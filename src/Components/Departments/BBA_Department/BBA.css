@@ -1,0 +1,47 @@
+.head_p {
+  height: 380px;
+
+  text-align: justify;
+}
+.heading {
+  /* margin-right: 250px; */
+  height: 150px;
+  width: 800px;
+  align-items: center;
+  justify-content: center;
+  /* text-align: center; */
+  text-align: left;
+}
+.image {
+  /* height: 200px; */
+  width: 1px;
+}
+.heading a:hover {
+  color: #ffc137;
+  text-decoration: none;
+}
+.anchor_tag {
+  /* text-decoration: none; */
+  color: brown;
+  font-weight: bold;
+  margin-left: 17px;
+}
+.teacher_info {
+  margin-bottom: 110px;
+  width: 500px;
+}
+.head {
+  width: 310px;
+  height: 35px;
+}
+.head_p {
+  text-align: justify;
+  margin-right: 40px;
+}
+.waddi_div {
+  height: 475px;
+}
+.paragraph {
+  text-align: justify;
+  margin-right: 30px;
+}

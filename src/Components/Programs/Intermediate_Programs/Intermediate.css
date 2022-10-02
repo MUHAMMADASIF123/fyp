@@ -1,0 +1,13 @@
+.fsc_engg {
+  /* background-color: #172540;
+  color: aliceblue; */
+  align-items: baseline;
+}
+.fsc_medical {
+  float: right;
+  margin-left: 20px;
+}
+.para {
+  display: flex;
+  text-align: justify;
+}

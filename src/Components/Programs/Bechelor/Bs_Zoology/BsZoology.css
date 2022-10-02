@@ -1,0 +1,32 @@
+/* .backcolor {
+  background-color: #172540;
+} */
+.paragraph {
+  text-align: justify;
+  justify-content: center;
+
+  display: flex;
+}
+ul {
+  text-align: left;
+}
+ul li {
+  text-decoration: none;
+}
+h2 {
+  background-color: #172540;
+  color: aliceblue;
+}
+h3 {
+  background-color: #172540;
+  color: aliceblue;
+}
+h4 {
+  background-color: #172540;
+  color: aliceblue;
+}
+.option_css {
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}

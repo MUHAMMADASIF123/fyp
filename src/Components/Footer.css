@@ -1,0 +1,150 @@
+.foter {
+  display: flex;
+  justify-content: space-between;
+  background-color: #172540;
+
+  height: 60px;
+  align-items: center;
+  /* justify-content: center; */
+  color: white;
+  /* overflow-x: hidden; */
+  /* width: 1000px; */
+}
+
+.foter p {
+  align-items: center;
+}
+.txt {
+  color: white;
+  margin-left: -20px;
+  /* width: 1000px; */
+}
+.icons {
+  color: yellow;
+  width: 200px;
+  margin-right: 100px;
+}
+
+.icons li {
+  align-items: center;
+  /* padding: 0 10px; */
+  /* margin: 0 0 100px 0; */
+}
+.IMG {
+  width: 500px;
+  height: 250px;
+  margin-left: -210px;
+  margin-bottom: 5px;
+  margin-top: 5px;
+
+  /* margin-left: ; */
+}
+.footer22 {
+  background-color: #172540;
+  border-bottom: 4px solid orange;
+
+  /* width: 1024px; */
+}
+.text-align {
+  text-align: justify;
+  margin-left: 20px;
+}
+.logimg {
+  width: 100px;
+  height: 100px;
+}
+.text_space {
+  font-size: medium;
+}
+.address {
+  width: 400px;
+  /* margin-top: 70px; */
+  margin-left: -200px;
+  /* margin-top: 60px; */
+}
+.address1 .address {
+  margin-top: 120px;
+}
+.info {
+  margin-left: -480px;
+  margin-top: 0px;
+  /* z-index: -1; */
+}
+.info {
+  font-weight: 1000;
+  font-size: x-large;
+  /* margin-left:; */
+  margin-right: -40px;
+}
+.icons i {
+  margin: 0px 5px;
+}
+
+@media screen and (min-width: 375px) {
+  /* .addree1 .info span {
+    margin-top: 120px;
+  } */
+  .txt {
+    font-size: 11px;
+    font-weight: bolder;
+    margin-left: 8px;
+  }
+
+  .IMG {
+    width: 95%;
+    height: 200px;
+    margin-left: 2px;
+  }
+  .address1 {
+    /* width: 95%; */
+    margin-left: 130px;
+    margin-top: -100px;
+    /* margin-top: 120px; */
+  }
+
+  .logimg {
+    /* text-align: center; */
+    margin-left: 125px;
+  }
+  .text_space {
+    margin-left: 4px;
+    width: 95%;
+  }
+}
+@media screen and (min-width: 820px) {
+  .address1 {
+    /* width: 210px; */
+    margin-left: 0px;
+    /* padding-left: 50px; */
+  }
+  .address {
+    width: 400px;
+    /* margin-top: 70px; */
+    margin-left: -61px;
+    margin-top: 4px;
+  }
+  .info {
+    width: 100%;
+    margin-right: -400px;
+  }
+  .IMG {
+    /* width: 95%; */
+    margin-top: 20px;
+    /* height: 200px; */
+    margin-left: -10px;
+  }
+  .logimg {
+    margin-left: 20px;
+  }
+  .txt {
+    margin-left: 10px;
+  }
+}
+
+/* On screens that are 600px or less, set the background color to olive */
+
+@media screen and (min-width: 480px) {
+  #footerf {
+    background-color: white;
+  }
+}

@@ -1,0 +1,12 @@
+li a {
+  text-decoration: none;
+  color: #172540;
+  font-weight: bold;
+}
+li a:hover {
+  color: #ffc137;
+}
+h1 {
+  background-color: #172540;
+  color: aliceblue;
+}

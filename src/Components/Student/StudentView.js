@@ -1,9 +1,8 @@
-import React from 'react';
-import './StudentView.css';
+import React from 'react'
+import './StudentView.css'
 
-function StudentView() {
+const StudentView = () => {
   return (
-    // <div>StudentView</div>
     <div>
       <div className='mt-5  wraper  '>
         <div className='container '>
@@ -18,9 +17,7 @@ function StudentView() {
                   <div className='input-group mb-3'>
                     <div className='input-group-prepend'>
                       {/* <label className="input-group-text" htmlFor="inputGroupSelect01">Options</label> */}
-                      <h6>
-                        applied for:<span>BSCS</span>
-                      </h6>
+                      <h6>Applied For: BSCS</h6>
                     </div>
                   </div>
                 </div>
@@ -388,7 +385,7 @@ function StudentView() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default StudentView;
+export default StudentView

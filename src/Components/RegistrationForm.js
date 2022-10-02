@@ -67,7 +67,6 @@ function RegistrationForm() {
   //submit
   const handleSubmit = async (e) => {
     e.preventDefault()
-
     studentSubmitForm({ form, metric, intermediate, graduate })
   }
 

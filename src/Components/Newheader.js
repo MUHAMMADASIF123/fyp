@@ -1,16 +1,16 @@
-import React from 'react';
-import { Link } from 'react-router-dom';
-import { useNavigate } from 'react-router-dom';
-import './Header_.css';
+import React from 'react'
+import { Link } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
+import './Header_.css'
 const Newheader = () => {
-  const history = useNavigate();
+  const history = useNavigate()
   const logout = () => {
-    localStorage.clear('token-info');
+    localStorage.clear('token-info')
     // setIsLoggedin(false);
-    history('/');
-  };
+    history('/')
+  }
   // const auth= localStorage.getItem("token-info")
-  var auth = JSON.parse(localStorage.getItem('token-info'));
+  var auth = JSON.parse(localStorage.getItem('token-info'))
   // console.log(auth);
 
   return (
@@ -33,8 +33,7 @@ const Newheader = () => {
           {localStorage.getItem('token-info') ? (
             <>
               <button onClick={logout} className='hbtn me-2'>
-                {' '}
-                logout{' '}
+                logout
               </button>
               {/* <Link to={'/login'} className="btn btn-primary me-2"> Login </Link> */}
               <button>
@@ -87,11 +86,11 @@ const Newheader = () => {
           <a href='AboutUs'>About Us</a>
           <a href='Admin'>Admin</a>
           <a href='StudentView'>Student View</a>
-          <a href='StudentProfile'>StudentProfile</a>
+          <a href='StudentProfile'>Student Profile</a>
         </nav>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Newheader;
+export default Newheader

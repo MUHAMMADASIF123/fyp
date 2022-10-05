@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, NavLink } from 'react-router-dom'
 import { useNavigate } from 'react-router-dom'
 import './Header_.css'
 const Newheader = () => {
@@ -37,12 +37,10 @@ const Newheader = () => {
               </button>
               {/* <Link to={'/login'} className="btn btn-primary me-2"> Login </Link> */}
               <button>
-                {' '}
                 <Link
                   to={'/apply'}
                   className='hbtn text-white me-2'
                 >
-                  {' '}
                   {auth.email}
                   Apply Now
                 </Link>
@@ -76,18 +74,18 @@ const Newheader = () => {
       </div>
 
       <div className='menu'>
-        <nav>
-          <a href='/'>Home</a>
+        <NavLink accessKey='ok'>
+          <Link to='/'>Home</Link>
 
-          {/* <a href='#Programs'>Programs</a>
-          <a href='#Departments'>Departements</a> */}
-          <a href='/Administration'>Administration</a>
-          <a href='/contactUs'>Contact Us</a>
-          <a href='AboutUs'>About Us</a>
-          <a href='Admin'>Admin</a>
-          <a href='StudentView'>Student View</a>
-          <a href='StudentProfile'>Student Profile</a>
-        </nav>
+          {/* <a to='#Programs'>Programs</a>
+          <a to='#Departments'>Departements</a> */}
+          <Link to='/Administration'>Administration</Link>
+          <Link to='/contactUs'>Contact Us</Link>
+          <Link to='AboutUs'>About Us</Link>
+          <Link to='Admin'>Admin</Link>
+          <Link to='StudentView'>Student View</Link>
+          <Link to='StudentProfile'>Student Profile</Link>
+        </NavLink>
       </div>
     </div>
   )

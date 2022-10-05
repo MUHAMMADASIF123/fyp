@@ -1,8 +1,11 @@
-import { useState, useEffect } from 'react'
+import { useState, useEffect, Suspense, lazy } from 'react'
+// import { useHistory } from 'react-router-dom'
 import './Admin.css'
 import useStore from '../../store/store'
-import AdminRenderList from './AdminRenderList'
+const AdminRenderList = lazy(() => import('./AdminRenderList'))
+
 function Admin() {
+  // const history = useHistory()
   const [search, setSearch] = useState({
     program: 'intermediate',
     program_list: 'pre-engg',
@@ -10,7 +13,7 @@ function Admin() {
     shift: 'morning ',
   })
 
-  const [applications, setApplications] = useState([])
+  // const [applications, setApplications] = useState([])
 
   //=> useEffect
   const adminFetchApplications = useStore(
@@ -23,8 +26,9 @@ function Admin() {
   const handleSearchSubmit = async (e) => {
     e.preventDefault()
     // const result = await adminQueryFetchApplications(search)
-    const result = await adminFetchApplications(search)
-    setApplications(result.data.result)
+
+    await adminFetchApplications(search)
+    // setApplications(result?.data.applications)
   }
 
   return (
@@ -238,7 +242,9 @@ function Admin() {
           </div>
         </form>
       </div>
-      <AdminRenderList applications={applications} />
+      <Suspense fallback={<div>Loading...</div>}>
+        <AdminRenderList />
+      </Suspense>
     </>
   )
 }

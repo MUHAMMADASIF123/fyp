@@ -1,15 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
-import StudentView from '../Student/StudentView'
-
-const AdminRenderList = ({ applications }) => {
-  const viewDetail = (id) => {
-    ;<StudentView id />
-  }
+import useStore from '../../store/store'
+const AdminRenderList = () => {
+  const forms = useStore((state) => state.forms)
 
   return (
     <div className='container shadow rounded vh-100 mb-5 bg-white'>
-      {applications.length ? (
+      {forms.length ? (
         <>
           <table className='table'>
             <tbody>
@@ -17,39 +14,32 @@ const AdminRenderList = ({ applications }) => {
                 <th>Student Count</th>
                 <th>Student Name</th>
                 <th>Student's Father Name</th>
-                {/* <th>CNIC</th> <td>{applications.cnic}</td> */}
+                {/* <th>CNIC</th> <td>{forms.cnic}</td> */}
                 <th>Percentage Marks</th>
                 <th>Detail</th>
               </tr>
             </tbody>
           </table>
-          {applications.map((application, index) => {
+          {forms.map((form, index) => {
+            // console.log(form[0])
             return (
               <table className='table' key={index}>
                 <tbody>
                   <tr>
                     <td>{index}</td>
-                    <td>{application.student_name}</td>
-                    <td>{application.father_name}</td>
-                    {application.program === 'intermediate' && (
-                      <td>{application.metric.percentage}</td>
+                    <td>{form.student_name}</td>
+                    <td>{form.father_name}</td>
+                    {form.program === 'intermediate' && (
+                      <td>{form.metric.percentage}</td>
                     )}
-                    {application.program === 'graduate' && (
-                      <td>
-                        {application.intermediate.percentage}
-                      </td>
+                    {form.program === 'graduate' && (
+                      <td>{form.intermediate.percentage}</td>
                     )}
-                    {application.program === 'post graduate' && (
-                      <td>{application.graduate.percentage}</td>
+                    {form.program === 'post graduate' && (
+                      <td>{form.graduate.percentage}</td>
                     )}
                     <td>
-                      <Link
-                        to='/StudentView/:id'
-                        params={{ id: application._id }}
-                        onClick={() =>
-                          viewDetail(application._id)
-                        }
-                      >
+                      <Link to={`/StudentView/${form._id}`}>
                         View Detail
                       </Link>
                     </td>

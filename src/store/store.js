@@ -92,6 +92,7 @@ let store = (set) => ({
       })
     }
   },
+
   adminFetchApplications: async () => {
     try {
       const response = await axios.get(
@@ -100,11 +101,35 @@ let store = (set) => ({
       cogoToast.success(response?.data?.message, {
         position: 'top-right',
       })
-      return response
+      set((state) => ({
+        ...state,
+        forms: response.data.applications,
+      }))
     } catch (error) {
-      cogoToast.error(`${error?.response?.data?.message}`, {
+      cogoToast.error(
+        error?.response?.data?.message ||
+          'Something Went Wrong. Please Check You Connection',
+        {
+          position: 'top-right',
+        }
+      )
+    }
+  },
+
+  adminFetchApplicationById: async (id) => {
+    try {
+      const response = await axios.get(
+        `${baseURL}/api/admin/fetch/application/${id}`
+      )
+      cogoToast.success(response?.data?.message, {
         position: 'top-right',
       })
+      set((state) => ({
+        ...state,
+        form: response.data.application,
+      }))
+    } catch (error) {
+      console.log(error)
     }
   },
 })

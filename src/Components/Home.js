@@ -1,8 +1,9 @@
-import React, { Component } from 'react';
-import Slider from 'react-slick';
-import 'slick-carousel/slick/slick.css';
-import 'slick-carousel/slick/slick-theme.css';
-import './Home.css';
+import React, { Component } from 'react'
+import Slider from 'react-slick'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
+import './Home.css'
+import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'
 
 function Home() {
   const settings = {
@@ -12,58 +13,81 @@ function Home() {
     speed: 500,
     slidesToShow: 1,
     slidesToScroll: 1,
-  };
+  }
   const settings1 = {
     dots: true,
     autoplay: true,
     infinite: true,
     slidesToShow: 2,
     slidesToScroll: 1,
-  };
 
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+          infinite: true,
+          dots: true,
+        },
+      },
+      {
+        breakpoint: 600,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          initialSlide: 2,
+        },
+      },
+      {
+        breakpoint: 480,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  }
   return (
     <div>
-      <div className=''>
-        <div className='slider'>
-          <Slider {...settings}>
-            <div>
-              {/* <h3>1</h3> */}
-
-              <img
-                className='justify sliderimg'
-                src='https://res.cloudinary.com/azeem413/image/upload/v1664275312/images/Slider/entrance_hyz8jh.jpg'
-              />
-            </div>
-            <div>
-              {/* <h3>2</h3> */}
-              <img
-                className='justify sliderimg'
-                src='https://res.cloudinary.com/azeem413/image/upload/v1664035593/images/Slider/gallary_1_oxlnfo.jpg'
-              />
-            </div>{' '}
-            <div>
-              {/* <h3>2</h3> */}
-              <img
-                className='justify sliderimg'
-                src='https://res.cloudinary.com/azeem413/image/upload/v1664035593/images/Slider/galary_2_ev11u3.jpg'
-              />
-            </div>{' '}
-            <div>
-              {/* <h3>2</h3> */}
-              <img
-                className='justify sliderimg'
-                src='https://res.cloudinary.com/azeem413/image/upload/v1664035591/images/Slider/hajvery_hall_vrojec.jpg'
-              />
-            </div>
-            <div>
-              {/* <h3>2</h3> */}
-              <img
-                className='justify sliderimg'
-                src='https://res.cloudinary.com/azeem413/image/upload/v1664035588/images/Slider/education_dptcrop_dgmaz0.jpg'
-              />
-            </div>
-          </Slider>
-        </div>
+      <div className=' vh-100'>
+        <MDBCarousel showControls showIndicators>
+          <MDBCarouselItem
+            className='w-100  d-block'
+            style={{ height: '600px' }}
+            itemId={1}
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664275312/images/Slider/entrance_hyz8jh.jpg'
+            alt='...'
+          />
+          <MDBCarouselItem
+            className='w-100  d-block'
+            style={{ height: '600px' }}
+            itemId={2}
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035593/images/Slider/gallary_1_oxlnfo.jpg'
+            alt='...'
+          />
+          <MDBCarouselItem
+            className='w-100  d-block'
+            style={{ height: '600px' }}
+            itemId={3}
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035593/images/Slider/galary_2_ev11u3.jpg'
+            alt='...'
+          />
+          <MDBCarouselItem
+            className='w-100  d-block'
+            style={{ height: '600px' }}
+            itemId={4}
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035591/images/Slider/hajvery_hall_vrojec.jpg'
+            alt='...'
+          />
+          <MDBCarouselItem
+            className='w-100  d-block'
+            style={{ height: '600px' }}
+            itemId={5}
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035588/images/Slider/education_dptcrop_dgmaz0.jpg'
+            alt='...'
+          />
+        </MDBCarousel>
       </div>
       <div id='Programs' className=''>
         <div className='d-flex'>
@@ -312,92 +336,69 @@ function Home() {
           </div>
         </section>
       </div>
-      <div className=' container shadow rounded mb-5 gallary-container bg-white'>
+      <div className=' container shadow rounded mb-5 slider_container'>
         <h2 className='mb-5 h2_border rounded'> Gallary </h2>
         <Slider {...settings1}>
-          <div>
-            <img
-              className='Img'
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035572/images/Gallary/cricket_Ground_wx2nun.jpg'
-              alt='Credit to Joshua Earle on Unsplash'
-            />
-          </div>
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/Gallary/library_jf2ldg.jpg'
-              alt='Credit to Alisa Anton on Unsplash'
-            />
-          </div>
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035591/images/Gallary/gallary_6_rgpbi1.png'
-              alt='Credit to Igor Ovsyannykov on Unsplash'
-            />
-          </div>
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/Gallary/gallary_5_xmvaqf.png'
-              alt='Credit to Pierre Châtel-Innocenti on Unsplash'
-            />
-          </div>
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035582/images/Gallary/pricipal_vj8zjp.jpg'
-              alt='Credit to Richard Nolan on Unsplash'
-            />
-          </div>
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035582/images/Gallary/registrar_office_rev0mz.jpg'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035581/images/Gallary/hostel_ejydew.jpg'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/gallary_7_xtvup8.png'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/hajveri_ground_oer61m.jpg'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035578/images/Gallary/gallary_8_hrl1ny.png'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035578/images/Gallary/gallary_4_kaeszw.png'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Gallary/gallary_3_bmjsf1.png'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>{' '}
-          <div>
-            <img
-              src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Gallary/canteen_dum0xo.jpg'
-              alt='Credit to Cristina Gottardi on Unsplash'
-            />
-          </div>
+          <img
+            className=' w-75 h-50'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035572/images/Gallary/cricket_Ground_wx2nun.jpg'
+            alt='Credit to Joshua Earle on Unsplash'
+          />
+          <img
+            className='w-75 h-50'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/Gallary/library_jf2ldg.jpg'
+            alt='Credit to Alisa Anton on Unsplash'
+          />
+
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035582/images/Gallary/pricipal_vj8zjp.jpg'
+            alt='Credit to Richard Nolan on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035582/images/Gallary/registrar_office_rev0mz.jpg'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035581/images/Gallary/hostel_ejydew.jpg'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/gallary_7_xtvup8.png'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/hajveri_ground_oer61m.jpg'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='w-75 h-50'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035578/images/Gallary/gallary_8_hrl1ny.png'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035578/images/Gallary/gallary_4_kaeszw.png'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Gallary/gallary_3_bmjsf1.png'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
+          <img
+            className='h-50 w-75'
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Gallary/canteen_dum0xo.jpg'
+            alt='Credit to Cristina Gottardi on Unsplash'
+          />
         </Slider>
       </div>
     </div>
-  );
+  )
 }
 
-export default Home;
+export default Home

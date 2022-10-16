@@ -6,12 +6,7 @@ const AdminRenderList = lazy(() => import('./AdminRenderList'))
 
 function Admin() {
   // const history = useHistory()
-  const [search, setSearch] = useState({
-    program: 'intermediate',
-    program_list: 'pre-engg',
-    num_student: 50,
-    shift: 'morning ',
-  })
+  const [search, setSearch] = useState({})
 
   // const [applications, setApplications] = useState([])
 
@@ -20,15 +15,13 @@ function Admin() {
     (state) => state.adminFetchApplications
   )
 
-  const adminQueryFetchApplications = useStore(
-    (state) => state.adminQueryFetchApplications
+  const adminFetchQueryApplications = useStore(
+    (state) => state.adminFetchQueryApplications
   )
   const handleSearchSubmit = async (e) => {
     e.preventDefault()
-    // const result = await adminQueryFetchApplications(search)
 
-    await adminFetchApplications(search)
-    // setApplications(result?.data.applications)
+    await adminFetchQueryApplications(search)
   }
 
   return (

@@ -76,16 +76,21 @@ let store = (set) => ({
       })
     }
   },
-  adminQueryFetchApplications: async (data = {}) => {
+  adminFetchQueryApplications: async (data = {}) => {
     try {
+      console.log(data)
       const response = await axios.get(
-        `${baseURL}/api/admin/fetch/query/applications`,
+        `${baseURL}/api/admin/fetch/applications/query`,
         { params: data }
       )
+      console.log(response.data)
       cogoToast.success(response?.data?.message, {
         position: 'top-right',
       })
-      return response
+      set((state) => ({
+        ...state,
+        forms: response.data.applications,
+      }))
     } catch (error) {
       cogoToast.error(`${error?.response?.data?.message}`, {
         position: 'top-right',

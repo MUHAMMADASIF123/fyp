@@ -1,150 +1,30 @@
-.foter {
-  display: flex;
-  justify-content: space-between;
+footer {
+  /* width: 100%; */
+  /* max-width: 2000px; */
+
   background-color: #172540;
-
-  height: 60px;
-  align-items: center;
-  /* justify-content: center; */
-  color: white;
-  /* overflow-x: hidden; */
-  /* width: 1000px; */
+  border-bottom: 5px solid orange;
+  /* height: 240px; */
 }
 
-.foter p {
-  align-items: center;
+.col-lg-4 {
+  height: 240px;
 }
-.txt {
-  color: white;
-  margin-left: -20px;
-  /* width: 1000px; */
+p {
+  text-align: justify;
+  margin-left: 10px;
 }
 .icons {
-  color: yellow;
-  width: 200px;
-  margin-right: 100px;
-}
-
-.icons li {
-  align-items: center;
-  /* padding: 0 10px; */
-  /* margin: 0 0 100px 0; */
+  letter-spacing: 20px;
+  color: orange;
 }
 .IMG {
-  width: 500px;
-  height: 250px;
-  margin-left: -210px;
-  margin-bottom: 5px;
-  margin-top: 5px;
-
-  /* margin-left: ; */
+  width: 90%;
+  margin: 5px 5px 5px 5px;
+  height: 70%;
 }
-.footer22 {
+.copyright {
+  height: 50px;
+  width: 100%;
   background-color: #172540;
-  border-bottom: 4px solid orange;
-
-  /* width: 1024px; */
-}
-.text-align {
-  text-align: justify;
-  margin-left: 20px;
-}
-.logimg {
-  width: 100px;
-  height: 100px;
-}
-.text_space {
-  font-size: medium;
-}
-.address {
-  width: 400px;
-  /* margin-top: 70px; */
-  margin-left: -200px;
-  /* margin-top: 60px; */
-}
-.address1 .address {
-  margin-top: 120px;
-}
-.info {
-  margin-left: -480px;
-  margin-top: 0px;
-  /* z-index: -1; */
-}
-.info {
-  font-weight: 1000;
-  font-size: x-large;
-  /* margin-left:; */
-  margin-right: -40px;
-}
-.icons i {
-  margin: 0px 5px;
-}
-
-@media screen and (min-width: 375px) {
-  /* .addree1 .info span {
-    margin-top: 120px;
-  } */
-  .txt {
-    font-size: 11px;
-    font-weight: bolder;
-    margin-left: 8px;
-  }
-
-  .IMG {
-    width: 95%;
-    height: 200px;
-    margin-left: 2px;
-  }
-  .address1 {
-    /* width: 95%; */
-    margin-left: 130px;
-    margin-top: -100px;
-    /* margin-top: 120px; */
-  }
-
-  .logimg {
-    /* text-align: center; */
-    margin-left: 125px;
-  }
-  .text_space {
-    margin-left: 4px;
-    width: 95%;
-  }
-}
-@media screen and (min-width: 820px) {
-  .address1 {
-    /* width: 210px; */
-    margin-left: 0px;
-    /* padding-left: 50px; */
-  }
-  .address {
-    width: 400px;
-    /* margin-top: 70px; */
-    margin-left: -61px;
-    margin-top: 4px;
-  }
-  .info {
-    width: 100%;
-    margin-right: -400px;
-  }
-  .IMG {
-    /* width: 95%; */
-    margin-top: 20px;
-    /* height: 200px; */
-    margin-left: -10px;
-  }
-  .logimg {
-    margin-left: 20px;
-  }
-  .txt {
-    margin-left: 10px;
-  }
-}
-
-/* On screens that are 600px or less, set the background color to olive */
-
-@media screen and (min-width: 480px) {
-  #footerf {
-    background-color: white;
-  }
 }

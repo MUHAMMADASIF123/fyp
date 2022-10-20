@@ -1,43 +1,4 @@
-.incHeight {
-  height: 100%;
+.heading_costome{
+  background-color: #172540;
+  color: white;
 }
-.head_p {
-  height: 380px;
-
-  text-align: left;
-}
-
-.heading {
-  /* margin-right: 250px; */
-  height: 150px;
-
-  width: 800px;
-  align-items: center;
-  justify-content: center;
-  text-align: left;
-}
-.image {
-  /* height: 200px; */
-  width: 1px;
-}
-.heading a:hover {
-  color: #ffc137;
-  text-decoration: none;
-}
-.anchor_tag {
-  /* text-decoration: none; */
-  color: brown;
-  font-weight: bold;
-  /* margin-left: 150px; */
-}
-.teacher_info {
-  margin-bottom: 110px;
-  width: 500px;
-}
-.head {
-  width: 310px;
-  height: 35px;
-}
-/* .incHeight {
-  height: 100%;
-} */

@@ -1,16 +1,14 @@
 import React from 'react'
-
-import { Route, Routes, Redirect } from 'react-router-dom'
-import Addpost from './Components/Addpost'
-import Editpost from './Components/Editpost'
-import Postlist from './Components/Postlist'
 import './App.css'
+import { Route, Routes, Redirect } from 'react-router-dom'
+
+
 import RegisterUser from './Components/RegisterUser'
 import Login from './Components/Login'
 import ContactUs from './Components/ContactUs'
 import AboutUs from './Components/About/AboutUs'
 import Administration from './Components/Administration'
-import Newheader from './Components/Newheader'
+
 import RegistrationForm from './Components/RegistrationForm'
 import Home from './Components/Home'
 
@@ -55,22 +53,25 @@ import Admin from './Components/Admin_side/Admin'
 
 import StudentView from './Components/Student/StudentView'
 import Studentprofile from './Components/Student/StudentProfile'
+import Navbar from './Components/Navbar';
+
 
 function App() {
   return (
     <div className='App'>
-      <Newheader />
+    
+      <Navbar/>
       <Routes>
-        {/* //laskdlk /asdjhkasx ,asldkh */}
-        {/* <Route path="/" element={<Newheader/>}/> */}
+   
+        
         <Route path='/' element={<Home />} />
-        <Route path='/addpost' element={<Addpost />} />
-        <Route path='/editpost/:postid' element={<Editpost />} />
+        
         <Route path='/registeruser' element={<RegisterUser />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contactUs' element={<ContactUs />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/Admin' element={<Admin />} />
+        {/* <Route path='/navbar' element={<Navbar />} /> */}
         <Route
           path='/Administration'
           element={<Administration />}

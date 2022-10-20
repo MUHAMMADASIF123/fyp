@@ -25,8 +25,8 @@ function Home() {
       {
         breakpoint: 1024,
         settings: {
-          slidesToShow: 3,
-          slidesToScroll: 3,
+          slidesToShow: 2,
+          slidesToScroll: 2,
           infinite: true,
           dots: true,
         },
@@ -56,7 +56,7 @@ function Home() {
             className='w-100  d-block'
             style={{ height: '600px' }}
             itemId={1}
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664275312/images/Slider/entrance_hyz8jh.jpg'
+            src='https://res.cloudinary.com/azeem413/image/upload/v166427536/images/Slider/entrance_hyz8jh.jpg'
             alt='...'
           />
           <MDBCarouselItem
@@ -89,6 +89,10 @@ function Home() {
           />
         </MDBCarousel>
       </div>
+      {/* <div className='container'>
+        d
+
+      </div> */}
       <div id='Programs' className=''>
         <div className='d-flex'>
           <div className='shadow ms-5 rounded prg-container bg-white w-75'>
@@ -98,7 +102,7 @@ function Home() {
               </h1>
               {/* <hr className='mr-25 ml-25' /> */}
               <div className='d-flex justify-content-center  '>
-                <div className='col-md-4 h-25 w-25 ms-4 me-4 mt-4 mb-4 '>
+                <div className='col-md-3  '>
                   <div className='card '>
                     <img
                       src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/interstdnt_jcsrv3.jpg'
@@ -124,7 +128,7 @@ function Home() {
                   </div>
                 </div>
 
-                <div className='col-md-4 h-25 w-25 ms-4 me-4 mt-4 mb-4 '>
+                <div className='col-md-3  '>
                   <div className='card '>
                     <img
                       src='https://res.cloudinary.com/azeem413/image/upload/v1664035545/images/bechlorimggirl_lfiell.jpg'
@@ -148,7 +152,7 @@ function Home() {
                   </div>
                 </div>
 
-                <div className='col-md-4 h-25 w-25 ms-4 me-4 mt-4 mb-4'>
+                <div className='col-md-3 '>
                   <div className='card'>
                     <img
                       src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/postgraduatepics_popj9n.jpg'
@@ -172,11 +176,8 @@ function Home() {
                     </div>
                   </div>
                 </div>
-              </div>
-            </section>
-          </div>
-          <div className='shadow ms-5 rounded prg-container bg-white w-25 me-5'>
-            <h3 className='container rounded'> Notice Board</h3>
+                <div className='col-md-3 shadow ms-5 rounded prg-container bg-white w-25 me-5'>
+                <h3 className='container rounded'> Notice Board</h3>
             <marquee
               width='60%'
               direction='up'
@@ -231,7 +232,13 @@ function Home() {
                 <br />
               </ul>
             </marquee>
+                </div>
+              </div>
+            </section>
           </div>
+          {/* <div className='shadow ms-5 rounded prg-container bg-white w-25 me-5'>
+          
+          </div> */}
         </div>
         <section id='Departments'>
           <div className='container mt-3 dept_container rounded shadow mb-5 bg-white'>
@@ -240,94 +247,94 @@ function Home() {
               BS Departments
             </h1>
 
-            <div className='row'>
-              <div className='col-md-2  bsdept mt-3 col-lg-3'>
+            <div className='row '>
+              <div className='col-md-6 col-sm-12  bsdept mt-3 col-lg-3'>
                 <a className='' href='/ComputerScience'>
                   Computer Science
                 </a>
               </div>
 
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Chemistry_'>
                   Chemistry
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Physics_'>
                   Physics
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Mathematics_'>
                   Mathematics
                 </a>
               </div>
             </div>
             <div className='row'>
-              <div className='col-md-2 bsdept mt-3 col-lg-3'>
+              <div className='col-md-6 col-sm-12  bsdept mt-3 col-lg-3'>
                 <a className='' href='/Economics_'>
                   Economics
                 </a>
               </div>
 
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Islamiyat_'>
                   Islamiyat
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/BBA'>
                   BBA
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/MassCom'>
                   Mass Comm.
                 </a>
               </div>
             </div>
             <div className='row'>
-              <div className='col-md-2 bsdept mt-3 col-lg-3'>
+              <div className='col-md-6 col-sm-12  bsdept mt-3 col-lg-3'>
                 <a className='' href='/Sociology'>
                   Sociology
                 </a>
               </div>
 
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Botany'>
                   Botany
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Zoology_'>
                   Zoology
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Education'>
                   Education
                 </a>
               </div>
             </div>
             <div className='row'>
-              <div className='col-md-2 bsdept mt-3 col-lg-3'>
+              <div className='col-md-6 col-sm-12  bsdept mt-3 col-lg-3'>
                 <a className='' href='/English'>
                   {' '}
                   English
                 </a>
               </div>
 
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Urdu'>
                   Urdu
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12 mb-2 mt-3 bsdept col-lg-3'>
                 <a className='' href='/PoliticalScience'>
                   Political Science
                 </a>
               </div>
-              <div className='col-md-2 mt-3 bsdept col-lg-3'>
+              <div className='col-md-6 col-sm-12 mb-2  mt-3 bsdept col-lg-3'>
                 <a className='' href='/Statistics'>
                   Statistics
                 </a>

@@ -1,24 +1,26 @@
 import React from 'react';
-
+import './AboutUs.css'
 function AboutUs() {
   return (
-    <div className=' container vh-100 mb-5 mt-5 incHeight '>
-      <h1 className=' rounded'>About Us</h1>
+    <>
+    <div className=' container mb-5 mt-5 '>
+      <h1 className=' rounded heading_costome'>About Us</h1>
       <hr />
-      <div className='d-flex justify-content-center mt-5 mb-5 me-5 ms-5 bg-white '>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/principlepic_ahfbtm.jpg'
-            width='300px'
-            height='300px'
-          />
-        </div>
-        <div className='ms-5 me-5 '>
-          <h3 className='container rounded mt-2'>
-            Peinciple's Message
+         
+         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+          <div className='row'>
+            <div className='principle col-6'>
+            <img
+             src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/principlepic_ahfbtm.jpg'
+            width='500px'
+            height='450px'
+          />            </div>
+            <div className=' col-6'>
+          <h3 className='container rounded mt-2 me-5'>
+            Principle's Message
           </h3>
           <hr />
-          <p className='paragraph'>
+          <p className='paragraph me-5'>
             Dear New Entrants: It is a matter of great pleasure
             for me to welcome you at Government College of
             Science, Wahdat Road, Lahore. After getting
@@ -41,16 +43,19 @@ function AboutUs() {
             any other college.
           </p>
         </div>
-      </div>
-      <hr />
-      <div className=' d-flex justify-content-center me-5 ms-5 mb-5 mt-5 bg-white'>
-        <div className=' heading  mb-5'>
-          <h3 className='rounded me-5 mt-2'>
+          </div>
+
+         </section>
+         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+          <div className='row'>
+           
+            <div className=' col-6'>
+            <h3 className='rounded me-5 mt-2'>
             Development Phase
           </h3>
           <hr />
-          <p className=' paragraph me-5 mb-5'>
-            Situated well away from the din of the city life and
+          <p className='paragraph me-5'>
+          Situated well away from the din of the city life and
             surrounded by tall and lush green shady trees, Govt.
             College of science, Wahdat Road, Lahore is one of the
             first rank academic institutions of the Punjab. The
@@ -75,19 +80,20 @@ function AboutUs() {
             Mathematics (1994)and Zoology (2005).
           </p>
         </div>
-
-        <div>
-          <img
+        <div className='principle col-6'>
+        <img
             src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/gallary_7_xtvup8.png'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
-      <hr />
-      <div className=' d-flex justify-content-center me-5 ms-5 mb-5 mt-5 bg-white'>
-        <div className=' heading mb-5'>
-          <h3 className='rounded me-5'>Aims And Objectives</h3>
+            width='490px'
+            height='530px'
+          />          </div>
+          </div>
+
+         </section>
+         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+          <div className='row'>
+           
+            <div className=' col-6'>
+            <h3 className='rounded me-5'>Aims And Objectives</h3>
           <hr />
           <ul>
             <li className=' paragraph ms-3'>
@@ -117,28 +123,33 @@ function AboutUs() {
               </p>
             </li>
           </ul>
+        
         </div>
-
-        <div>
-          <img
+        <div className='principle col-6'>
+        <img
             src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/Gallary/library_jf2ldg.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
-      <hr />
-      <div className='container mb-5 mt-5'>
+            width='490px'
+            height='530px'
+          />            </div>
+          </div>
+
+         </section>
+         <section>
+          <div className='row'>
+          <div className='container mb-5'>
         <h3 className='rounded me-5'>College Map</h3>
         <hr />
         <img
-          className='mb-5 mt-5 rounded'
+          className='mb-3 rounded'
           src='https://res.cloudinary.com/azeem413/image/upload/v1664035547/images/clgMap_cwqug0.jpg'
           width='80%'
           height='450px'
         />
       </div>
-    </div>
+          </div>
+         </section>
+         </div>
+         </>
   );
 }
 

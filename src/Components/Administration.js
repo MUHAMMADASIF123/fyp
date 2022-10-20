@@ -158,6 +158,8 @@ function Administration() {
         </div>
       </div>
       <div>
+
+        
         <div className='d-flex justify-content-center  mt-5 me-5 ms-5 p-5'>
           <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
             <h3 className='rounded'>Registrar Office</h3>

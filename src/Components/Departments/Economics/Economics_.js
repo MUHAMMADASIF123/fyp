@@ -2,18 +2,25 @@ import React from 'react';
 import './Economics_.css';
 function Economics_() {
   return (
-    <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Economics Department
-      </h2>
+    <>
+ <div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035547/images/Departments/economic_dpt_beebk0.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of Economics
+          </h4>
+     
 
       {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
-          </h4>
-          <p className=' head_p ms-3'>
+     
+        <div className='justify-content-center me-5 ms-5'>
+        
+          <p className='s-3 font-size-small me-5'>
             The Department of Economics is to provide excellent
             education in economics. The programs of the
             department emphasize the development of strong
@@ -34,22 +41,18 @@ function Economics_() {
             analysis skills that can be used in the investigation
             of economic problems in a wide variety of
             settings.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+           
           </p>
+          <a className='anchor_tag button_programs' href='Bschemistry'>
+          See Course Content  Details
+            </a>
+          
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035547/images/Departments/economic_dpt_beebk0.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+       
+      
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Amjad Sheikh</b> <br />
@@ -82,7 +85,7 @@ function Economics_() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Muhammad Tanveer</b>
@@ -118,7 +121,7 @@ function Economics_() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

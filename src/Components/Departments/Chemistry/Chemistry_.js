@@ -1,19 +1,27 @@
 import React from 'react';
 import './Chemistry_.css';
 function Chemistry_() {
-  return (
+  return (<>
+  
     <div>
-      <h2 className=' container mb-5 rounded mt-3'>
+      {/* <h2 className=' container mb-5 rounded mt-3'>
         Department of Chemistry
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+      </h2> */}
+       <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035549/images/Departments/chemistry_dpt_v0qkzl.jpg'
+            width='100%'
+            height='500px'
+          />
+</div>
+<h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of Chemistry
           </h4>
-          <p className=' head_p ms-3'>
+
+         
+     
+      <div className=' justify-content-center me-5 ms-5'>
+       
+          <p className='ms-3 font-size-small me-5'>
             The Chemistry Department is committed to the
             advancement of highest level of theoretical and
             practical knowledge of chemistry. The department
@@ -33,22 +41,17 @@ function Chemistry_() {
             engineering and biological processes, biosensors,
             industrial growth and energy are all due to chemistry
             in one way or the other.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+            
           </p>
+          <a className='anchor_tag button_programs' href='Bschemistry'>
+          See Course Content  Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035549/images/Departments/chemistry_dpt_v0qkzl.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+      
+      
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b> Dr. Qamar Subhani</b>
@@ -111,7 +114,7 @@ function Chemistry_() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Dr. Muhammad Tariq</b>
@@ -177,7 +180,7 @@ function Chemistry_() {
           </div>
         </div>
       </div>
-    </div>
+</>
   );
 }
 

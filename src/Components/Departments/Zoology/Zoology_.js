@@ -2,18 +2,19 @@ import React from 'react';
 import './Zoology_.css';
 function Zoology_() {
   return (
-    <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Department Of Zoology
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+    <>
+ <div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/zoology_dpt_oeyiow.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of Zoology
           </h4>
-          <p className=' head_p ms-3'>
+        <div className='justify-content-center me-5 ms-5 '>
+          <p className='ms-3 font-size-small me-5'>
             The Department of Zoology, a discipline of natural
             sciences, meets the need of training persons in a
             vast basic and interdisciplinary framework concerning
@@ -27,22 +28,17 @@ function Zoology_() {
             experience and competence to serve or learn further
             in education, health, agriculture, industry and
             environment sectors.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+            
           </p>
+          <a className='anchor_tag button_programs' href='Bschemistry'>
+              See Course content Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/zoology_dpt_oeyiow.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+      
+   
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b> Dr. Zahid Hussain Siddiqui</b>
@@ -81,7 +77,7 @@ function Zoology_() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Dr. Muhammad Tariq</b>
@@ -117,7 +113,7 @@ function Zoology_() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

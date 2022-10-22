@@ -3,20 +3,29 @@ import './AboutUs.css'
 function AboutUs() {
   return (
     <>
-    <div className=' container mb-5 mt-5 '>
-      <h1 className=' rounded heading_costome'>About Us</h1>
+    <div className='container mb-5 mt-5 '>
+      <h1 className='rounded'>About Us</h1>
       <hr />
-         
-         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+         </div>
+         <div>
+         <video controls autoplay>
+  <source src="movie.mp4" type="video/mp4"/>
+  {/* <source src="movie.ogg" type="video/ogg"> */}
+  Your browser does not support the video tag.
+</video>
+</div>
+         <section className=' container bg-white mb-2 '>
           <div className='row'>
-            <div className='principle col-6'>
+            <div className=' col-md-6 col-sm-12'>
             <img
              src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/principlepic_ahfbtm.jpg'
-            width='500px'
+            width='550px'
             height='450px'
-          />            </div>
-            <div className=' col-6'>
-          <h3 className='container rounded mt-2 me-5'>
+            className='me-2 mb-2 ms-0 principle'
+          />        
+           </div>
+            <div className='col-md-6 col-sm-12'>
+          <h3 className='rounded mt-2 me-5'>
             Principle's Message
           </h3>
           <hr />
@@ -46,10 +55,9 @@ function AboutUs() {
           </div>
 
          </section>
-         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+         <section className='container mb-2 bg-white'>
           <div className='row'>
-           
-            <div className=' col-6'>
+            <div className='col-md-6 col-sm-12'>
             <h3 className='rounded me-5 mt-2'>
             Development Phase
           </h3>
@@ -80,8 +88,8 @@ function AboutUs() {
             Mathematics (1994)and Zoology (2005).
           </p>
         </div>
-        <div className='principle col-6'>
-        <img
+        <div className='col-md-6 col-sm-12'>
+        <img className='about_img mb-2'
             src='https://res.cloudinary.com/azeem413/image/upload/v1664035580/images/Gallary/gallary_7_xtvup8.png'
             width='490px'
             height='530px'
@@ -89,11 +97,11 @@ function AboutUs() {
           </div>
 
          </section>
-         <section className=' d-flex mt-5 mb-5 me-5 ms-5 bg-white '>
+         <section className='container bg-white mb-2 '>
           <div className='row'>
            
-            <div className=' col-6'>
-            <h3 className='rounded me-5'>Aims And Objectives</h3>
+            <div className=' col-md-6 col-sm-12'>
+            <h3 className='rounded me-5 mt-2'>Aims And Objectives</h3>
           <hr />
           <ul>
             <li className=' paragraph ms-3'>
@@ -125,30 +133,31 @@ function AboutUs() {
           </ul>
         
         </div>
-        <div className='principle col-6'>
-        <img
+        <div className='col-md-6 col-sm-12'>
+        <img className='about_img mb-2'
             src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/Gallary/library_jf2ldg.jpg'
             width='490px'
             height='530px'
-          />            </div>
+          />           
+           </div>
           </div>
 
          </section>
-         <section>
+         <section className='mb-2 container'>
           <div className='row'>
-          <div className='container mb-5'>
+          <div className='mb-5'>
         <h3 className='rounded me-5'>College Map</h3>
         <hr />
         <img
           className='mb-3 rounded'
           src='https://res.cloudinary.com/azeem413/image/upload/v1664035547/images/clgMap_cwqug0.jpg'
-          width='80%'
+          width='100%'
           height='450px'
         />
       </div>
           </div>
          </section>
-         </div>
+         
          </>
   );
 }

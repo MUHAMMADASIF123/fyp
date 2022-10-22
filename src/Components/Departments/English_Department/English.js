@@ -2,18 +2,22 @@ import React from 'react';
 import './English.css';
 function English() {
   return (
-    <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        English Department
-      </h2>
+    <>
+  
 
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+  <div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/english_dpt_xuh4fl.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of English
           </h4>
-          <p className=' head_p ms-3'>
+       
+        <div className='justify-content-center me-5 ms-5'>
+          <p className='ms-3 font-size-small me-5'>
             The Department of English at the Govt.College of
             Science envisions a broad based need oriented
             approach at the various wings of its academia; the
@@ -32,22 +36,17 @@ function English() {
             sound foothold in their English language proficiency
             but also engaged in running degree programmes in BS 4
             Year Degree Program.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+          
           </p>
+          <a className='anchor_tag button_programs' href='BsEnglish'>
+              See Course Content Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/english_dpt_xuh4fl.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+      
+ 
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Jahangir Rana</b>
@@ -98,7 +97,7 @@ function English() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Muhammad Nadeem Anwar</b>
@@ -153,7 +152,7 @@ function English() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

@@ -47,14 +47,12 @@ function RegisterUser() {
       <section className='mt-5 wraper '>
         <div className='container vh-100'>
           <div className='col-sm-8 offset-sm-2  col-lg-6 offset-lg-3 text-center'>
-            <div className='logo '>
-              {/* <img className="w-25 h-25" src="/images/1218776_company_logo_apple_ipad_iphone_icon.png"/> */}
-            </div>
+            
             <form
-              className=' shadow p-5 w-100 mt-5'
-              style={{ backgroundColor: 'white' }}
+              className=' shadow p-5 w-100 bg-white mt-5'
+           
             >
-              <h1 className='mb-2 text-white rounded   '>
+              <h1 className='mb-2 text-white rounded'>
                 Register Here !
               </h1>
 
@@ -67,7 +65,7 @@ function RegisterUser() {
                   name='name'
                   value={name}
                   onChange={onInputChange}
-                  className='form-control mt-2 w-75 border-warning '
+                  className='form-control mt-2  border-warning '
                   style={{ height: '40px' }}
                 />
                 <label htmlFor='floatingPassword'>
@@ -83,7 +81,7 @@ function RegisterUser() {
                   name='email'
                   value={email}
                   onChange={onInputChange}
-                  className='form-control mt-2 w-75 border-warning'
+                  className='form-control mt-2  border-warning'
                   style={{ height: '40px' }}
                 />
                 <label htmlFor='floatingInput'>
@@ -98,7 +96,7 @@ function RegisterUser() {
                   name='password'
                   value={password}
                   onChange={onInputChange}
-                  className='form-control w-75 mt-2 border-warning'
+                  className='form-control  mt-2 border-warning'
                   style={{ height: '40px' }}
                 />
                 {/* <input type="password" className="form-control" id="floatingPassword" placeholder="Password"/> */}
@@ -121,7 +119,7 @@ function RegisterUser() {
                   name='cpassword'
                   value={cpassword}
                   onChange={onInputChange}
-                  className='form-control mt-2 w-75 border-warning'
+                  className='form-control mt-2  border-warning'
                   style={{ height: '40px' }}
                 />
                 <label htmlFor='floatingPassword'>
@@ -135,7 +133,7 @@ function RegisterUser() {
               <button
                 type='submit'
                 onClick={handleuser}
-                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-75 border-0 rounded-pill '
+                className='mt-4 font-weight-bold text-uppercase text-white text-bold shadow w-75 border-0 rounded-pill '
               >
                 {' '}
                 Signup

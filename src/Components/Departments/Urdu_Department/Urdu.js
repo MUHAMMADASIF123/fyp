@@ -2,18 +2,21 @@ import React from 'react';
 import './Urdu.css';
 function Urdu() {
   return (
-    <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Urdu Department
-      </h2>
+   <>
 
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+<div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/urdu_dpt_onjtap.jpg'
+            width='100%'
+            height='450x'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department Of Urdu
           </h4>
-          <p className=' head_p ms-3'>
+        <div className='justify-content-center me-5 ms-5'>
+        
+          <p className='ms-3 font-size-small me-5'>
             The department of Urdu literature has a mission to
             make the youth rational and sensible with above
             mentioned literary values. The coming generation is
@@ -35,22 +38,17 @@ function Urdu() {
             ages. To explore old and new horizons of Urdu
             literature pertaining to prose, poetry and
             criticism.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+          
           </p>
+          <a className='anchor_tag button_programs' href='Bschemistry'>
+              See Course Content Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035571/images/Departments/urdu_dpt_onjtap.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+      
+     
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Dr. Azadar Hussain Jawaz Jafri</b>
@@ -89,7 +87,7 @@ function Urdu() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 sol-sm-12'>
             <ul>
               <li>
                 <b>Dr. Ishfaq Ahmad Virk</b>
@@ -132,7 +130,7 @@ function Urdu() {
           </div>
         </div>
       </div>
-    </div>
+ </>
   );
 }
 

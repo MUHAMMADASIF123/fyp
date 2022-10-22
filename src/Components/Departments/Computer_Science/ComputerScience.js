@@ -2,18 +2,22 @@ import React from 'react';
 import './ComputerScience.css';
 function ComputerScience() {
   return (
+    <>
     <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Computer Science Department
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex justify-content-center me-5 ms-5 mb-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+    <img className=''
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035565/images/Departments/bscs_dpt_qxil9g.jpg'
+            width='100%'
+            height='400px'
+          />
+      </div>
+      <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of Computer Science
           </h4>
-          <p className='ms-3'>
+      <div className=' w-75 ms-5 me-5 m-auto'>
+      <div className='row'>
+        <div className='col-md-12   col-sm-12  mb-5 '>
+         
+          <p className='ms-3 font-size-small me-5'>
             The Department of Computer Sciences is to ensure that
             the students take maximum advantage of the modern
             computer sciences to solve a wide range of complex
@@ -23,11 +27,11 @@ function ComputerScience() {
             of computer so that they productively contribute to
             academia and industry.&nbsp;
             <br />
-            <a className='anchor_tag' href='Bscs'>
-              See Programe Detail
-            </a>
+          
           </p>
-
+          <a className='anchor_tag button_programs' href='Bscs'>
+              See Course Content  Details
+            </a>
           <ul>
             <li>
               <b> Mr. Ejaz Ahmad </b>
@@ -36,7 +40,8 @@ function ComputerScience() {
             </li>
             <hr />
             <li>
-              <b>Ms. Sadaf Siddiqi</b> <br />
+              <b>Ms. Sadaf Siddiqi</b>
+               <br />
               Assistant Professor. M.Phil.
             </li>
             <hr />
@@ -48,15 +53,10 @@ function ComputerScience() {
             <hr />
           </ul>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035565/images/Departments/bscs_dpt_qxil9g.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
+       
       </div>
-    </div>
+      </div>
+      </>
   );
 }
 

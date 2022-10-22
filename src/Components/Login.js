@@ -52,7 +52,7 @@ function Login() {
         <div className='container '>
           <div className='col-sm-8 offset-sm-2  col-lg-6 offset-lg-3 text-center mt-5 vh-100'>
             <form
-              className='shadow p-5 mt-5 w-100 rounded-top'
+              className='shadow p-5 mt-5 w-100 rounded'
               style={{ backgroundColor: 'white' }}
             >
               <h3 className='text-white fw-bolder fs-4 rounded  w-100 mb-2'>
@@ -61,7 +61,7 @@ function Login() {
               <div className='fw-normal text-black fw-bold mb-4'>
                 New here ?{' '}
                 <a
-                  href='#'
+                  href='/registeruser'
                   className='text-decoration-none text-warning fw-bolder'
                 >
                   create a account
@@ -76,7 +76,7 @@ function Login() {
                   name='email'
                   value={email}
                   onChange={onInputChange}
-                  className='form-control w-75 text-center mt-2 border-warning'
+                  className='form-control  text-center mt-2 border-warning'
                 />
                 <label htmlFor='floatingInput'>
                   Email address
@@ -92,7 +92,7 @@ function Login() {
                   name='password'
                   value={password}
                   onChange={onInputChange}
-                  className='form-control w-75 text-center mt-2 border-warning'
+                  className='form-control text-center mt-2 border-warning'
                 />
                 <label htmlFor='floatingPassword'>
                   Password
@@ -101,7 +101,7 @@ function Login() {
               <div className='mt-2 text-end'>
                 <a
                   href='#'
-                  className='fw-bold text-primary text-decoration-none me-5 text-warning '
+                  className='fw-bold text-primary text-decoration-none text-warning '
                 >
                   {' '}
                   Forget password ?
@@ -111,7 +111,7 @@ function Login() {
               <button
                 type='submit'
                 onClick={handleuser}
-                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-75 border-0 rounded-pill '
+                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-75  login border-0 rounded-pill '
               >
                 {' '}
                 Login

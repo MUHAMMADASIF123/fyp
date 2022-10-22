@@ -2,18 +2,21 @@ import React from 'react';
 import './Administration.css';
 
 function Administration() {
-  return (
+  return (<>
     <div className='divbg'>
       <h3 className=' container rounded mt-3'>
         Administration Management
       </h3>
-      <div className='d-flex justify-content-center mt-0 me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+      
+      </div>
+        <div className='container mb-2'>
+        <div className='row'>
+        <div className='col-md-6 admins_card  col-sm-12 shadow rounded bg-white   '>
           <h3 className='rounded'>
             College Management Committee
           </h3>
           <hr />
-          <ul>
+          <ul >
             <li>
               {' '}
               Prof. Dr. Mian Muhammad Akram (Principal) <br />
@@ -76,9 +79,10 @@ function Administration() {
             </li>
             <hr />
           </ul>
+      
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white  '>
-          <ul>
+        <div className='col-md-6 admins_card ms-2 col-sm-12 shadow rounded bg-white  '>
+          <ul className=''>
             <li>
               <p>
                 <b> Principal:</b> &nbsp; Prof. Dr. Mian Muhammad
@@ -156,12 +160,13 @@ function Administration() {
             <hr />
           </ul>
         </div>
+      
       </div>
-      <div>
-
-        
-        <div className='d-flex justify-content-center  mt-5 me-5 ms-5 p-5'>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+        </div>
+    
+        <div className='container mb-2'>
+          <div className='row'>
+          <div className='col-md-6 admins_card  col-sm-12 shadow rounded bg-white'>
             <h3 className='rounded'>Registrar Office</h3>
             <hr />
             <ul>
@@ -195,7 +200,7 @@ function Administration() {
               <hr />
             </ul>
           </div>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+          <div className='col-md-6 admins_card ms-2  col-sm-12 shadow rounded bg-white'>
             <h3 className='rounded'>Admission Board </h3>
             <hr />
             <ul>
@@ -226,11 +231,14 @@ function Administration() {
               <hr />
             </ul>
           </div>
+          </div>
         </div>
-      </div>
-      <div>
-        <div className='d-flex justify-content-center  mt-5 me-5 ms-5 p-5'>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+       
+      
+      <div className='container mb-2'>
+        <div className='row'>
+        
+          <div className='col-md-6 admins_card  col-sm-12 shadow rounded bg-white '>
             <h3 className='rounded'>
               Controller Examination Offfice (Intermediate)
             </h3>
@@ -270,7 +278,7 @@ function Administration() {
               <hr />
             </ul>
           </div>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+          <div className='col-md-6 admins_card ms-2  col-sm-12 shadow rounded bg-white'>
             <h3 className='rounded'>Cleanliness Committee: </h3>
             <hr />
             <ul>
@@ -311,9 +319,10 @@ function Administration() {
           </div>
         </div>
       </div>
-      <div>
-        <div className='d-flex justify-content-center  mt-5 me-5 ms-5 p-5'>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+      <div className='container mb-2'>
+        <div className='row'>
+        
+          <div className='col-md-6 admins_card  col-sm-12 shadow rounded bg-white'>
             <h3 className='rounded'>
               College Disipline Commottee
             </h3>
@@ -346,7 +355,7 @@ function Administration() {
               <hr />
             </ul>
           </div>
-          <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+          <div className='col-md-6 admins_card ms-2 col-sm-12 shadow rounded bg-white'>
             <h3 className='rounded'>Proctorial Board: </h3>
             <hr />
             <ul>
@@ -381,9 +390,11 @@ function Administration() {
               <hr />
             </ul>
           </div>
+          </div>
         </div>
-      </div>
-    </div>
+      
+      </>
+    
   );
 }
 

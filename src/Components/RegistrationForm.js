@@ -74,7 +74,7 @@ function RegistrationForm() {
   return (
     <div>
       <div className='mt-5  wraper  '>
-        <div className='container '>
+        <div className='container mb-5 '>
           <div className=' text-center '>
             <h1 className='rounded'>
               Government Graduate Science College Wahdat Road
@@ -1045,7 +1045,7 @@ function RegistrationForm() {
               <button
                 type='submit'
                 onClick={handleSubmit}
-                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-25 border-0 rounded-pill'
+                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-50 text-white border-0 rounded-pill'
               >
                 Submit
               </button>

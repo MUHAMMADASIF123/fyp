@@ -1,3 +1,14 @@
-.divbg {
-  /* background-color: #ebf0f4; */
+.container>.row > .admins_card{
+  width: 566px;
+  margin-bottom: 10px;
+} 
+
+@media screen and (max-width: 1024px)
+{
+  .container>.row > .admins_card{
+    width: 700px;
+    /* margin: auto; */
+    margin-bottom: 10px;
+  }
+ 
 }

@@ -30,11 +30,17 @@
   margin-bottom: 110px;
   width: 500px;
 }
-.head {
-  width: 310px;
-  height: 35px;
+.button_programs{
+  /* background-color: orange; */
+  margin-top: 10px;
+  border-radius: 12px;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  border: 2px solid white;
+  color: aliceblue;
+  background-color: cadetblue;
 }
-
-.waddi_div {
-  height: 475px;
+.button_programs:hover {
+  color:#ffdd40;
 }

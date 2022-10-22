@@ -16,8 +16,7 @@
   font-weight: bolder;
 }
 .button_programs {
-  margin-left: 15px;
-  padding: 4px 20px;
+
   /* background-color: orange; */
   border-radius: 12px;
   border: none;
@@ -28,7 +27,7 @@
   background-color: cadetblue;
 }
 .button_programs:hover {
-  color: brown;
+  color:#ffdd40;
 }
 .programs1 {
   border-radius: 100px;
@@ -68,7 +67,7 @@
   color: aliceblue;
 }
 .bsdept a:hover {
-  color: brown;
+  color: #ffdd40;;
 }
 
 .dept_container {
@@ -97,6 +96,9 @@
   color: blue;
   /* margin-right: 140px; */
   margin-left: 25px;
+}
+.card-img-top{
+  height: 320px;
 }
 
 /* media query for mobile */

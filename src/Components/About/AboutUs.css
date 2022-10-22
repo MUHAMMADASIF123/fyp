@@ -2,3 +2,72 @@
   background-color: #172540;
   color: white;
 }
+@media (min-width:375px)
+{
+  .principle{
+    width: 360px;
+    height: 400px;
+    margin-top: 8px;
+
+  }
+  .about_img{
+    width: 360px;
+    height: 400px;
+    margin-top: 8px;
+
+  }
+
+}
+
+@media (min-width: 576px) {
+
+  .principle{
+    width: 375px;
+    height: 400px;
+    margin-top: 8px;
+
+  }
+  .about_img{
+    width: 450px;
+    height: 400px;
+    margin-top: 8px;
+
+  }
+}
+
+
+
+@media (min-width: 768px) { 
+
+.principle{
+  width: 340px;
+  height: 570px;
+  margin-top: 10px
+}
+p{
+  font-size: small;
+}
+.about_img{
+  width: 340px;
+  height: 400px;
+  margin-top: 10px
+}
+
+ }
+ @media (min-width: 992px) { 
+
+  .principle{
+    width: 400px;
+    height: 400px;
+    margin-top: 10px
+  }
+  p{
+    font-size: medium;
+  }
+  .about_img{
+    width: 400px;
+    height: 600px;
+    margin-top: 10px
+  }
+  
+   }

@@ -27,12 +27,12 @@ const ContactUs = () => {
       );
   };
   return (
-    <div className='row d-flex justify-content-center  vh-100  '>
+    <div className=' d-flex justify-content-center '>
       <div className='col-md-6 mt-5 text-center mb-5 '>
         <form
           ref={form}
           onSubmit={sendEmail}
-          className=' shadow d-flex justify-content-center rounded mt-5 mb-5 h-75 bg-white'
+          className=' shadow d-flex justify-content-center rounded mt-5 mb-5  bg-white'
         >
           {/* <h1 className=''>Name</h1> */}
           <div className='w-75  '>
@@ -44,7 +44,7 @@ const ContactUs = () => {
               <input
                 type='text'
                 placeholder='Enter your name '
-                className=' w-75 text-center mt-2 rounded '
+                className=' w-75 text-center mt-2 rounded border-warning'
                 name='from_name'
               />
               {/* <label className='ms-0'>Email</label> */}
@@ -64,7 +64,7 @@ const ContactUs = () => {
                 name='message'
               />
               <button
-                className='mt-4 font-weight-bold text-uppercase text-bold shadow w-75 border-0 rounded-pill '
+                className='mt-4 font-weight-bold text-uppercase text-white text-bold shadow w-75 border-0 rounded-pill '
                 type='submit'
                 value='Send'
               >

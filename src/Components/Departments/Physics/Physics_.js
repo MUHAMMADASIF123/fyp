@@ -2,37 +2,36 @@ import React from 'react';
 import './Physics_.css';
 function Physics_() {
   return (
+    <>
     <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Physics Department
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035557/images/Departments/physics_dpt_e5cy22.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department of Physics
           </h4>
-          <p className=' head_p ms-3'>
+      {/* <div className=' head_p rounded shadow mb-5'> */}
+      
+        <div className='justify-content-center me-5 ms-5'>
+         
+          <p className='ms-3 font-size-small me-5'>
             The Department of Physics offers a full program of
             courses and research leading to the BS and M.Sc.
             degrees.&nbsp; <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+           
           </p>
+          <a className='anchor_tag button_programs' href='Bschemistry'>
+          See Course Content  Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035557/images/Departments/physics_dpt_e5cy22.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+        
+    
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b> Dr. Ejaz Ahmed</b>
@@ -71,7 +70,7 @@ function Physics_() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Saeed Ahmad Pal</b>
@@ -131,7 +130,7 @@ function Physics_() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

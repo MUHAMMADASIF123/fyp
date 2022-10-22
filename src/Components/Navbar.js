@@ -64,14 +64,14 @@ function NavBar() {
               </NavLink>
             </li>
           </ul>
-        <div className="me-2 rounded">
-              <button>
+        <div className="me-2 rounded ">
+              <button  className="button_programs" >
                 {' '}
                 <Link to={'/login'} className='me-2 rounded'>
                   SignIn
                 </Link>
               </button>
-              <button>
+              <button className="button_programs">
                 <Link to={'/apply'} className='ms-2'>
                   {' '}
                   Apply

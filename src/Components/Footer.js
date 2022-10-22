@@ -56,9 +56,10 @@ function Footer() {
           </div>
         </div>
       </footer>
-      <div className='text-white copyright'>
-        All &copy; Right Reserved By Government Graduate college
-        Science | GCS
+      <div className='text-white copyright m-auto'>
+        <span>  All &copy; Right Reserved By Government Graduate college
+        Science | GCS</span>
+       
       </div>
     </>
   )

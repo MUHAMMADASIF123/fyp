@@ -105,14 +105,23 @@ button a {
 
   /* background-color: none; */
 }
-button a:hover{
-  color:#172534;
+
+
+.button_programs{
+  /* margin-left: 15px;  */
+  margin: 0px 2px;
+  padding: 4px 8px; 
+   /* background-color: orange;  */
+   border-radius: 12px; 
+   border: none;
+  text-decoration: none;
+  font-weight: bold;
+   border: 2px solid white;
+  color: aliceblue;
+  background-color: cadetblue;
 }
-button{
-  color: #172534;
-  margin-right: 2px;
-  border-radius: 13px;
-  /* margin-left: 10px; */
+.button_programs a:hover{
+  color:#ffdd40;
 }
 
 

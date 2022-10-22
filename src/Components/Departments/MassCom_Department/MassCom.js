@@ -2,18 +2,22 @@ import React from 'react';
 import './MassCom.css';
 function MassCom() {
   return (
-    <div className='vh-100'>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Mass Communication Department
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex justify-content-center me-5 ms-5 mb-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+    <>
+ <div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035549/images/Departments/ms_dpt_r0imnf.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+        Department of Mass Communication
           </h4>
-          <p className='paragraph ms-3'>
+      {/* <div className=' head_p rounded shadow mb-5'> */}
+      
+        <div className='justify-content-center me-5 ms-5'>
+        
+          <p className='ms-3 font-size-small me-5'>
             Mass communication is a process in which a person,
             group of people, or an organization sends a message
             through a channel of communication to a large group
@@ -23,10 +27,14 @@ function MassCom() {
             and To persuade.
           </p>
 
-          <a className='anchor_tag' href='/'>
-            See Programe Detail
-          </a>
+          <a className='anchor_tag button_programs' href='BsMass_Communication'>
+          See Course Content  Details
+            </a>
+          </div>
 
+          <div className='container mb-5 mt-5'>
+        <div className='row '>
+          <div className='col-md-6 col-sm-12'>
           <ul className='mt-4'>
             <li>
               <b>Mr. Shafayat Ali</b> <br />
@@ -41,16 +49,16 @@ function MassCom() {
             </li>
             <hr />
           </ul>
-        </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035549/images/Departments/ms_dpt_r0imnf.jpg'
-            width='600px'
-            height='400px'
-          />
+    
+          </div>
+        
         </div>
       </div>
-    </div>
+
+     
+       
+     
+      </>
   );
 }
 

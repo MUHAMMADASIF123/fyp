@@ -2,39 +2,37 @@ import React from 'react';
 import './Statistics.css';
 function Statistics() {
   return (
-    <div>
-      <h2 className=' container mb-5 rounded mt-3'>
-        Statistics Department
-      </h2>
-
-      {/* <div className=' head_p rounded shadow mb-5'> */}
-      <div className='d-flex waddi_div justify-content-center me-5 ms-5'>
-        <div className=' heading mb-5'>
-          <h4 className='head ms-3 me-3 rounded'>
-            Introduction of Department
+    <>
+   
+   <div>
+          <img
+            src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Departments/statistic_dpt_xlsbgy.jpg'
+            width='100%'
+            height='450px'
+          />
+        </div>
+        <h4 className='custom_heading  w-50 m-auto mt-2 rounded'>
+            Department Of Statistics
           </h4>
-          <p className=' head_p ms-3'>
+        <div className='justify-content-center me-5 ms-5'>
+          
+          <p className='ms-3 font-size-small me-5'>
             Introduction to Statistics - Basic descriptive and
             inferential statistics. Emphasis on becoming a smart
             consumer of statistics . Will include the study of
             examples of statistics in the medical news.&nbsp;{' '}
             <br />
-            <a className='anchor_tag' href='Bschemistry'>
-              See Programe Detail
-            </a>
+          
           </p>
+          <a className='anchor_tag button_programs ' href='Bsstatistics'>
+              See Course Content Details
+            </a>
         </div>
-        <div>
-          <img
-            src='https://res.cloudinary.com/azeem413/image/upload/v1664035574/images/Departments/statistic_dpt_xlsbgy.jpg'
-            width='600px'
-            height='400px'
-          />
-        </div>
-      </div>
+      
+     
       <div className='container mb-5 mt-5'>
         <div className='row '>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Muhammad Bajwa</b>
@@ -61,7 +59,7 @@ function Statistics() {
               <hr />
             </ul>
           </div>
-          <div className='col-6'>
+          <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
                 <b>Mr. Muhammad Zahid Rasheed</b>
@@ -93,7 +91,7 @@ function Statistics() {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

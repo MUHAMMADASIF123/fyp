@@ -24,7 +24,7 @@ function Statistics() {
             <br />
           
           </p>
-          <a className='anchor_tag button_programs ' href='Bsstatistics'>
+          <a className='anchor_tag button_programs ' href='BsStatistic'>
               See Course Content Details
             </a>
         </div>

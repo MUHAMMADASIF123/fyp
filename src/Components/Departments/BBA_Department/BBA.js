@@ -29,7 +29,7 @@ function BBA() {
             working for them or studying further.
           </p>
 </div>
-<a className='anchor_tag button_programs' href='Bschemistry'>
+<a className='anchor_tag button_programs' href='BBA_'>
 See Course Content  Details
           </a>
 <div className='container'>

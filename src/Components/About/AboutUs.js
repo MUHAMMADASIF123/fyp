@@ -7,10 +7,10 @@ function AboutUs() {
       <h1 className='rounded'>About Us</h1>
       <hr />
          </div>
-         <div>
+         <div className='vediomsg'>
          <video controls autoplay>
-  <source src="movie.mp4" type="video/mp4"/>
-  {/* <source src="movie.ogg" type="video/ogg"> */}
+  <source src="vedios/Principalmsg.mp4" type="video/mp4"/>
+ 
   Your browser does not support the video tag.
 </video>
 </div>

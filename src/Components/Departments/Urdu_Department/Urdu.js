@@ -40,7 +40,7 @@ function Urdu() {
             criticism.&nbsp; <br />
           
           </p>
-          <a className='anchor_tag button_programs' href='Bschemistry'>
+          <a className='anchor_tag button_programs' href='BsUrdu'>
               See Course Content Details
             </a>
         </div>

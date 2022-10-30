@@ -3,10 +3,11 @@ import './Bschemistry.css';
 
 function Bschemistry() {
   return (
-    <div>
-      <div className='d-flex justify-content-center mt-5 me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
-          <h2 className='rounded'>
+    <>
+    <div className='container mt-2'>
+      <div className='row'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+        <h2 className='rounded'>
             Bachelor of Science in Chemisty (Hons)
           </h2>
           <hr />
@@ -27,8 +28,9 @@ function Bschemistry() {
             Grade 4 in the last research assessment.
           </p>
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h3 className='rounded'>Eligibility Criteria</h3>
+      
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h3 className='rounded'>Eligibility Criteria</h3>
           <hr />
           <ul>
             <li>
@@ -44,12 +46,13 @@ function Bschemistry() {
           </ul>
           <h4 className='paragraph rounded'>Available Seats </h4>
           <hr />
-          Only 50 seats are Available for this Program.
+          Only 100 seats are Available for this Program.
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>1st Semester</h2>
+       
+          </div>
+          <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+        <h2 className='rounded'>1st Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -100,8 +103,8 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
-        </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+          </div>
+          <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
           <h2 className='rounded'>2nd Semester</h2>
           <hr />
           <table className='table'>
@@ -153,11 +156,11 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
+          </div>
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>3rd Semester</h2>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>3rd Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -205,9 +208,10 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>4th Semester</h2>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>4th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -258,11 +262,13 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>5th Semester</h2>
+
+        </div>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>5th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -303,9 +309,10 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>6th Semester</h2>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>6th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -346,11 +353,12 @@ function Bschemistry() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>7th Semester</h2>
+        </div>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>7th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -394,111 +402,13 @@ function Bschemistry() {
                 <td>Physical Chemistry (Sp. Practical) </td>
                 <td>2</td>
               </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>CHEM-408 </td>
-                <td>Inorganic Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>CHEM-406 </td>
-                <td>Inorganic Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-407</td>
-                <td>Inorganic Chemistry (Sp. Theory-II) </td>
-                <td>4</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-409 </td>
-                <td>Organic Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-410</td>
-                <td>Organic Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-411</td>
-                <td>Organic Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-412 </td>
-                <td>Analytical Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-413</td>
-                <td>Analytical Chemistry (Sp. Theory-II) </td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-414</td>
-                <td>Analytical Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-415</td>
-                <td>Applied Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-416</td>
-                <td>Applied Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-417</td>
-                <td>Applied Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-418 </td>
-                <td>Bio Chemistry (Sp. Theory-I)</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-419</td>
-                <td>Bio Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-421</td>
-                <td>Bio Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
+      
             </tbody>
           </table>
+        
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>8th Semester</h2>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>8th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -542,111 +452,14 @@ function Bschemistry() {
                 <td>Physical Chemistry (Sp. Practical) </td>
                 <td>2</td>
               </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>
-              <tr>
-                <td>CHEM-425 </td>
-                <td>Inorganic Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr>
-                <td>CHEM-426 </td>
-                <td>Inorganic Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-427</td>
-                <td>Inorganic Chemistry (Sp. Theory-II) </td>
-                <td>4</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-428 </td>
-                <td>Organic Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-429</td>
-                <td>Organic Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-430</td>
-                <td>Organic Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-431 </td>
-                <td>Analytical Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-432</td>
-                <td>Analytical Chemistry (Sp. Theory-II) </td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-433</td>
-                <td>Analytical Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-434</td>
-                <td>Applied Chemistry (Sp. Theory-I) </td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-435</td>
-                <td>Applied Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-436</td>
-                <td>Applied Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
-              <tr className='option_css'>
-                <td>-</td>
-                <td>OR </td>
-                <td>-</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-437 </td>
-                <td>Bio Chemistry (Sp. Theory-I)</td>
-                <td>4</td>
-              </tr>
-              <tr>
-                <td>CHEM-438</td>
-                <td>Bio Chemistry (Sp. Theory-II)</td>
-                <td>4</td>
-              </tr>{' '}
-              <tr>
-                <td>CHEM-439</td>
-                <td>Bio Chemistry (Sp. Practical) </td>
-                <td>2</td>
-              </tr>
+   
             </tbody>
           </table>
+        
+        </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }
 

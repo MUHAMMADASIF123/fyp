@@ -9,7 +9,7 @@ function AboutUs() {
          </div>
          <div className='vediomsg'>
          <video controls autoplay>
-  <source src="vedios/Principalmsg.mp4" type="video/mp4"/>
+  <source src="vedios/Principalmsg.mp4" type="video/mp4" className='vediomsg'/>
  
   Your browser does not support the video tag.
 </video>

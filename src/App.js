@@ -2,9 +2,9 @@ import React from 'react'
 import './App.css'
 import { Route, Routes, Redirect } from 'react-router-dom'
 
-
 import RegisterUser from './Components/RegisterUser'
 import Login from './Components/Login'
+import Admin_Login from './Components/Admin_side/Admin_Login'
 import ContactUs from './Components/ContactUs'
 import AboutUs from './Components/About/AboutUs'
 import Administration from './Components/Administration'
@@ -49,28 +49,24 @@ import English from './Components/Departments/English_Department/English'
 import Urdu from './Components/Departments/Urdu_Department/Urdu'
 import Statistics from './Components/Departments/Statistics_Department/Statistics'
 import PoliticalScience from './Components/Departments/PoliticalScience_Department/PoliticalScience'
-import Admin from './Components/Admin_side/Admin'
+// import AdminLogin from './Components/Admin_side/Login/AdminLogin'
 
 import StudentView from './Components/Student/StudentView'
 import Studentprofile from './Components/Student/StudentProfile'
-import Navbar from './Components/Navbar';
-
+import Navbar from './Components/Navbar'
 
 function App() {
   return (
     <div className='App'>
-    
-      <Navbar/>
+      <Navbar />
       <Routes>
-   
-        
         <Route path='/' element={<Home />} />
-        
+
         <Route path='/registeruser' element={<RegisterUser />} />
         <Route path='/login' element={<Login />} />
         <Route path='/contactUs' element={<ContactUs />} />
         <Route path='/AboutUs' element={<AboutUs />} />
-        <Route path='/Admin' element={<Admin />} />
+        {/* <Route path='/Admin' element={<Admin />} /> */}
         {/* <Route path='/navbar' element={<Navbar />} /> */}
         <Route
           path='/Administration'
@@ -122,7 +118,7 @@ function App() {
         <Route path='/Education' element={<Education />} />
         <Route path='/Urdu' element={<Urdu />} />
         <Route path='/English' element={<English />} />
-        <Route path='/Admin' element={<Admin />} />
+        {/* <Route path='/Admin' element={<Admin />} /> */}
         <Route
           path='/StudentView/:id'
           element={<StudentView />}
@@ -137,7 +133,7 @@ function App() {
         />
         <Route path='/Statistics' element={<Statistics />} />
 
-        {/* <Route path='/footer' element={<Footer/>}/> */}
+        <Route path='/adminlogin' element={<Admin_Login />} />
       </Routes>
       {/* <Redirect to='/' /> */}
       <Footer />

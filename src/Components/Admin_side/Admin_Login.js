@@ -2,15 +2,15 @@ import React, { useState } from 'react'
 // import uniqid from "uniqid";
 
 import axios from 'axios'
-import './Login.css'
+import './Admin_Login.css'
 // import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom'
 
 //config
-import BASE_URL from '../config/url'
+// import BASE_URL from '../config/url'
 //
 
-function Login() {
+function Admin_Login() {
   const history = useNavigate()
   const [user, setUser] = useState({
     email: '',
@@ -39,7 +39,7 @@ function Login() {
         // console.log(res.data.result);
         // alert(JSON.stringify(res.data))
         alert(res.data.message)
-        history('/')
+        history('/admin')
       })
       .catch((err) => {
         console.log(err)
@@ -124,4 +124,4 @@ function Login() {
   )
 }
 
-export default Login
+export default Admin_Login

@@ -1,5 +1,5 @@
-import React from 'react';
-import './Bscs.css';
+import React from 'react'
+import './Bscs.css'
 
 function BSCS() {
   return (
@@ -439,7 +439,7 @@ function BSCS() {
         </div>
       </div>
     </div>
-  );
+  )
 }
 
-export default BSCS;
+export default BSCS

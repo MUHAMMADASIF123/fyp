@@ -1,10 +1,10 @@
-import React, { useState } from 'react';
-import uniqid from 'uniqid';
-import axios from 'axios';
-import { useNavigate } from 'react-router-dom';
+import React, { useState } from 'react'
+import uniqid from 'uniqid'
+import axios from 'axios'
+import { useNavigate } from 'react-router-dom'
 
 //config
-import BASE_URL from '../config/url';
+import BASE_URL from '../config/url'
 
 function RegisterUser() {
   const [user, setUser] = useState({
@@ -12,13 +12,13 @@ function RegisterUser() {
     email: '',
     password: '',
     cpassword: '',
-  });
+  })
 
-  const history = useNavigate();
-  const { name, email, password, cpassword } = user;
+  const history = useNavigate()
+  const { name, email, password, cpassword } = user
   const onInputChange = (e) => {
-    setUser({ ...user, [e.target.name]: e.target.value });
-  };
+    setUser({ ...user, [e.target.name]: e.target.value })
+  }
 
   const handleuser = async (e) => {
     var users = {
@@ -26,32 +26,28 @@ function RegisterUser() {
       email: email,
       password: password,
       cpassword: cpassword,
-    };
-    console.log(users);
-    e.preventDefault();
+    }
+    console.log(users)
+    e.preventDefault()
     await axios
       .post(`${BASE_URL}/api/student/register`, users)
       .then((res) => {
-        alert(res.data);
+        alert(res.data)
         // console.log(res.data)
-        history('/login');
+        history('/login')
       })
       .catch((err) => {
-        console.log(err);
-        alert(err.response.data.message);
-      });
-  };
+        console.log(err)
+        alert(err.response.data.message)
+      })
+  }
 
   return (
     <div>
       <section className='mt-5 wraper '>
         <div className='container vh-100'>
           <div className='col-sm-8 offset-sm-2  col-lg-6 offset-lg-3 text-center'>
-            
-            <form
-              className=' shadow p-5 w-100 bg-white mt-5'
-           
-            >
+            <form className=' shadow p-5 w-100 bg-white mt-5'>
               <h1 className='mb-2 text-white rounded'>
                 Register Here !
               </h1>
@@ -136,14 +132,14 @@ function RegisterUser() {
                 className='mt-4 font-weight-bold text-uppercase text-white text-bold shadow w-75 border-0 rounded-pill '
               >
                 {' '}
-                Signup
+                Sign up
               </button>
             </form>
           </div>
         </div>
       </section>
     </div>
-  );
+  )
 }
 
-export default RegisterUser;
+export default RegisterUser

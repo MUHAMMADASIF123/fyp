@@ -26,23 +26,23 @@ function Footer() {
                 Information
               </h1>
               {/* GCS Wahdat Road,Lahore  */}
-              <h6 class='align-baseline me-4 text-white'>
-                <i class='fa-solid fa-location-dot text-warning me-2'></i>
+              <h6 className='align-baseline me-4 text-white'>
+                <i className='fa-solid fa-location-dot text-warning me-2'></i>
                 GCS Wahdat Road,Lahore{' '}
               </h6>
-              <h6 class='align-baseline text-white'>
+              <h6 className='align-baseline text-white'>
                 <i className='fa-solid fa-phone text-warning me-2'></i>
                 Phone No +42-99260039-40{' '}
               </h6>
-              <h6 class='align-baseline me-5 text-white'>
+              <h6 className='align-baseline me-5 text-white'>
                 <i className='fa-solid fa-envelope text-warning me-2'></i>{' '}
                 Email:abc@gmail.com
               </h6>
             </div>
             <div className='icons '>
-              <i class='fa-brands fa-facebook'></i>
-              <i class='fa-brands fa-instagram'></i>
-              <i class='fa-brands fa-twitter'></i>
+              <i className='fa-brands fa-facebook'></i>
+              <i className='fa-brands fa-instagram'></i>
+              <i className='fa-brands fa-twitter'></i>
             </div>
           </div>
           <div className='col-lg-4  col-md-4 col-sm-12 '>
@@ -57,9 +57,11 @@ function Footer() {
         </div>
       </footer>
       <div className='text-white copyright m-auto'>
-        <span>  All &copy; Right Reserved By Government Graduate college
-        Science | GCS</span>
-       
+        <span>
+          {' '}
+          All &copy; Right Reserved By Government Graduate
+          college Science | GCS
+        </span>
       </div>
     </>
   )

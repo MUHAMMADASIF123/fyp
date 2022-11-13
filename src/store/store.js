@@ -15,7 +15,7 @@ const removeUserFromLocalStorage = () => {
   localStorage.removeItem('token')
 }
 
-const baseURL = 'http://localhost:5000'
+const baseURL = 'http://localhost:5000/api/'
 
 let store = (set) => ({
   token: token,
@@ -27,7 +27,7 @@ let store = (set) => ({
   adminLogin: async (data) => {
     try {
       const response = await axios.post(
-        `${baseURL}/api/admin/login`,
+        `${baseURL}admin/login`,
         data
       )
       console.log(response)
@@ -50,7 +50,7 @@ let store = (set) => ({
   adminRegister: async (data) => {
     try {
       const response = await axios.post(
-        `${baseURL}/api/admin/add`,
+        `${baseURL}admin/add`,
         data
       )
       cogoToast.success(response.data.message)
@@ -66,7 +66,7 @@ let store = (set) => ({
   studentSubmitForm: async (data) => {
     try {
       const response = await axios.post(
-        `${baseURL}/api/student/submit/application`,
+        `${baseURL}student/submit/application`,
         data
       )
       cogoToast.success(response.data.message)
@@ -76,20 +76,19 @@ let store = (set) => ({
       })
     }
   },
-  adminFetchQueryApplications: async (data = {}) => {
+  adminFetchQueryApplications: async (query) => {
     try {
-      console.log(data)
-      const response = await axios.get(
-        `${baseURL}/api/admin/fetch/applications/query`,
-        { params: data }
+      const { data } = await axios.get(
+        `${baseURL}admin/fetch/query/applications`,
+        { params: query }
       )
-      console.log(response.data)
-      cogoToast.success(response?.data?.message, {
+      console.log(data)
+      cogoToast.success(data?.message, {
         position: 'top-right',
       })
       set((state) => ({
         ...state,
-        forms: response.data.applications,
+        forms: data.applications,
       }))
     } catch (error) {
       cogoToast.error(`${error?.response?.data?.message}`, {
@@ -100,15 +99,15 @@ let store = (set) => ({
 
   adminFetchApplications: async () => {
     try {
-      const response = await axios.get(
-        `${baseURL}/api/admin/fetch/applications`
+      const { data } = await axios.get(
+        `${baseURL}admin/fetch/applications`
       )
-      cogoToast.success(response?.data?.message, {
+      cogoToast.success(data?.message, {
         position: 'top-right',
       })
       set((state) => ({
         ...state,
-        forms: response.data.applications,
+        forms: data.applications,
       }))
     } catch (error) {
       cogoToast.error(
@@ -124,7 +123,7 @@ let store = (set) => ({
   adminFetchApplicationById: async (id) => {
     try {
       const response = await axios.get(
-        `${baseURL}/api/admin/fetch/application/${id}`
+        `${baseURL}admin/fetch/application/${id}`
       )
       cogoToast.success(response?.data?.message, {
         position: 'top-right',

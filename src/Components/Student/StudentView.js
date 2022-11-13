@@ -5,6 +5,7 @@ import useStore from '../../store/store'
 const StudentView = () => {
   const params = useParams()
   const form = useStore((state) => state.form)
+  console.log(form)
   const adminFetchApplicationById = useStore(
     (state) => state.adminFetchApplicationById
   )
@@ -30,7 +31,7 @@ const StudentView = () => {
                   <div className='col-md-4'>
                     <div className='input-group mb-3'>
                       <div className='input-group-prepend'>
-                        <h6>Applied For: {form.program_list}</h6>
+                        <h6>Applied For: {form.list}</h6>
                       </div>
                     </div>
                   </div>

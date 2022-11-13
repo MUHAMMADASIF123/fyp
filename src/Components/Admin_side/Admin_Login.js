@@ -7,7 +7,7 @@ import './Admin_Login.css'
 import { useNavigate } from 'react-router-dom'
 
 //config
-// import BASE_URL from '../config/url'
+import BASE_URL from '../../config/url'
 //
 
 function Admin_Login() {

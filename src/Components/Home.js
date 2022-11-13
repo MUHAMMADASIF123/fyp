@@ -85,22 +85,22 @@ function Home() {
         <h1 className='rounded'>Programs</h1>
         <div className='row'>
           <div className='col-md-6 col-lg-3 col-sm-6 mb-2'>
-            <div class='card'>
+            <div className='card'>
               <img
-                class='card-img-top'
+                className='card-img-top'
                 src='https://res.cloudinary.com/azeem413/image/upload/v1664035583/images/interstdnt_jcsrv3.jpg'
                 alt='Card image cap'
               />
-              <div class='card-body'>
-                <h5 class='card-title text-white'>
+              <div className='card-body'>
+                <h5 className='card-title text-white'>
                   {' '}
                   Intermediate
                 </h5>
-                <p class='card-text '>
+                <p className='card-text '>
                   Done with Matrric? Now its time to move on to
                   the next phase of your journey of knowledge.
                 </p>
-                {/* <a href="#" class="btn btn-primary">Go somewhere</a> */}
+                {/* <a href="#" className"btn btn-primary">Go somewhere</a> */}
                 <a
                   href='/Intermediate'
                   className='button_programs'
@@ -111,15 +111,17 @@ function Home() {
             </div>
           </div>
           <div className='col-md-6 col-lg-3 col-sm-6 mb-2'>
-            <div class='card'>
+            <div className='card'>
               <img
-                class='card-img-top'
+                className='card-img-top'
                 src='https://res.cloudinary.com/azeem413/image/upload/v1664035545/images/bechlorimggirl_lfiell.jpg'
                 alt='Card image cap'
               />
-              <div class='card-body'>
-                <h5 class='card-title text-white'>Bechelors</h5>
-                <p class='card-text '>
+              <div className='card-body'>
+                <h5 className='card-title text-white'>
+                  Bechelors
+                </h5>
+                <p className='card-text '>
                   {' '}
                   Now its all upto you to choose wisely in which
                   field you have most interest and want to harn
@@ -135,17 +137,17 @@ function Home() {
             </div>
           </div>
           <div className='col-md-6 col-lg-3 col-sm-6 mb-2 '>
-            <div class='card'>
+            <div className='card'>
               <img
-                class='card-img-top'
+                className='card-img-top'
                 src='https://res.cloudinary.com/azeem413/image/upload/v1664035586/images/postgraduatepics_popj9n.jpg'
                 alt='Card image cap'
               />
-              <div class='card-body'>
-                <h5 class='card-title text-white'>
+              <div className='card-body'>
+                <h5 className='card-title text-white'>
                   Post Graduate
                 </h5>
-                <p class='card-text'>
+                <p className='card-text'>
                   Now its all upto you to choose wisely in which
                   field you have most interest and want to harn
                   your specifical skills.

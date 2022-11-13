@@ -8,6 +8,7 @@ import Admin_Login from './Components/Admin_side/Admin_Login'
 import ContactUs from './Components/ContactUs'
 import AboutUs from './Components/About/AboutUs'
 import Administration from './Components/Administration'
+import Admin from './Components/Admin_side/Admin'
 
 import RegistrationForm from './Components/RegistrationForm'
 import Home from './Components/Home'
@@ -118,7 +119,7 @@ function App() {
         <Route path='/Education' element={<Education />} />
         <Route path='/Urdu' element={<Urdu />} />
         <Route path='/English' element={<English />} />
-        {/* <Route path='/Admin' element={<Admin />} /> */}
+        <Route path='/Admin' element={<Admin />} />
         <Route
           path='/StudentView/:id'
           element={<StudentView />}

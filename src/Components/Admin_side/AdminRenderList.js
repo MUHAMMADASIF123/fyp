@@ -21,12 +21,11 @@ const AdminRenderList = () => {
             </tbody>
           </table>
           {forms.map((form, index) => {
-            // console.log(form[0])
             return (
               <table className='table' key={index}>
                 <tbody>
                   <tr>
-                    <td>{index}</td>
+                    <td>{index + 1}</td>
                     <td>{form.student_name}</td>
                     <td>{form.father_name}</td>
                     {form.program === 'intermediate' && (

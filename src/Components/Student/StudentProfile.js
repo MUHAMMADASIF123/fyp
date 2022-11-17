@@ -39,6 +39,7 @@ function Studentprofile() {
         console.log(err);
       });
   };
+  
 
   return (
     <div>

@@ -4,7 +4,7 @@ import { Route, Routes, Redirect } from 'react-router-dom'
 
 import RegisterUser from './Components/RegisterUser'
 import Login from './Components/Login'
-import Admin_Login from './Components/Admin_side/Admin_Login'
+import AdminLogin from './Components/Admin_side/AdminLogin'
 import ContactUs from './Components/ContactUs'
 import AboutUs from './Components/About/AboutUs'
 import Administration from './Components/Administration'
@@ -29,7 +29,7 @@ import BsEducation from './Components/Programs/Bechelor/Bs_Education/BsEducation
 import BsMath from './Components/Programs/Bechelor/Bs_Math/BsMath'
 import BBA_ from './Components/Programs/Bechelor/BBA/BBA_'
 import BsEnglish from './Components/Programs/Bechelor/Bs_English/BsEnglish'
-import AdminLogin from './Components/Admin_side/AdminLogin'
+
 import BsSociology from './Components/Programs/Bechelor/Bs_Sociology/BsSociology'
 import BsEconomics from './Components/Programs/Bechelor/Bs_Economics/BsEconomics'
 import BsMass_Communication from './Components/Programs/Bechelor/Bs_Mass_Communication/BsMass_Communication'
@@ -50,7 +50,6 @@ import English from './Components/Departments/English_Department/English'
 import Urdu from './Components/Departments/Urdu_Department/Urdu'
 import Statistics from './Components/Departments/Statistics_Department/Statistics'
 import PoliticalScience from './Components/Departments/PoliticalScience_Department/PoliticalScience'
-// import AdminLogin from './Components/Admin_side/Login/AdminLogin'
 
 import StudentView from './Components/Student/StudentView'
 import Studentprofile from './Components/Student/StudentProfile'
@@ -134,7 +133,7 @@ function App() {
         />
         <Route path='/Statistics' element={<Statistics />} />
 
-        <Route path='/adminlogin' element={<Admin_Login />} />
+        <Route path='/adminlogin' element={<AdminLogin />} />
       </Routes>
       {/* <Redirect to='/' /> */}
       <Footer />

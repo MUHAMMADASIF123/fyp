@@ -24,26 +24,26 @@ let store = (set) => ({
   rentings: [],
   form: {},
   forms: [],
-  adminLogin: async (data) => {
+  adminLogin: async (loginData) => {
     try {
-      const response = await axios.post(
+      console.log(loginData)
+      const {data} = await axios.post(
         `${baseURL}admin/login`,
-        data
+        loginData
       )
-      console.log(response)
-      const { user, token } = response.data
-      //
+      
+  
 
-      addUserToLocalStorage({ token })
+      addUserToLocalStorage( data.token )
 
       set((state) => ({ ...state, token: token }))
 
-      return true
+      cogoToast.success(data.message,{position:'top-right'})
     } catch (error) {
+      console.log(error)
       cogoToast.error(error.response.data.message, {
         position: 'top-right',
       })
-      return false
     }
   },
 
@@ -82,7 +82,7 @@ let store = (set) => ({
         `${baseURL}admin/fetch/query/applications`,
         { params: query }
       )
-      console.log(data)
+
       cogoToast.success(data?.message, {
         position: 'top-right',
       })
@@ -111,7 +111,7 @@ let store = (set) => ({
       }))
     } catch (error) {
       cogoToast.error(
-        error?.response?.data?.message ||
+        error?.data?.message ||
           'Something Went Wrong. Please Check You Connection',
         {
           position: 'top-right',
@@ -122,20 +122,38 @@ let store = (set) => ({
 
   adminFetchApplicationById: async (id) => {
     try {
-      const response = await axios.get(
+      const {data} = await axios.get(
         `${baseURL}admin/fetch/application/${id}`
       )
-      cogoToast.success(response?.data?.message, {
+      cogoToast.success(data?.message, {
         position: 'top-right',
       })
       set((state) => ({
         ...state,
-        form: response.data.application,
+        form: data.application,
       }))
     } catch (error) {
-      console.log(error)
-    }
+      cogoToast.error(error?.data?.message, {
+        position: 'top-right',
+      })    }
   },
+  adminSearchByCnic:async(cnic)=>{
+    try {
+      const {data} = await axios.get(
+        `${baseURL}admin/fetch/cnic/application`,        { params: {cnic} }
+      )
+      cogoToast.success(data?.message, {
+        position: 'top-right',
+      })
+      set((state) => ({
+        ...state,
+        forms: [data.application],
+      }))
+    } catch (error) {
+      cogoToast.error(error?.response?.data?.message, {
+        position: 'top-right',
+      })    }
+  }
 })
 
 const useStore = createStore(store)

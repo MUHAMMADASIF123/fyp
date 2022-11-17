@@ -5,47 +5,27 @@ import axios from 'axios';
 import './AdminLogin.css';
 // import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
+import useStore from '../../store/store';
 
-//config
-// import BASE_URL from '../config/url';
-//
 
 function AdminLogin() {
   const history = useNavigate();
+  const adminLogin=useStore(state=>state.adminLogin)
   const [user, setUser] = useState({
     email: '',
     password: '',
   });
 
-  const { email, password } = user;
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   const handleuser = async (e) => {
-    // const user = {
-    //   email: email,
-    //   password: password,
-    // };
-    // console.log(users);
+    
     e.preventDefault();
-    await axios
-    // ${BASE_URL}
-      .post(`/api/student/login`, user)
-      .then((res) => {
-        localStorage.setItem(
-          'token-info',
-          JSON.stringify(res?.data?.result)
-        );
-        // console.log(res.data.result);
-        // alert(JSON.stringify(res.data))
-        alert(res.data.message);
-        history('/');
-      })
-      .catch((err) => {
-        console.log(err);
-        alert(err.response.data.message);
-      });
+    await adminLogin(user)
+        // history('/');
+    
   };
   return (
     <div>
@@ -75,7 +55,6 @@ function AdminLogin() {
                   // id="floatingInput"
                   placeholder='Enter Your Email'
                   name='email'
-                  value={email}
                   onChange={onInputChange}
                   className='form-control  text-center mt-2 border-warning'
                 />
@@ -91,7 +70,6 @@ function AdminLogin() {
                   id='floatingPassword'
                   placeholder='password'
                   name='password'
-                  value={password}
                   onChange={onInputChange}
                   className='form-control text-center mt-2 border-warning'
                 />

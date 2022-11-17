@@ -17,6 +17,7 @@ export const Login = lazy(() => import('../Components/Login'))
 export const ContactUs = lazy(() =>
   import('../Components/ContactUs')
 )
+
 export const AboutUs = lazy(() =>
   import('../Components/About/AboutUs')
 )

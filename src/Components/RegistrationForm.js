@@ -40,30 +40,30 @@ function RegistrationForm() {
     institute: '',
   })
   const [form, setForm] = useState({
-    shift: 'morning',
-    program: 'intermediate',
-    program_list: 'Pre Engg',
-    student_name: 'rana',
-    student_phone_number: '03047755668',
-    father_name: 'shamoon',
-    father_phone_number: '03047755660',
-    cnic: '5566677889909',
-    religion: 'islam',
-    domicile: 'lahore',
-    dob: '14-10-9911',
-    email: 'umair@gmail.com',
-    father_occupation: 'teacher',
-    father_cnic: '5566677889909',
-    guardian_name: 'shamoon',
-    guardian_occupation: 'teacher',
-    guardian_phone_number: '02013344567',
-    current_address: 'chungi amer lahore punjab pakistan ',
-    permanent_address: 'bandian wala lahore punjab pakistan ',
-    city: 'lahore',
-    state: 'punjab',
-    zip_code: '88776',
+    shift: '',
+    program: '',
+    list: '',
+    student_name: '',
+    student_phone_number: '',
+    father_name: '',
+    father_phone_number: '',
+    cnic: '',
+    religion: '',
+    domicile: '',
+    dob: '',
+    email: '',
+    father_occupation: '',
+    father_cnic: '',
+    guardian_name: '',
+    guardian_occupation: '',
+    guardian_phone_number: '',
+    current_address: '',
+    permanent_address: '',
+    city: '',
+    state: '',
+    zip_code: '',
   })
-
+  console.log(form)
   //submit
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -95,6 +95,7 @@ function RegistrationForm() {
                         id='inputGroupSelect01'
                         defaultValue='intermediate'
                         style={{ width: 220 }}
+                        name='program'
                         onChange={(e) =>
                           setForm({
                             ...form,
@@ -127,10 +128,11 @@ function RegistrationForm() {
                             className='custom-select'
                             id='inputGroupSelect01'
                             style={{ width: 214 }}
+                            name='list'
                             onChange={(e) =>
                               setForm({
                                 ...form,
-                                program: e.target.value,
+                                list: e.target.value,
                               })
                             }
                           >
@@ -185,9 +187,12 @@ function RegistrationForm() {
                             className='custom-select'
                             id='inputGroupSelect01'
                             style={{ width: 214 }}
-                            // onChange={(e) =>
-
-                            // }
+                            onChange={(e) =>
+                              setForm({
+                                ...form,
+                                list: e.target.value,
+                              })
+                            }
                           >
                             <option value='fsc-engg'>
                               F.Sc (Pre Engineering)
@@ -249,6 +254,12 @@ function RegistrationForm() {
                         id='inputGroupSelect01'
                         style={{ width: 214 }}
                         defaultValue='morning'
+                        onChange={(e) =>
+                          setForm({
+                            ...form,
+                            shift: e.target.value,
+                          })
+                        }
                       >
                         <option value='morning'>Morning</option>
 

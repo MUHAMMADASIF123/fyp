@@ -8,19 +8,27 @@ function Admin() {
   // const history = useHistory()
   const [search, setSearch] = useState({})
 
-  // const [applications, setApplications] = useState([])
-
-  //=> useEffect
   const adminFetchApplications = useStore(
     (state) => state.adminFetchApplications
   )
-
   const adminFetchQueryApplications = useStore(
     (state) => state.adminFetchQueryApplications
   )
+
+  const forms = useStore((state) => state.forms)
+
+  // const [applications, setApplications] = useState([])
+
+  //=> useEffect
+  useEffect(
+    () => async () => {
+      adminFetchApplications()
+    },
+    []
+  )
+
   const handleSearchSubmit = async (e) => {
     e.preventDefault()
-
     await adminFetchQueryApplications(search)
   }
 
@@ -75,7 +83,7 @@ function Admin() {
                           onChange={(e) => {
                             setSearch({
                               ...search,
-                              program_list: e.target.value,
+                              list: e.target.value,
                             })
                           }}
                         >
@@ -129,7 +137,7 @@ function Admin() {
                           onChange={(e) =>
                             setSearch({
                               ...search,
-                              program_list: e.target.value,
+                              list: e.target.value,
                             })
                           }
                         >
@@ -137,7 +145,7 @@ function Admin() {
                           <option value='pre-engg'>
                             F.Sc (Pre Engineering)
                           </option>
-                          <option value='pre-medical'>
+                          <option value='fsc-medical'>
                             F.Sc (Pre Medical)
                           </option>
                           <option value='i.com'>I.Com</option>
@@ -154,7 +162,7 @@ function Admin() {
                           onChange={(e) =>
                             setSearch({
                               ...search,
-                              program_list: e.target.value,
+                              list: e.target.value,
                             })
                           }
                         >

@@ -19,7 +19,7 @@ function Chemistry_() {
 
          
      
-      <div className=' justify-content-center me-5 ms-5'>
+      <div className='justify-content-center me-5 ms-5'>
        
           <p className='ms-3 font-size-small me-5'>
             The Chemistry Department is committed to the

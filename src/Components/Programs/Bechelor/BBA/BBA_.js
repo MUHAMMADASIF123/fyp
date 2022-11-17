@@ -3,9 +3,11 @@ import './BBA_.css';
 
 function BBA_() {
   return (
-    <div>
-      <div className='d-flex justify-content-center mt-5 me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
+    <>
+    <div className='container mt-2'>
+      <div className='row'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+        
           <h2 className='rounded'>
             Bachelor of Business Administration (BBA Hons)
           </h2>
@@ -23,7 +25,9 @@ function BBA_() {
             years program.
           </p>
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+      
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
           <h3 className='rounded'>Eligibility Criteria</h3>
           <hr />
           <ul>
@@ -36,9 +40,11 @@ function BBA_() {
           <hr />
           Only 100 seats are Available for this Program.
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+       
+          </div>
+          <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+       
           <h2 className='rounded'>1st Semester</h2>
           <hr />
           <table className='table'>
@@ -80,8 +86,10 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
-        </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        
+          </div>
+          <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+         
           <h2 className='rounded'>2nd Semester</h2>
           <hr />
           <table className='table'>
@@ -123,10 +131,12 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+        
+          </div>
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
           <h2 className='rounded'>3rd Semester</h2>
           <hr />
           <table className='table'>
@@ -168,8 +178,10 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+      
           <h2 className='rounded'>4th Semester</h2>
           <hr />
           <table className='table'>
@@ -211,10 +223,13 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+
+        </div>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+      
           <h2 className='rounded'>5th Semester</h2>
           <hr />
           <table className='table'>
@@ -251,8 +266,10 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
           <h2 className='rounded'>6th Semester</h2>
           <hr />
           <table className='table'>
@@ -294,10 +311,12 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        </div>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+ 
           <h2 className='rounded'>7th Semester</h2>
           <hr />
           <table className='table'>
@@ -371,8 +390,10 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        
           <h2 className='rounded'>8th Semester</h2>
           <hr />
           <table className='table'>
@@ -446,9 +467,17 @@ function BBA_() {
               </tr>
             </tbody>
           </table>
+        
+        </div>
         </div>
       </div>
-    </div>
+
+     
+      
+    
+ 
+
+    </>
   );
 }
 

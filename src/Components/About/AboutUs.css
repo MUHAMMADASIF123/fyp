@@ -2,6 +2,11 @@
   background-color: #172540;
   color: white;
 }
+.controls{
+  /* width: 100%; */
+  width: 900px;
+  margin-left: 100px;
+}
 @media (min-width:375px)
 {
   .principle{
@@ -16,6 +21,7 @@
     margin-top: 8px;
 
   }
+ 
 
 }
 

@@ -1,7 +1,7 @@
-.fsc_engg {
+/* .fsc_engg {
   /* background-color: #172540;
   color: aliceblue; */
-  align-items: baseline;
+/*  align-items: baseline;
 }
 .fsc_medical {
   float: right;
@@ -10,4 +10,11 @@
 .para {
   display: flex;
   text-align: justify;
+} */
+.container > .row > .semester{
+  width: 470px;
+  margin-left: 1px;
+  height: 620px;
+  margin: auto;
+  /* margin-bottom:30px; */
 }

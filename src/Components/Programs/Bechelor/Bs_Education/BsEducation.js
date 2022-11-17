@@ -3,10 +3,12 @@ import './BsEducation.css';
 
 function BsEducation() {
   return (
-    <div>
-      <div className='d-flex justify-content-center mt-5 me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white '>
-          <h2 className='rounded'>
+    <>
+    <div className='container mt-2'>
+      <div className='row'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+        
+        <h2 className='rounded'>
             Bachelor of Science in Education( Hons)
           </h2>
           <hr />
@@ -27,8 +29,10 @@ function BsEducation() {
             credit hours in 4 years.
           </p>
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h3 className='rounded'>Eligibility Criteria</h3>
+      
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
+        <h3 className='rounded'>Eligibility Criteria</h3>
           <hr />
           <ul>
             <li>Intermediate</li>
@@ -36,12 +40,13 @@ function BsEducation() {
           </ul>
           <h4 className='paragraph rounded'>Available Seats </h4>
           <hr />
-          Only 50 seats are Available for this Program.
+          Only 100 seats are Available for this Program.
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>1st Semester</h2>
+       
+          </div>
+          <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
+        <h2 className='rounded'>1st Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -87,8 +92,9 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
-        </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
+        
+          </div>
+          <div className='col-md-6  col-sm-12 mb-2 semester  rounded bg-white '>
           <h2 className='rounded'>2nd Semester</h2>
           <hr />
           <table className='table'>
@@ -130,11 +136,13 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
+        
+          </div>
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>3rd Semester</h2>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
+        <h2 className='rounded'>3rd Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -179,9 +187,11 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
+        
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>4th Semester</h2>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+      
+        <h2 className='rounded'>4th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -222,11 +232,13 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-      </div>
-      <div className='d-flex justify-content-center me-5 ms-5 p-5'>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>5th Semester</h2>
+
+        </div>
+        <div className='row mt-5'>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+        <h2 className='rounded'>5th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -257,9 +269,11 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
+      
         </div>
-        <div className='shadow p-5 w-100 rounded-top ms-5 me-5 bg-white'>
-          <h2 className='rounded'>6th Semester</h2>
+        <div className='col-md-6  col-sm-12 mb-2  rounded semester bg-white'>
+       
+        <h2 className='rounded'>6th Semester</h2>
           <hr />
           <table className='table'>
             <tbody>
@@ -292,9 +306,12 @@ function BsEducation() {
               </tr>
             </tbody>
           </table>
+        
         </div>
+        </div>
+    
       </div>
-    </div>
+    </>
   );
 }
 

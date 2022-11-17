@@ -7,14 +7,17 @@ function AboutUs() {
       <h1 className='rounded'>About Us</h1>
       <hr />
          </div>
-         <div>
-         <video controls autoplay>
-  <source src="movie.mp4" type="video/mp4"/>
-  {/* <source src="movie.ogg" type="video/ogg"> */}
+         <div className='vediomsg container'>
+         <h3 className='rounded  m-auto w-50 mb-2 '>
+            Principle's Message
+          </h3>
+         <video controls autoplay className='w-100'>
+  <source src="vedios/Principalmsg.mp4" type="video/mp4" className='vediomsg w-100'/>
+ 
   Your browser does not support the video tag.
 </video>
 </div>
-         <section className=' container bg-white mb-2 '>
+         {/* <section className=' container bg-white mb-2 '>
           <div className='row'>
             <div className=' col-md-6 col-sm-12'>
             <img
@@ -54,7 +57,7 @@ function AboutUs() {
         </div>
           </div>
 
-         </section>
+         </section> */}
          <section className='container mb-2 bg-white'>
           <div className='row'>
             <div className='col-md-6 col-sm-12'>

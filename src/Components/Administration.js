@@ -82,6 +82,9 @@ function Administration() {
       
         </div>
         <div className='col-md-6 admins_card ms-2 col-sm-12 shadow rounded bg-white  '>
+        <h3 className='rounded'>
+              Controller Examination Offfice (Intermediate)
+            </h3>
           <ul className=''>
             <li>
               <p>
@@ -239,9 +242,7 @@ function Administration() {
         <div className='row'>
         
           <div className='col-md-6 admins_card  col-sm-12 shadow rounded bg-white '>
-            <h3 className='rounded'>
-              Controller Examination Offfice (Intermediate)
-            </h3>
+           
             <hr />
             <ul>
               <li>

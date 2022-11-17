@@ -39,6 +39,7 @@ function Studentprofile() {
         console.log(err);
       });
   };
+  
 
   return (
     <div>
@@ -52,12 +53,13 @@ function Studentprofile() {
             <h1 className='border rounded-pill h-25 w-75 d-inline-block'>
               Application For Addmission-2022
             </h1>
-
-            <form className='rounded shadow p-5 mt-5 h-100 w-100 bg-white'>
+         
+            <form className='rounded shadow p-5 mt-5 mb-5 h-100 w-100 bg-white'>
               <div className='row'>
                 <div className='col-md-4'>
                   <div className='input-group mb-3'>
                     <div className='input-group-prepend'>
+                    <button onclick="window.print()">Print this page</button>
                       {/* <label className="input-group-text" htmlFor="inputGroupSelect01">Options</label> */}
                       <h6>
                         applied for:<span>BSCS</span>

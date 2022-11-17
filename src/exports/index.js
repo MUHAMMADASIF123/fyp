@@ -172,6 +172,9 @@ export const PoliticalScience = lazy(() =>
 export const Admin = lazy(() =>
   import('../Components/Admin_side/Admin')
 )
+export const AdminLogin = lazy(() =>
+  import('../Components/Admin_side/AdminLogin')
+)
 
 export const StudentView = lazy(() =>
   import('../Components/Student/StudentView')

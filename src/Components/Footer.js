@@ -9,11 +9,11 @@ function Footer() {
           <div className='col-lg-4  col-md-4 col-sm-12 '>
             <a>
               <img
-                className='w-25 logo d-flex ms-2 h-50 mt-3'
+                className='w-25 logo d-flex ms-4 h-50 mt-3'
                 src='https://res.cloudinary.com/azeem413/image/upload/v1664276146/images/Others/colglogo_aahu5f.png'
               ></img>
             </a>
-            <p className='text-justify text-white'>
+            <p className='text-justify text-white ms-4'>
               Our has built a level of trust and confidence among
               its existing and aspiring students due to the
               launch of innovative but effective study and work

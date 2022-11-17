@@ -4,7 +4,8 @@ import './Becholer_programs_list.css';
 function Bacholer_programs_list() {
   return (
     <div className='justify-content-center align-item-center  mb-5 me-5 ms-5 bg-white rounded'>
-      <div className='justify-content-center align-item-center  mb-5 mt-5 me-5 ms-5 p-5'>
+      <div className=' row justify-content-center align-item-center  mb-5 mt-5 me-5 ms-5 p-5'>
+        <div className='col-md-12 col-sm-12'>
         <h1 className='rounded'>Bacholer Programs List</h1>
         <hr />
         <br />
@@ -98,6 +99,7 @@ function Bacholer_programs_list() {
           <hr />
           <br />
         </ul>
+     </div>
       </div>
     </div>
   );

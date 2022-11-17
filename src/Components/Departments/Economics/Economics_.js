@@ -43,7 +43,7 @@ function Economics_() {
             settings.&nbsp; <br />
            
           </p>
-          <a className='anchor_tag button_programs' href='Bschemistry'>
+          <a className='anchor_tag button_programs' href='BsEconomics'>
           See Course Content  Details
             </a>
           

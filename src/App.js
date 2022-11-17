@@ -29,7 +29,7 @@ import BsEducation from './Components/Programs/Bechelor/Bs_Education/BsEducation
 import BsMath from './Components/Programs/Bechelor/Bs_Math/BsMath'
 import BBA_ from './Components/Programs/Bechelor/BBA/BBA_'
 import BsEnglish from './Components/Programs/Bechelor/Bs_English/BsEnglish'
-
+import AdminLogin from './Components/Admin_side/AdminLogin'
 import BsSociology from './Components/Programs/Bechelor/Bs_Sociology/BsSociology'
 import BsEconomics from './Components/Programs/Bechelor/Bs_Economics/BsEconomics'
 import BsMass_Communication from './Components/Programs/Bechelor/Bs_Mass_Communication/BsMass_Communication'
@@ -67,7 +67,12 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/contactUs' element={<ContactUs />} />
         <Route path='/AboutUs' element={<AboutUs />} />
+<<<<<<< HEAD
+        <Route path='/Admin' element={<Admin />} />
+        <Route path='/AdminLogin' element={<AdminLogin />} />
+=======
         {/* <Route path='/Admin' element={<Admin />} /> */}
+>>>>>>> 2a11271783085192028fdf0ac5353e104f98f8bd
         {/* <Route path='/navbar' element={<Navbar />} /> */}
         <Route
           path='/Administration'

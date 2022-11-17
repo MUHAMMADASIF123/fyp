@@ -34,13 +34,12 @@ const adminSearchByCnic=useStore(state=>state.adminSearchByCnic)
   }
 const handleCnicSubmit=async(e)=>{
   e.preventDefault()
-  console.log('snic',cnic)
   await adminSearchByCnic(cnic)
 }
 
   return (
     <>
-      {token&&<div className='container justify-content-center'>
+      <div className='container justify-content-center'>
         <div className='row'>
           <div className='col-md-6 shadow bg-white rounded'>
           <form className='w-10 mb-5 mt-5 h-25'>
@@ -261,7 +260,7 @@ const handleCnicSubmit=async(e)=>{
           </div>
         </div>
        
-      </div> } 
+      </div> 
 
       <Suspense fallback={<div>Loading...</div>}>
         <AdminRenderList />

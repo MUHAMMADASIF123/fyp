@@ -227,7 +227,6 @@ function Home() {
             BS Departments
           </h1>
 
-<<<<<<< HEAD
             <div className='row '>
               <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
                 <a className='' href='/ComputerScience'>
@@ -297,6 +296,7 @@ function Home() {
                 </a>
               </div>
             </div>
+          
             <div className='row'>
               <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
                 <a className='' href='/English'>
@@ -320,31 +320,8 @@ function Home() {
                   Statistics
                 </a>
               </div>
-=======
-          <div className='row '>
-            <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
-              <a className='' href='/ComputerScience'>
-                Computer Science
-              </a>
             </div>
-
-            <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
-              <a className='' href='/Chemistry_'>
-                Chemistry
-              </a>
-            </div>
-            <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
-              <a className='' href='/Physics_'>
-                Physics
-              </a>
-            </div>
-            <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
-              <a className='' href='/Mathematics_'>
-                Mathematics
-              </a>
->>>>>>> 2a11271783085192028fdf0ac5353e104f98f8bd
-            </div>
-          </div>
+          
           <div className='row'>
             <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
               <a className='' href='/Economics_'>
@@ -416,6 +393,7 @@ function Home() {
             </div>
           </div>
         </div>
+        
       </section>
 
       <div className=' container shadow rounded mb-5 bg-white slider_container'>

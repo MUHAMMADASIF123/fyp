@@ -67,12 +67,8 @@ function App() {
         <Route path='/login' element={<Login />} />
         <Route path='/contactUs' element={<ContactUs />} />
         <Route path='/AboutUs' element={<AboutUs />} />
-<<<<<<< HEAD
         <Route path='/Admin' element={<Admin />} />
         <Route path='/AdminLogin' element={<AdminLogin />} />
-=======
-        {/* <Route path='/Admin' element={<Admin />} /> */}
->>>>>>> 2a11271783085192028fdf0ac5353e104f98f8bd
         {/* <Route path='/navbar' element={<Navbar />} /> */}
         <Route
           path='/Administration'

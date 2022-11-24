@@ -32,8 +32,8 @@ function RegisterUser() {
     await axios
       .post(`${BASE_URL}/api/student/register`, users)
       .then((res) => {
-        alert(res.data)
-        // console.log(res.data)
+        // alert(res.response.message)
+        // console.log(res.response.data)
         history('/login')
       })
       .catch((err) => {

@@ -182,3 +182,6 @@ export const StudentView = lazy(() =>
 export const Studentprofile = lazy(() =>
   import('../Components/Student/StudentProfile')
 )
+export const Profile = lazy(() =>
+  import('../Components/Student/Profile')
+)

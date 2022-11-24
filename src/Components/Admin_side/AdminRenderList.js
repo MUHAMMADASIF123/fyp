@@ -3,10 +3,12 @@ import { Link } from 'react-router-dom'
 import useStore from '../../store/store'
 const AdminRenderList = () => {
   const forms = useStore((state) => state.forms)
+  // let token = JSON.parse(localStorage.getItem('token-info'));
+  // console.log(token);
 
   return (
     <div className='container shadow rounded vh-100 mb-5 bg-white'>
-      {forms.length ? (
+      {forms.length? (
         <>
           <table className='table'>
             <tbody>

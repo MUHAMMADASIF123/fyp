@@ -1,7 +1,8 @@
 import React, { useEffect } from 'react'
-import { useParams } from 'react-router-dom'
+import { NavLink, useParams } from 'react-router-dom'
 import './StudentView.css'
 import useStore from '../../store/store'
+import Link from 'react-dom';
 const StudentView = () => {
   const params = useParams()
   const form = useStore((state) => state.form)
@@ -351,11 +352,12 @@ const StudentView = () => {
                     </table>
                   </div>
                 </div>
-                <button
-                  type='submit'
-                  className='mt-4 font-weight-bold text-uppercase text-bold shadow w-25 border-0 rounded-pill'
+                <button className='mt-4 font-weight-bold text-uppercase text-bold shadow w-25 border-0 rounded-pill'>
+                <NavLink to={'/admin'}
+                  // type='submit'
                 >
-                  Submit
+                  back
+                </NavLink>
                 </button>
               </div>
             </div>

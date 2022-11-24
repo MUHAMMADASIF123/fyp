@@ -1,10 +1,19 @@
 import React, { useState } from 'react'
 import { NavLink, Link } from 'react-router-dom'
 import './Navbar.css'
-
+import { useNavigate } from 'react-router-dom'
+// import {Dropdown} from 'bootstrap'
 function NavBar() {
+  const history=useNavigate();
   const [click, setClick] = useState(false)
+  let user = JSON.parse(localStorage.getItem('token-info'));
+  // console.log(token);
 
+  const removeUserFromLocalStorage = () => {
+    localStorage.removeItem('user')
+    localStorage.removeItem('token-info')
+    history('/login')
+  }
   const handleClick = () => setClick(!click)
   return (
     <>
@@ -63,20 +72,53 @@ function NavBar() {
               </NavLink>
             </li>
           </ul>
-          <div className='me-2 rounded '>
-            <button className='button_programs'>
-              {' '}
-              <Link to={'/login'} className='me-2 rounded'>
-                Login
+{(localStorage.getItem('token-info'))?
+  <>
+               <div className=" dropdown-center  ">
+  <button className=" button_programs  dropdown-toggle " type="button" data-bs-toggle="dropdown" aria-expanded="true">
+Avatar
+  </button>
+  <ul className="dropdown-menu btn-sm mt-2">
+   
+            <li><a class="dropdown-item" href="/profile">profile</a></li>
+            <li> <button className='button_programs btn-sm'>
+              <Link onClick={removeUserFromLocalStorage} className='ms-2 btn-sm'>
+                {' '}
+                Logout
               </Link>
-            </button>
+            </button></li>
+  </ul>
+</div>
             <button className='button_programs'>
               <Link to={'/apply'} className='ms-2'>
                 {' '}
                 Apply
               </Link>
             </button>
+           
+   
+
+  </>:<>
+   <div className='me-2 rounded '>
+            <button className='button_programs'>
+              {' '}
+              <Link to={'/login'} className='me-2 rounded'>
+                Login
+              </Link>
+              </button>
           </div>
+          <button className='button_programs'>
+              <Link to={'/apply'} className='ms-2'>
+                {' '}
+                Apply
+              </Link>
+            </button>
+  </>
+
+         
+}
+
+
           <div className='nav-icon' onClick={handleClick}>
             <i
               className={click ? 'fas fa-times' : 'fas fa-bars'}

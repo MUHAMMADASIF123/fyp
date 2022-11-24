@@ -39,7 +39,7 @@ const handleCnicSubmit=async(e)=>{
 
   return (
     <>
-      <div className='container justify-content-center'>
+      <div className='container justify-content-center mb-5'>
         <div className='row'>
           <div className='col-md-6 shadow bg-white rounded'>
           <form className='w-10 mb-5 mt-5 h-25'>

@@ -54,6 +54,7 @@ import PoliticalScience from './Components/Departments/PoliticalScience_Departme
 import StudentView from './Components/Student/StudentView'
 import Studentprofile from './Components/Student/StudentProfile'
 import Navbar from './Components/Navbar'
+import Profile from './Components/Student/Profile'
 
 function App() {
   return (
@@ -119,6 +120,7 @@ function App() {
         <Route path='/Urdu' element={<Urdu />} />
         <Route path='/English' element={<English />} />
         <Route path='/Admin' element={<Admin />} />
+        <Route path='/profile' element={<Profile />} />
         <Route
           path='/StudentView/:id'
           element={<StudentView />}

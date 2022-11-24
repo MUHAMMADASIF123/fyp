@@ -24,7 +24,7 @@ function AdminLogin() {
     
     e.preventDefault();
     await adminLogin(user)
-        // history('/');
+        history('/admin');
     
   };
   return (
@@ -37,9 +37,9 @@ function AdminLogin() {
               style={{ backgroundColor: 'white' }}
             >
               <h3 className='text-white fw-bolder fs-4 rounded  w-100 mb-2'>
-                Login Here !
+                Admin Login Here !
               </h3>
-              <div className='fw-normal text-black fw-bold mb-4'>
+              {/* <div className='fw-normal text-black fw-bold mb-4'>
                 New here ?{' '}
                 <a
                   href='/registeruser'
@@ -47,7 +47,7 @@ function AdminLogin() {
                 >
                   create a account
                 </a>
-              </div>
+              </div> */}
               <div className='form-floating mb-3 d-flex justify-content-center '>
                 {/* <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/> */}
                 <input

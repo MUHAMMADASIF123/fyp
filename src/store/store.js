@@ -3,16 +3,17 @@ import createStore from 'zustand'
 import axios from 'axios'
 import cogoToast from 'cogo-toast'
 
-const token = localStorage.getItem('token')
+const token = localStorage.getItem('token-info')
+console.log(token);
 
 const addUserToLocalStorage = ({ user, token }) => {
   localStorage.setItem('user', JSON.stringify(user))
-  localStorage.setItem('token', token)
+  localStorage.setItem('token-info', token)
 }
 
 const removeUserFromLocalStorage = () => {
   localStorage.removeItem('user')
-  localStorage.removeItem('token')
+  localStorage.removeItem('token-info')
 }
 
 const baseURL = 'http://localhost:5000/api/'

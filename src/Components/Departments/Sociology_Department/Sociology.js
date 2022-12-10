@@ -54,16 +54,33 @@ function Sociology() {
 
             <ul className='mt-4'>
             <li>
-              <b>Mr. Abdul Aziz</b> <br />
+              <b> Dr. Kaisar Mehmood (Ph.D.) </b> <br />
               Assistant Professor,/Head of Department M.Phil.
             </li>
             <hr />
             <li>
-              <b>Mr. Noman Isaac</b>
+              <b> Ms. Amtal Saba (Ph.D.)</b>
               <br />
               Lecturer M.Phil.{' '}
             </li>
             <hr />
+            <li>
+              <b> Mr. Muhammad Aslam  (Ph.D.)</b>
+              <br />
+              Lecturer M.Phil.{' '}
+            </li>
+            <hr />
+            <li>
+              <b>  Mr. Abdul Aziz Taga (M.Phil)</b>
+              <br />
+              Lecturer M.Phil.{' '}
+            </li>
+            <hr />
+            <li>
+              <b> Mr. Shamir Faraz </b>
+              <br />
+              Lecturer M.Phil.{' '}
+            </li>
           </ul>
 
             </div>

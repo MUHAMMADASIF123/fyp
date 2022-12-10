@@ -1,9 +1,17 @@
-import React, { useEffect } from 'react'
+import React, { useEffect,useRef } from 'react'
 import { NavLink, useParams } from 'react-router-dom'
 import './StudentView.css'
 import useStore from '../../store/store'
 import Link from 'react-dom';
+import {useReactToPrint} from 'react-to-print'
 const StudentView = () => {
+  const componentRef=useRef();
+  const handlePrint = useReactToPrint({
+    content:()=>componentRef.current,
+    decumentTitle:'student-data',
+    onAfterPrint: ()=>alert("form is printed successfully")
+  });
+
   const params = useParams()
   const form = useStore((state) => state.form)
   console.log(form)
@@ -17,31 +25,53 @@ const StudentView = () => {
     },
     []
   )
+  // 
+  // 
   return (
-    <div>
+    <div  className="mb-5">
+       <button   onClick={handlePrint}  className='mt-4 font-weight-bold text-uppercase text-bold shadow w-25 border-0 rounded-pill'>
+                print form
+              </button>
       {form ? (
-        <div className='mt-5  wraper  '>
+        <div ref={componentRef} className='mt-5  wraper  '>
           <div className='container '>
             <div className=' text-center '>
-              <h1 className='border rounded-pill h-25 w-75 d-inline-block'>
-                Student Detail
-              </h1>
+            
 
               <div className='rounded shadow p-5 mt-5 h-100 w-100 bg-white'>
-                <div className='row'>
-                  <div className='col-md-4'>
-                    <div className='input-group mb-3'>
-                      <div className='input-group-prepend'>
-                        <h6>Applied For: {form.list}</h6>
-                      </div>
-                    </div>
+                <div className="row">
+<div className='col-6 w-25'>
+<div class="card" >
+  <img src="..." class="card-img-top" alt="Please attach your Photo here"/>
+ 
+</div>
+</div>
+<div className='col-6 w-75 '>
+{/* <img  className="w-25" src='https://res.cloudinary.com/azeem413/image/upload/v1664276146/images/Others/colglogo_aahu5f.png' class="img-thumbnail" alt="..."/> */}
+<h1 className='border rounded h-75 w-100  d-inline-block'>
+              Government Graduate Science College Wahdat Road
+              Lahore Application For Addmission-2022
+              </h1>
+</div>
+                </div>
+             
+                <div className='row g-3'>
+                  <div className='col'>
+                    <h6 className='d-flex justify-content-start'>
+                      Applied For:
+                    </h6>
+
+                    <p className='border textleft'>
+                      {form.list}
+                    </p>
                   </div>
-                  <div className='col-md-4 ms-5'>
-                    <div className='input-group mb-3 '>
-                      <div className='input-group-prepend'>
-                        <h6>Shift: {form.shift}</h6>
-                      </div>
-                    </div>
+                  <div className='col'>
+                    <h6 className='d-flex justify-content-start'>
+                      Shift:
+                    </h6>
+                    <p className='border textleft'>
+                      {form.shift}
+                    </p>
                   </div>
                 </div>
                 <div className='row g-3'>
@@ -352,21 +382,16 @@ const StudentView = () => {
                     </table>
                   </div>
                 </div>
-                <button className='mt-4 font-weight-bold text-uppercase text-bold shadow w-25 border-0 rounded-pill'>
-                <NavLink to={'/admin'}
-                  // type='submit'
-                >
-                  back
-                </NavLink>
-                </button>
+               
               </div>
             </div>
           </div>
         </div>
       ) : (
-        <></>
+        <> </>
       )}
     </div>
+  
   )
 }
 

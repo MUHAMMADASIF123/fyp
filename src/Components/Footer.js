@@ -35,8 +35,8 @@ function Footer() {
                 Phone No +42-99260039-40{' '}
               </h6>
               <h6 className='align-baseline me-5 text-white'>
-                <i className='fa-solid fa-envelope text-warning me-2'></i>{' '}
-                Email:abc@gmail.com
+                <i className='fa-solid fa-envelope text-warning ms-5  '></i>{' '}
+                <a href="mailto:gcswahdatroad@gmail.com" className="text-white text-decoration-none me-4">gcswahdatroad@gmail.com</a> 
               </h6>
             </div>
             <div className='icons '>
@@ -59,7 +59,7 @@ function Footer() {
       <div className='text-white copyright m-auto'>
         <span>
           {' '}
-          All &copy; Right Reserved By Government Graduate
+          All &copy; Right 2022 Reserved By Government Graduate
           college Science | GCS
         </span>
       </div>

@@ -54,32 +54,32 @@ function Chemistry_() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b> Dr. Qamar Subhani</b>
+                <b> Dr. Hafiz Muhammad Farooq (Ph.D) HOD </b>
                 <br />
                 Associate Professo Ph.D.{' '}
               </li>
               <hr />
               <li>
-                <b>Dr. Muhammad Monim Ul Mahboob</b> <br />
+                <b>Dr. Qamar Subhani</b> <br />
                 Associate Professor Ph.D.{' '}
               </li>
               <hr />
               <li>
-                <b>Dr. Muhammad Naeem Khan</b>
+                <b>Dr. M. Monim ul Mahboob</b>
                 <br />
                 Assistant Professor Ph.D.
               </li>
               <hr />
               <li>
-                <b>Mr. Muhammad Naeem</b>
+                <b>Dr. M. Naeem Khan</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Zaid Bin Umer</b>
+                <b>Dr. Aamir Niaz</b>
                 <br />
-                Associate Professor M.Sc.{' '}
+                Associate Professor ph.D.{' '}
               </li>
               <hr />
               <li>
@@ -89,7 +89,7 @@ function Chemistry_() {
               </li>
               <hr />
               <li>
-                <b>Dr. Nouman Jamil</b>
+                <b>Dr. Nauman Jamil</b>
                 <br />
                 Assistant Professor Ph.D..{' '}
               </li>
@@ -123,59 +123,64 @@ function Chemistry_() {
               </li>
               <hr />
               <li>
-                <b>Mr. Sabir Javed</b>
+                <b>Mr. Amir Hussain </b>
                 <br />
                 Lecturer M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Ms. Qurat Ul Ain</b>
+                <b>Mr. Muhammad Arshad Bhatti</b>
                 <br />
                 Lecturer M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Ms. Bushra Younas</b>
+                <b>Hafiz Abdul Rauf</b>
                 <br />
                 Lecturer M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Fazal Elahi Butt</b>
+                <b>Mr. Zahid Sharif Ch. </b>
                 <br />
                 Assistant Professor M. Phil{' '}
               </li>
               <hr />
               <li>
-                <b>Mrs. Mariam Zaheer</b>
+                <b>Mr. Anfas Ahmad</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mrs. Mariam Zaheer</b>
+                <b>Mr. Naveed Asalm Dogar</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mrs. Mariam Zaheer</b>
+                <b>Dr. Tariq Mahmood</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mrs. Mariam Zaheer</b>
+                <b>Mr. M. Aziz ur Rehman Atif</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mrs. Mariam Zaheer</b>
+                <b>Hafiz M. Raoof Amin</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
+              <li>
+                <b>Dr. Muhammad Waheed Mushtaq</b>
+                <br />
+                Associate Professor M.Phil.{' '}
+              </li>
             </ul>
           </div>
         </div>

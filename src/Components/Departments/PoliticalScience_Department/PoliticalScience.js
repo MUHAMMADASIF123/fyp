@@ -44,57 +44,73 @@ function PoliticalScience() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b>Mr. Asif Nazeer</b>
+                <b>Mr. Zahid Mahmood</b>
                 <br />
                 Professor/Head of Department M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Nasir Mehmood</b> <br />
+                <b>Mr. Rehman Gul Khan</b> <br />
                 Associate Professor M.A{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Nasir Ali Khan</b>
+                <b>Mr. Mujib-ul-Islam</b>
                 <br />
                 Associate Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Zahid Mahmood</b>
+                <b>Mr. Qamar Abbas </b>
                 <br />
-                Associate Professor M.A.{' '}
+                Associate Professor  (M.Phil){' '}
               </li>
               <hr />
+              <li>
+                <b>Ms. Munira Sultana</b>
+                <br />
+                Associate Professor  (M.Phil){' '}
+              </li>
+              <hr />
+              <li>
+                <b>Mr. Imran Majeed </b>
+                <br />
+                Associate Professor (M.Phil){' '}
+              </li>
             </ul>
           </div>
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b>Mr. Mujeeb Ul Islam</b>
+                <b>Mr. Usman Zammurad</b>
                 <br />
                 Assistant Professor M.A.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Qamar Abbas</b>
+                <b>Dr. M. Raza Taimoor </b>
                 <br />
                 Assistant Professor M.Phil.{' '}
               </li>
 
               <hr />
               <li>
-                <b>Ms. Muneera Sultana</b>
+                <b>Mr. Munir Ahmad Bhatti </b>
                 <br />
                 Assistant Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Usman Zamurrad</b>
+                <b>Dr Mr. Muhammad Ghous</b>
                 <br />
                 Lecturer BS Hons.{' '}
               </li>
               <hr />
+              <li>
+                <b>Mr. Muhammad Sohail</b>
+                <br />
+                Lecturer BS Hons.{' '}
+              </li>
             </ul>
           </div>
         </div>

@@ -2,16 +2,18 @@ import { useState, useEffect, Suspense, lazy } from 'react'
 // import { useHistory } from 'react-router-dom'
 // import './Admin.css'
 import useStore from '../../store/store'
-const AdminRenderList = lazy(() => import('../Admin_side/AdminRenderList'))
+import StudentForm from './StudentForm'
+// const AdminRenderList = lazy(() => import('../Admin_side/AdminRenderList'))
+
 
 function Profile() {
   // const history = useHistory()
 //   const [search, setSearch] = useState({})
   const [cnic,setCnic]=useState('')
 
-  const adminFetchApplications = useStore(
-    (state) => state.adminFetchApplications
-  )
+  // const adminFetchApplications = useStore(
+  //   (state) => state.adminFetchApplications
+  // )
 //   const adminFetchQueryApplications = useStore(
 //     (state) => state.adminFetchQueryApplications
 //   )
@@ -21,12 +23,12 @@ const adminSearchByCnic=useStore(state=>state.adminSearchByCnic)
 //   console.log(token.data.name);
 
   //=> useEffect
-  useEffect(
-    () => async () => {
-      adminFetchApplications()
-    },
-    []
-  )
+  // useEffect(
+  //   () => async () => {
+  //     adminFetchApplications()
+  //   },
+  //   []
+  // )
 
 //   const handleSearchSubmit = async (e) => {
 //     e.preventDefault()
@@ -53,7 +55,8 @@ return (
 
 
 <Suspense fallback={<div>Loading...</div>}>
-<AdminRenderList />
+{/* <AdminRenderList /> */}
+<StudentForm/>
 </Suspense>
 </>
 )

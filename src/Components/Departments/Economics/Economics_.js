@@ -55,32 +55,32 @@ function Economics_() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b>Mr. Amjad Sheikh</b> <br />
+                <b>Mr. Muhammad Tariq (HOD)</b> <br />
                 Associate Professor/Head of Department M.A
               </li>
               <hr />
               <li>
-                <b>Dr. Muhammad khalid Rashid</b>
+                <b>Ms. Hifsa Farooq </b>
                 <br />
                 Associate Professor Ph.D.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Muhammad Tariq</b>
-                <br />
-                Assistant Professor M.A.{' '}
-              </li>
-              <hr />
-              <li>
-                <b>Mr. Khalid Munir</b>
+                <b> Mr. Faisal Shahzad</b>
                 <br />
                 Assistant Professor M.Phil.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Iftikhar Ahmad</b>
+                <b>Ms. Sana Shahzad </b>
                 <br />
                 Assistant Professor M.Phil.{' '}
+              </li>
+              <hr />
+              <li>
+                <b>Usman Saeed </b>
+                <br />
+                Assistant Professor M.com.{' '}
               </li>
               <hr />
             </ul>
@@ -88,35 +88,23 @@ function Economics_() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b>Mr. Muhammad Tanveer</b>
+                <b>Muhammad Usman</b>
                 <br />
-                Assistant Professor M.A.{' '}
+                (B.com Hons) Visting Lecturer{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Syed Tahir Ali Shah</b>
+                <b>Sajawal Anwar</b>
                 <br />
-                Assistant Professor M.Phil.{' '}
+                (B.com Hons) Visting Lecturer{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Rehan Hamid</b>
+                <b>Arslan Rashid</b>
                 <br />
-                Assistant Professor M.Phil.{' '}
+                (M.Phil Finance and Marketing) Visiting Lecturer{' '}
               </li>
-              <hr />
-              <li>
-                <b>Mr. Fahad IQbal</b>
-                <br />
-                Lecturer M.A{' '}
-              </li>
-              <hr />
-              <li>
-                <b>Mr. Ghulam Farid</b>
-                <br />
-                Lecturer M.Phil.{' '}
-              </li>
-              <hr />
+            
             </ul>
           </div>
         </div>

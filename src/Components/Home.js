@@ -5,7 +5,7 @@ import 'slick-carousel/slick/slick-theme.css'
 import './Home.css'
 import { MDBCarousel, MDBCarouselItem } from 'mdb-react-ui-kit'
 
-function Home() {
+function Home() {  
   const settings1 = {
     dots: true,
     autoplay: true,
@@ -41,7 +41,7 @@ function Home() {
     ],
   }
   return (
-    <div>
+    <div>    
       <div className='mb-3'>
         <MDBCarousel showControls showIndicators>
           <MDBCarouselItem

@@ -1,11 +1,37 @@
 //npm
-import React, { useState } from 'react'
-
+import React, { useEffect,useRef,useState } from 'react'
+import { NavLink, useParams } from 'react-router-dom'
+import './StudentView.css'
+import useStore from '../../store/store'
+import Link from 'react-dom';
+import {useReactToPrint} from 'react-to-print'
 import { useNavigate } from 'react-router-dom'
 //files
-import useStore from '../store/store'
+// import useStore from '../store/store'
 
-function RegistrationForm() {
+
+
+function StudentViewTwo() {
+    const componentRef=useRef();
+    const handlePrint = useReactToPrint({
+      content:()=>componentRef.current,
+      decumentTitle:'student-data',
+      onAfterPrint: ()=>alert("form is printed successfully")
+    });
+  
+    const params = useParams()
+    const form1 = useStore((state) => state.form)
+    console.log(form1)
+    const adminFetchApplicationById = useStore(
+      (state) => state.adminFetchApplicationById
+    )
+  
+    useEffect(
+      () => async () => {
+        await adminFetchApplicationById(params.id)
+      },
+      []
+    )
   const studentSubmitForm = useStore(
     (state) => state.studentSubmitForm
   )
@@ -1067,4 +1093,4 @@ function RegistrationForm() {
   )
 }
 
-export default RegistrationForm
+export default StudentViewTwo

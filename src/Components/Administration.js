@@ -19,65 +19,41 @@ function Administration() {
           <ul >
             <li>
               {' '}
-              Prof. Dr. Mian Muhammad Akram (Principal) <br />
-              Chairman
+              <b>
+             Principal:
+              </b>
+              <br />
+              Prof Dr. Tahseen Razzaq PhD Chemistry (Austria), MBA Exec. (PU) 
+            
             </li>
             <hr />
             <li>
               {' '}
-              Prof. Izhar Abbasi (Zoology)
-              <br /> Secretary
+              <b>
+              Vice Principal(Estt)
+              </b>
+              <br/>
+              Prof Dr. Abdul Hameed
+              
             </li>
             <hr />
             <li>
               {' '}
-              Prof. Tauqeer Saleem Khan (Vice Principal) <br />
-              Member
+              <b>Vice Principal(Admin)</b>
+              <br></br>
+              Prof Dr. Zahid Hussain Siddiqui <br />
+              
             </li>
             <hr />
 
             <li>
               {' '}
-              Prof. Dr. Abdul Hameed (Botany)
-              <br /> Member
+              <b>Dean, Faculty of Science</b>
+              <br /> 
+              Prof Muhammad Zahid Rafiq Bhatti (Math)
             </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. Dr. Zahid Hussain Siddiqui (Zoology)
-              <br /> Member
-            </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. Zahid Nazir (Political Science) <br />
-              Member
-            </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. JAhangir Rana (English)
-              <br /> Member
-            </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. Dr. Azadar Hussain Jawaz Jafri (Urdu) <br />
-              Member
-            </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. Dr. Ejaz Ahmed (Physicsy)
-              <br /> Member
-            </li>
-            <hr />
-            <li>
-              {' '}
-              Prof. Dr. Tahseen Razzaq (Chemistry) <br />
-              Member
-            </li>
-            <hr />
+            
+            
           </ul>
       
         </div>
@@ -88,8 +64,8 @@ function Administration() {
           <ul className=''>
             <li>
               <p>
-                <b> Principal:</b> &nbsp; Prof. Dr. Mian Muhammad
-                Akram
+                <b> Principal:</b> &nbsp; 
+                Prof. Dr. Tahseen Razzaq
                 <br /> Ph.D.(Economics).
               </p>
             </li>
@@ -97,8 +73,8 @@ function Administration() {
             <li>
               <p>
                 {' '}
-                <b>Vice Principal :</b> &nbsp;Prof. Tauqeer
-                Saleem Khan
+                <b>Vice Principal :</b> &nbsp;
+                Prof. Dr. Abdul Hameed
                 <br /> M.A. (Psychology)
               </p>
             </li>

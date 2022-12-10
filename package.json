@@ -19,6 +19,7 @@
     "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "react-slick": "^0.29.0",
+    "react-to-print": "^2.14.10",
     "slick-carousel": "^1.8.1",
     "slick-slider": "^1.8.2",
     "uniqid": "^5.4.0",

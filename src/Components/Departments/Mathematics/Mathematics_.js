@@ -38,7 +38,7 @@ function Mathematics_() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b> Mr. Mudassar Ahmad Qureshi</b>
+                <b> Muhammad Zahid Rafiq Bhatti</b>
                 <br />
                 Associate Professor/ Head of department M.Phil.{' '}
               </li>
@@ -49,13 +49,13 @@ function Mathematics_() {
               </li>
               <hr />
               <li>
-                <b>Dr. Qaisar Mehmood</b>
+                <b>Dr. Naveed Akhtar</b>
                 <br />
                 Assistant Professor Ph.D.{' '}
               </li>
               <hr />
               <li>
-                <b>Mr. Tariq Sharif</b>
+                <b>Muhammad Arshad Rashad</b>
                 <br />
                 Assistant Professor M.Phil{' '}
               </li>

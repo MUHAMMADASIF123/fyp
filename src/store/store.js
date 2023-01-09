@@ -1,22 +1,22 @@
-import createStore from 'zustand'
+import createStore from "zustand";
 
-import axios from 'axios'
-import cogoToast from 'cogo-toast'
+import axios from "axios";
+import cogoToast from "cogo-toast";
 
-const token = localStorage.getItem('token-info')
+const token = localStorage.getItem("token-info");
 console.log(token);
 
 const addUserToLocalStorage = ({ user, token }) => {
-  localStorage.setItem('user', JSON.stringify(user))
-  localStorage.setItem('token-info', token)
-}
+  localStorage.setItem("user", JSON.stringify(user));
+  localStorage.setItem("token-info", token);
+};
 
 const removeUserFromLocalStorage = () => {
-  localStorage.removeItem('user')
-  localStorage.removeItem('token-info')
-}
+  localStorage.removeItem("user");
+  localStorage.removeItem("token-info");
+};
 
-const baseURL = 'http://localhost:5000/api/'
+const baseURL = "http://localhost:5000/api/";
 
 let store = (set) => ({
   token: token,
@@ -27,40 +27,32 @@ let store = (set) => ({
   forms: [],
   adminLogin: async (loginData) => {
     try {
-      console.log(loginData)
-      const {data} = await axios.post(
-        `${baseURL}admin/login`,
-        loginData
-      )
-      
-  
+      console.log(loginData);
+      const { data } = await axios.post(`${baseURL}admin/login`, loginData);
 
-      addUserToLocalStorage( data.token )
+      addUserToLocalStorage(data.token);
 
-      set((state) => ({ ...state, token: token }))
+      set((state) => ({ ...state, token: token }));
 
-      cogoToast.success(data.message,{position:'top-right'})
+      cogoToast.success(data.message, { position: "top-right" });
     } catch (error) {
-      console.log(error)
+      console.log(error);
       cogoToast.error(error.response.data.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
     }
   },
 
   adminRegister: async (data) => {
     try {
-      const response = await axios.post(
-        `${baseURL}admin/add`,
-        data
-      )
-      cogoToast.success(response.data.message)
-      set((state) => ({ ...state, admins: token }))
+      const response = await axios.post(`${baseURL}admin/add`, data);
+      cogoToast.success(response.data.message);
+      set((state) => ({ ...state, admins: token }));
     } catch (error) {
-      console.log(error.response.data)
+      console.log(error.response.data);
       cogoToast.error(error.response.data.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
     }
   },
 
@@ -69,12 +61,88 @@ let store = (set) => ({
       const response = await axios.post(
         `${baseURL}student/submit/application`,
         data
-      )
-      cogoToast.success(response.data.message)
+      );
+      cogoToast.success(response.data.message);
     } catch (error) {
       cogoToast.error(`${error.response.data.message}`, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
+    }
+  },
+
+  // updateStudent: async (id) => {
+  //   try {
+  //     // const response = await axios.post(
+  //     //   `${baseURL}student/submit/application`,
+  //     //   data
+  //     const response = await axios.put(`${baseURL}student/studentEdit/${id}`);
+  //     cogoToast.success(response.data.message);
+  //   } catch (error) {
+  //     cogoToast.error(`${error.response.data.message}`, {
+  //       position: "top-right",
+  //     });
+  //   }
+  // const response = await axios.put(`${baseURL}student/studentEdit/${id}`);
+  // set((state) => {
+  //   // let updateform = state.forms.filter((_) => _.id !== id);
+  //   updateform.push(response.data);
+  //   state.forms = updateform;
+  // });
+  // },
+  updateStudent: async ({ form, metric, intermediate, graduate, id }) => {
+    try {
+      const { data } = await axios.put(`${baseURL}student/edit/${id}`, {
+        form,
+        metric,
+        intermediate,
+        graduate,
+      });
+      cogoToast.success(data?.message, {
+        position: "top-right",
+      });
+
+      set((state) => ({
+        ...state,
+        forms: data.application,
+      }));
+    } catch (error) {
+      cogoToast.error(error?.data?.message, {
+        position: "top-right",
+      });
+    }
+  },
+  fetchOneApplicatoin: async (id) => {
+    try {
+      const { data } = await axios.get(
+        `${baseURL}/student/fetch/application/${id}`
+      );
+      cogoToast.success(data?.message, {
+        position: "top-right",
+      });
+      set((state) => ({
+        ...state,
+        form: data.application,
+      }));
+    } catch (error) {
+      cogoToast.error(error?.data?.message, {
+        position: "top-right",
+      });
+    }
+  },
+  getApplicationById: async (id) => {
+    try {
+      const { data } = await axios.get(`${baseURL}student/edit/${id}`);
+      cogoToast.success(data?.message, {
+        position: "top-right",
+      });
+      set((state) => ({
+        ...state,
+        form: data.application,
+      }));
+    } catch (error) {
+      cogoToast.error(error?.data?.message, {
+        position: "top-right",
+      });
     }
   },
   adminFetchQueryApplications: async (query) => {
@@ -82,81 +150,82 @@ let store = (set) => ({
       const { data } = await axios.get(
         `${baseURL}admin/fetch/query/applications`,
         { params: query }
-      )
+      );
 
       cogoToast.success(data?.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
       set((state) => ({
         ...state,
         forms: data.applications,
-      }))
+      }));
     } catch (error) {
       cogoToast.error(`${error?.response?.data?.message}`, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
     }
   },
 
   adminFetchApplications: async () => {
     try {
-      const { data } = await axios.get(
-        `${baseURL}admin/fetch/applications`
-      )
+      const { data } = await axios.get(`${baseURL}admin/fetch/applications`);
       cogoToast.success(data?.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
       set((state) => ({
         ...state,
         forms: data.applications,
-      }))
+      }));
     } catch (error) {
       cogoToast.error(
         error?.data?.message ||
-          'Something Went Wrong. Please Check You Connection',
+          "Something Went Wrong. Please Check You Connection",
         {
-          position: 'top-right',
+          position: "top-right",
         }
-      )
+      );
     }
   },
 
   adminFetchApplicationById: async (id) => {
     try {
-      const {data} = await axios.get(
+      const { data } = await axios.get(
         `${baseURL}admin/fetch/application/${id}`
-      )
+      );
       cogoToast.success(data?.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
       set((state) => ({
         ...state,
         form: data.application,
-      }))
+      }));
     } catch (error) {
       cogoToast.error(error?.data?.message, {
-        position: 'top-right',
-      })    }
+        position: "top-right",
+      });
+    }
   },
-  adminSearchByCnic:async(cnic)=>{
+  adminSearchByCnic: async (cnic) => {
     try {
-      const {data} = await axios.get(
-        `${baseURL}admin/fetch/cnic/application`,        { params: {cnic} }
-      )
+      const { data } = await axios.get(
+        `${baseURL}admin/fetch/cnic/application`,
+        { params: { cnic } }
+      );
       cogoToast.success(data?.message, {
-        position: 'top-right',
-      })
+        position: "top-right",
+      });
       set((state) => ({
         ...state,
         forms: [data.application],
-      }))
+      }));
     } catch (error) {
       cogoToast.error(error?.response?.data?.message, {
-        position: 'top-right',
-      })    }
-  }
-})
+        position: "top-right",
+      });
+    }
+  },
+});
 
-const useStore = createStore(store)
+const useStore = createStore(store);
 
-export default useStore
+export default useStore;

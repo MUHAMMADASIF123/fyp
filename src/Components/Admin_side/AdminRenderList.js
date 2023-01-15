@@ -1,10 +1,20 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useStore from "../../store/store";
+import { useNavigate } from "react-router-dom";
 const AdminRenderList = () => {
+  const navigate = useNavigate();
   const forms = useStore((state) => state.forms);
+  const deleteStudent = useStore((state) => state.deleteStudent);
   // let token = JSON.parse(localStorage.getItem('token-info'));
   // console.log(token);
+
+  const handleDelete = async (id) => {
+    if (window.confirm("Are you sure you want to delete this form ?")) {
+      await deleteStudent(id);
+      navigate("/");
+    }
+  };
 
   return (
     <div className="container shadow rounded vh-100 mb-5 bg-white">
@@ -41,6 +51,11 @@ const AdminRenderList = () => {
                     )}
                     <td>
                       <Link to={`/StudentView/${form._id}`}>View Detail</Link>
+                    </td>
+                    <td>
+                      <button onClick={() => handleDelete(form._id)}>
+                        Delete Detail
+                      </button>
                     </td>
                   </tr>
                 </tbody>

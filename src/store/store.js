@@ -70,41 +70,20 @@ let store = (set) => ({
     }
   },
 
-  // updateStudent: async (id) => {
-  //   try {
-  //     // const response = await axios.post(
-  //     //   `${baseURL}student/submit/application`,
-  //     //   data
-  //     const response = await axios.put(`${baseURL}student/studentEdit/${id}`);
-  //     cogoToast.success(response.data.message);
-  //   } catch (error) {
-  //     cogoToast.error(`${error.response.data.message}`, {
-  //       position: "top-right",
-  //     });
-  //   }
-  // const response = await axios.put(`${baseURL}student/studentEdit/${id}`);
-  // set((state) => {
-  //   // let updateform = state.forms.filter((_) => _.id !== id);
-  //   updateform.push(response.data);
-  //   state.forms = updateform;
-  // });
-  // },
-  updateStudent: async ({ form, metric, intermediate, graduate, id }) => {
+  updateStudent: async (payload) => {
     try {
-      const { data } = await axios.put(`${baseURL}student/edit/${id}`, {
-        form,
-        metric,
-        intermediate,
-        graduate,
-      });
-      cogoToast.success(data?.message, {
-        position: "top-right",
-      });
+      const apiResponse = await axios.put(
+        `${baseURL}student/edit/${payload.id}`,
+        payload
+      );
+      // console.log(data);
+      cogoToast.success(apiResponse.data.message);
 
-      set((state) => ({
-        ...state,
-        forms: data.application,
-      }));
+      set((state) => {
+        let formData = state.forms.filter((_) => _.id !== payload.id);
+        formData.push(apiResponse.data);
+        state.forms = formData;
+      });
     } catch (error) {
       cogoToast.error(error?.data?.message, {
         position: "top-right",
@@ -223,6 +202,15 @@ let store = (set) => ({
         position: "top-right",
       });
     }
+  },
+  deleteStudent: async (id) => {
+    const { data } = await axios.delete(`${baseURL}admin/${id}`);
+    cogoToast.success(data?.message, {
+      position: "top-right",
+    });
+    set((state) => {
+      state.forms = state.forms.filter((_) => _.id !== id);
+    });
   },
 });
 

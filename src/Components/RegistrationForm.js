@@ -98,9 +98,9 @@ function RegistrationForm() {
 
   ///
   return (
-    <div className="vh-100">
+    <div>
       {token ? (
-        <div className="mt-5  wraper  ">
+        <div className="mt-5   wraper  ">
           <div className="container mb-5 ">
             <div className=" text-center ">
               <h1 className="rounded">

@@ -271,34 +271,36 @@ const StudentView = () => {
                         ) : (
                           <>Something Went Wrong</>
                         )}
-                        {form?.program === "graduate" ||
-                          (form?.program === "post graduate" && (
-                            <tr>
-                              <th scope="row">Intermediate</th>
-                              <td className="border textcenter">
-                                {form?.intermediate?.year}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.roll_number}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.obtain_marks}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.percentage}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.subject}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.board}
-                              </td>
-                              <td className="border textcenter">
-                                {form?.intermediate?.institute}
-                              </td>
-                            </tr>
-                          ))}
-                        {form?.program === "post graduate" && (
+                        {form?.program === "graduate" ? (
+                          <tr>
+                            <th scope="row">Intermediate</th>
+                            <td className="border textcenter">
+                              {form?.intermediate?.year}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.roll_number}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.obtain_marks}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.percentage}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.subject}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.board}
+                            </td>
+                            <td className="border textcenter">
+                              {form?.intermediate?.institute}
+                            </td>
+                          </tr>
+                        ) : (
+                          <>something went Wrong</>
+                        )}
+                        {form?.program === "post graduate" &&
+                        form?.program === "graduate" ? (
                           <tr>
                             <th scope="row">Graduate</th>
                             <td className="border textcenter">
@@ -323,6 +325,8 @@ const StudentView = () => {
                               {form?.graduate?.institute}
                             </td>
                           </tr>
+                        ) : (
+                          <></>
                         )}
                       </tbody>
                     </table>

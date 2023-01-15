@@ -2,41 +2,24 @@ import React, { useState, useEffect } from "react";
 // import uniqid from "uniqid";
 // import axios from "axios";
 // import { useNavigate } from "react-router-dom";
-import { Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 // import "./StudentView.css";
 import useStore from "../../store/store";
 
 function StudentEdit() {
-  // const params = useParams();
   const updateStudent = useStore((state) => state.updateStudent);
-  // const singleForm = useStore((state) => state.form);
+
   const forms = useStore((state) => state.forms);
-  // console.log(singleForm);
-  // const form = useStore((state) => state.form);
-  // console.log(form);
-  // const adminFetchApplicationById = useStore(
-  //   (state) => state.adminFetchApplicationById
-  // );
+
   const { id } = useParams();
   console.log(id);
   const navigate = useNavigate();
-  // console.log(id);
 
-  // const getApplicationById = useStore((state) => state.getApplicationById);
-  // useEffect(
-  //   () => async () => {
-  //     // await getApplicationById(id);
-
-  //   },
-  //   [id]
-  // );
   useEffect(() => {
     if (id) {
       const singleform = forms.find((item) => item._id === id);
-      console.log(singleform);
       setForm({ ...singleform });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [id]);
 
   const [form, setForm] = useState({
@@ -63,10 +46,8 @@ function StudentEdit() {
     state: "",
     zip_code: "",
   });
-  // console.log(form);
-  //submit
   const {
-    shif,
+    shift,
     program,
     list,
     student_name,
@@ -89,37 +70,65 @@ function StudentEdit() {
     state,
     zip_code,
   } = form;
+  const [intermediate, setIntermediate] = useState({
+    year: "",
+    roll_number: 0,
+    obtain_marks: 0,
+    total_marks: 0,
+    subject: "",
+    board: "",
+    institute: "",
+  });
+
+  const [graduate, setGraduate] = useState({
+    year: "",
+    roll_number: 0,
+    obtain_marks: 0,
+    total_marks: 0,
+    subject: "",
+    board: "",
+    institute: "",
+  });
+
+  const [metric, setMetric] = useState({
+    year: "",
+    roll_number: 0,
+    obtain_marks: 0,
+    total_marks: 0,
+    subject: "",
+    board: "",
+    institute: "",
+  });
+  const {
+    year,
+    roll_number,
+    obtain_marks,
+    total_marks,
+    subject,
+    board,
+    institute,
+  } = metric;
+
   const updateHandle = async (e) => {
     e.preventDefault();
-    const upadtedform = { ...form };
-    updateStudent({ id, upadtedform });
+    let payload = {
+      ...form,
+      ...metric,
+      ...intermediate,
+      ...graduate,
+      id,
+    };
+    await updateStudent(payload);
     navigate("/");
   };
   const onInputChange = (e) => {
     const { name, value } = e.target;
-    console.log(name, value);
+    // console.log(name, value);
     setForm({ ...form, [name]: value });
+    setIntermediate({ ...intermediate, [name]: value });
+    setMetric({ ...metric, [name]: value });
   };
 
-  // useEffect(
-  //   () => async () => {
-  //     const data = await adminFetchApplicationById(params.id);
-  //     console.log(data);
-  //     // form.student_name = data.student_name;
-  //     // setForm((form.father_name = data.student_name));
-  //   },
-  //   []
-  // );
-  // const updateHandle = async (payload) => {
-  //   // let payload = {
-  //   //   name: name.current.value,
-  //   //   imageUrl: imageUrl.current.value,
-  //   //   cost: Number(cost.current.value),
-  //   //   id: Number(id),
-  //   // };
-  //   await updateStudent(payload);
-  //   // navigate("/");
-  // };
   return (
     <div>
       <div className="mt-5  wraper  ">
@@ -132,27 +141,128 @@ function StudentEdit() {
               Application For Addmission-2022
             </h1>
 
-            <form className="rounded shadow p-5 mt-5 mb-5 h-100 w-100 bg-white">
-              <div className="row">
-                <div className="col-md-4">
-                  <div className="input-group mb-3">
-                    <div className="input-group-prepend">
-                      {/* <button onclick="window.print()">Print this page</button> */}
-                      {/* <label className="input-group-text" htmlFor="inputGroupSelect01">Options</label> */}
-                      <h6>
-                        applied for:<span>BSCS</span>
-                      </h6>
+            <form className="rounded shadow p-5 mt-5 h-100 w-100 bg-white">
+              <div className="row ">
+                <div className="col-md-4 mb-3">
+                  <div className="form-check">
+                    <h6 className="me-3 d-flex">Programs</h6>
+                    <div className="input-group mb-3">
+                      <select
+                        className="custom-select"
+                        id="inputGroupSelect01"
+                        defaultValue="intermediate"
+                        style={{ width: 220 }}
+                        name="program"
+                        value={program}
+                        onChange={onInputChange}
+                      >
+                        <option value="intermediate">Intermediate</option>
+                        <option value="graduate">Graduate</option>
+                        <option value="post graduate">Post Graduate</option>
+                      </select>
                     </div>
                   </div>
                 </div>
-                <div className="col-md-4 ms-5">
-                  <div className="input-group mb-3 ">
-                    <div className="input-group-prepend">
-                      {/* <label className="input-group-text" htmlFor="inputGroupSelect01">Options</label> */}
+                <div className="col-md-4">
+                  <div className="form-check">
+                    <h6 className="me-3 d-flex">Programs List</h6>
+                    <div className="input-group mb-3">
+                      <div>
+                        {form.program === "graduate" ? (
+                          <select
+                            className="custom-select"
+                            id="inputGroupSelect01"
+                            style={{ width: 214 }}
+                            name="list"
+                            value={list}
+                            onChange={onInputChange}
+                          >
+                            <option defaultValue value="bsit">
+                              BSIT
+                            </option>
+                            <option defaultValue>BSCS</option>
+                            <option value="bba">BBA</option>
+                            <option value="botany">Botany</option>
+                            <option value="chemistry">Chemistry</option>
+                            <option value="mass-communication">
+                              Mass Communication
+                            </option>
+                            <option value="conomics">Economics</option>
+                            <option value="islamiyat">Islamiyat</option>
+                            <option value="ducation">Education</option>
+                            <option value="english">English</option>
+                            <option value="political-science">
+                              Political Science
+                            </option>
+                            <option value="mathematics">Mathematics</option>
+                            <option value="sociology">Sociology</option>
+                            <option value="statistics">Statistics</option>
+                            <option value="urdu">Urdu</option>
+                            <option value="zoology">Zoology</option>
+                            <option value="physics">Physics</option>
+                          </select>
+                        ) : form.program === "intermediate" ? (
+                          <select
+                            className="custom-select"
+                            id="inputGroupSelect01"
+                            style={{ width: 214 }}
+                            value={list}
+                            onChange={onInputChange}
+                          >
+                            <option value="fsc-engg">
+                              F.Sc (Pre Engineering)
+                            </option>
+                            <option value="fsc-medical">
+                              F.Sc (Pre Medical)
+                            </option>
+                            <option value="i.com">I.Com</option>
+                            <option value="i.c.s">I.C.S</option>
+                            <option value="general science">
+                              General Science
+                            </option>
+                          </select>
+                        ) : (
+                          <select
+                            className="custom-select "
+                            id="inputGroupSelect03"
+                            style={{ width: 214 }}
+                          >
+                            <option defaultValue value="chemistry">
+                              Chemistry
+                            </option>
+                            <option value="economics">Economics</option>
 
-                      <h6>
-                        Shift : <span>morning</span>
-                      </h6>
+                            <option value="english">English</option>
+
+                            <option value="mathematics">Mathematics</option>
+                            <option value="physics">Physics</option>
+                            <option value="b-com-it">
+                              B.Com(Information Technology)
+                            </option>
+                            <option value="urdu">Urdu</option>
+                            <option value="zoology">Zoology</option>
+                          </select>
+                        )}
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div className="col-md-4">
+                  <div className="form-check">
+                    <h6 className="me-3 d-flex">Shift</h6>
+                    <div className="input-group mb-3">
+                      <select
+                        className="custom-select"
+                        id="inputGroupSelect01"
+                        style={{ width: 214 }}
+                        defaultValue="morning"
+                        value={shift}
+                        onChange={onInputChange}
+                      >
+                        <option value="morning">Morning</option>
+
+                        <option value="evening">Evening</option>
+                      </select>
                     </div>
                   </div>
                 </div>
@@ -168,6 +278,7 @@ function StudentEdit() {
                   {/* <h6 className="ms-0">name</h6> */}
                   <input
                     type="text"
+                    // pattern='[A-Za-z]{3}'
                     className="form-control"
                     id="exampleInputName"
                     placeholder="Enter Your Name"
@@ -185,7 +296,7 @@ function StudentEdit() {
                     Student's Phone Number:
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="exampleInputPhone"
                     placeholder="Enter Your Phone Number"
@@ -200,7 +311,7 @@ function StudentEdit() {
                 <div className="col">
                   <label
                     className="d-flex justify-content-start"
-                    htmlFor="exampleInputName"
+                    htmlFor="fatherName"
                   >
                     Student's Father Name:
                   </label>
@@ -208,23 +319,29 @@ function StudentEdit() {
                     type="text"
                     className="form-control"
                     placeholder="Enter Your Father Name"
-                    id="exampleInputName"
+                    id="fatherName"
                     aria-label="First name"
+                    name="father_name"
+                    value={father_name}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="col">
                   <label
                     className="d-flex justify-content-start"
-                    htmlFor="exampleInputPhone"
+                    htmlFor="fatherPhone"
                   >
                     Student's Father Phone Number:
                   </label>
                   <input
                     type="text"
                     className="form-control"
-                    id="exampleInputPhone"
+                    id="fatherPhone"
                     placeholder="Phone"
                     aria-label="Last name"
+                    name="father_phone_name"
+                    value={father_phone_number}
+                    onChange={onInputChange}
                   />
                 </div>
               </div>
@@ -237,9 +354,12 @@ function StudentEdit() {
                     Student's Cnic Number:
                   </label>
                   <input
-                    type="number"
+                    type="text"
                     className="form-control"
                     id="exampleInputCnic"
+                    name="cnic"
+                    value={cnic}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="col-md-4">
@@ -249,9 +369,18 @@ function StudentEdit() {
                   >
                     Religion
                   </label>
-                  <select id="inputState" className="form-select ">
-                    <option defaultValue>Islam</option>
-                    <option>Chrision</option>
+                  <select
+                    name="religion"
+                    value={religion}
+                    onChange={onInputChange}
+                    id="inputState"
+                    className="form-select "
+                  >
+                    <option defaultValue value="islam">
+                      Islam
+                    </option>
+                    <option value="christian">Christian</option>
+                    <option value="other">Other</option>
                   </select>
                 </div>
                 <div className="col-md-4">
@@ -261,7 +390,14 @@ function StudentEdit() {
                   >
                     Domicile
                   </label>
-                  <input type="text" className="form-control" id="inputZip" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    name="domicile"
+                    value={domicile}
+                    id="inputZip"
+                    onChange={onInputChange}
+                  />
                 </div>
               </div>
               {/* address section */}
@@ -277,6 +413,9 @@ function StudentEdit() {
                     type="date"
                     className="form-control"
                     id="inputEmail4"
+                    name="dob"
+                    value={dob}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -290,6 +429,9 @@ function StudentEdit() {
                     type="email"
                     className="form-control"
                     id="inputPassword4"
+                    name="email"
+                    value={email}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="row">
@@ -306,6 +448,9 @@ function StudentEdit() {
                       id="inputOccupation4"
                       placeholder="Enter Father Occupation"
                       aria-label="First name"
+                      name="father_occupation"
+                      value={father_occupation}
+                      onChange={onInputChange}
                     />
                   </div>
 
@@ -318,57 +463,71 @@ function StudentEdit() {
                       Father's Cnic Number
                     </label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
                       id="inputCnic"
                       placeholder="Enter Father's Cnic Number"
                       aria-label="First name"
+                      name="father_cnic"
+                      value={father_cnic}
+                      onChange={onInputChange}
                     />
                   </div>
                 </div>
                 <div className="row">
                   <div className="col-md-4">
                     <label
-                      htmlFor="inputOccupation4"
+                      htmlFor="guardianName"
                       className="form-label d-flex justify-content-start"
                     >
-                      Gradian's Name
+                      Guardian's Name
                     </label>
                     <input
                       type="text"
                       className="form-control"
-                      id="inputOccupation4"
+                      id="guardianName"
                       placeholder="Enter Gradian's Name"
                       aria-label="First name"
+                      name="guardian_name"
+                      value={guardian_name}
+                      onChange={onInputChange}
                     />
                   </div>
 
                   <div className="col-md-4">
                     <label
-                      htmlFor="inputOccupation4"
+                      htmlFor="guardianOcupation"
                       className="form-label d-flex justify-content-start"
                     >
-                      Gradian's Occupation
+                      Guardian's Occupation
                     </label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
                       placeholder="Enter gardian's Occupation"
                       aria-label=" First name"
+                      id="guardianOcupation"
+                      name="guardian_occupation"
+                      value={guardian_occupation}
+                      onChange={onInputChange}
                     />
                   </div>
                   <div className="col-md-4">
                     <label
-                      htmlFor="inputOccupation4"
+                      htmlFor="guardianPhone"
                       className="form-label d-flex justify-content-start"
                     >
-                      Gardian's Phone Number
+                      Guardian's Phone Number
                     </label>
                     <input
-                      type="number"
+                      type="text"
                       className="form-control"
                       placeholder="Enter Gradian's phone Number"
+                      id="guardianPhone"
                       aria-label="First name"
+                      name="guardian_phone_number"
+                      value={guardian_phone_number}
+                      onChange={onInputChange}
                     />
                   </div>
                 </div>
@@ -377,13 +536,16 @@ function StudentEdit() {
                     htmlFor="inputAddress"
                     className="form-label d-flex justify-content-start"
                   >
-                    Address
+                    Current Address
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     id="inputAddress"
                     placeholder="1234 Main St"
+                    name="current_address"
+                    value={current_address}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="col-12">
@@ -391,13 +553,16 @@ function StudentEdit() {
                     htmlFor="inputAddress2"
                     className="d-flex justify-content-start form-label"
                   >
-                    Address 2
+                    Permanent Address
                   </label>
                   <input
                     type="text"
                     className="form-control"
                     id="inputAddress2"
                     placeholder="Apartment, studio, or floor"
+                    name="permanent_address"
+                    value={permanent_address}
+                    onChange={onInputChange}
                   />
                 </div>
                 <div className="col-md-6">
@@ -407,7 +572,14 @@ function StudentEdit() {
                   >
                     City
                   </label>
-                  <input type="text" className="form-control" id="inputCity" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputCity"
+                    name="city"
+                    value={city}
+                    onChange={onInputChange}
+                  />
                 </div>
                 <div className="col-md-4">
                   <label
@@ -416,12 +588,21 @@ function StudentEdit() {
                   >
                     State
                   </label>
-                  <select id="inputState" className="form-select">
-                    <option defaultValue>Punjab</option>
-                    <option>Balochistan</option>
-                    <option>Sindh</option>
-                    <option>Khyber Pakhtunkhwa</option>
-                    <option>Gilgit-Baltistan</option>
+                  <select
+                    id="inputState"
+                    className="form-select"
+                    defaultValue="punjab"
+                    name="state"
+                    value={state}
+                    onChange={onInputChange}
+                  >
+                    <option value="punjab">Punjab</option>
+                    <option value="balochistan">Balochistan</option>
+                    <option value="sindh">Sindh</option>
+                    <option value="khyber pakhtunkhwa">
+                      Khyber Pakhtunkhwa
+                    </option>
+                    <option value="gilgit baltistan">Gilgit-Baltistan</option>
                   </select>
                 </div>
                 <div className="col-md-2">
@@ -431,18 +612,24 @@ function StudentEdit() {
                   >
                     Zip
                   </label>
-                  <input type="text" className="form-control" id="inputZip" />
+                  <input
+                    type="text"
+                    className="form-control"
+                    id="inputZip"
+                    name="zip_code"
+                    value={zip_code}
+                    onChange={onInputChange}
+                  />
                 </div>
                 <div className="container mt-5 ml-75">
-                  {" "}
-                  {/* table for qualifications */}
                   <table className="table border w-25">
                     <thead>
                       <tr>
                         <th scope="col">Examination</th>
                         <th scope="col">Year</th>
                         <th scope="col">Roll No</th>
-                        <th scope="col">Marks</th>
+                        <th scope="col">Obtain Marks</th>
+                        <th scope="col">Total Marks</th>
                         <th scope="col">%age</th>
                         <th scope="col">Subject</th>
                         <th scope="col">Board</th>
@@ -453,91 +640,336 @@ function StudentEdit() {
                       <tr>
                         <th scope="row">Matric</th>
                         <td>
-                          <input type="number" style={{ width: 80 }}></input>
+                          <input
+                            type="text"
+                            placeholder="year"
+                            style={{ width: 80 }}
+                            name="year"
+                            value={year}
+                            onChange={onInputChange}
+                          />
                         </td>
                         <td>
-                          <input type="number" style={{ width: 80 }}></input>
+                          <input
+                            type="text"
+                            placeholder="roll"
+                            style={{ width: 80 }}
+                            name="roll_number"
+                            value={roll_number}
+                            onChange={onInputChange}
+                          />
                         </td>
                         <td>
-                          <input type="number" style={{ width: 80 }}></input>
+                          <input
+                            type="number"
+                            style={{ width: 80 }}
+                            placeholder="obt"
+                            name="obtain_marks"
+                            value={obtain_marks}
+                            onChange={onInputChange}
+                          />
                         </td>
                         <td>
-                          <input type="number" style={{ width: 80 }}></input>
+                          <input
+                            type="number"
+                            style={{ width: 80 }}
+                            placeholder="tot"
+                            name="total_marks"
+                            value={total_marks}
+                            onChange={onInputChange}
+                          />
                         </td>
                         <td>
-                          <input type="text" style={{ width: 156 }}></input>
+                          <div
+                            className="border"
+                            // type='text'
+                            style={{
+                              width: 156,
+                            }}
+                            placeholder="%"
+                          >
+                            {metric.obtain_marks &&
+                            metric.total_marks >= metric.obtain_marks
+                              ? (metric.obtain_marks / metric.total_marks) * 100
+                              : 0}
+                          </div>
                         </td>
                         <td>
-                          <input type="text" style={{ width: 156 }}></input>
+                          <input
+                            type="text"
+                            style={{ width: 156 }}
+                            placeholder="sub"
+                            name="subject"
+                            value={subject}
+                            onChange={onInputChange}
+                          />
                         </td>
                         <td>
-                          <input type="text" style={{ width: 156 }}></input>
+                          <input
+                            type="text"
+                            style={{ width: 156 }}
+                            placeholder="board"
+                            name="board"
+                            value={board}
+                            onChange={onInputChange}
+                          />
+                        </td>
+                        <td>
+                          <input
+                            type="text"
+                            style={{ width: 156 }}
+                            placeholder="instasd"
+                            name="institute"
+                            value={institute}
+                            onChange={onInputChange}
+                          />
                         </td>
                       </tr>
-                      <tr>
-                        <th scope="row">Intermediate</th>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="text" style={{ width: 156 }}></input>
-                        </td>
-                        <td>
-                          <input type="text " style={{ width: 156 }}></input>
-                        </td>
-                        <td>
-                          <input type="text" style={{ width: 156 }}></input>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">BA/B.SC</th>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="number" style={{ width: 80 }}></input>
-                        </td>
-                        <td>
-                          <input type="text" style={{ width: 156 }}></input>
-                        </td>
-                        <td>
-                          <input type="text" style={{ width: 156 }}></input>
-                        </td>
-                        <td>
-                          <input type="text" style={{ width: 156 }}></input>
-                        </td>
-                      </tr>
+
+                      {/* inter mediate table */}
+
+                      {form.program === "graduate" ||
+                      form.program === "post graduate" ? (
+                        <tr>
+                          <th scope="row">Intermediate</th>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 80 }}
+                              placeholder="year"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  year: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 80 }}
+                              placeholder="roll number"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  roll_number: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="number"
+                              style={{ width: 80 }}
+                              placeholder="obt"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  obtain_marks: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="number"
+                              style={{ width: 80 }}
+                              placeholder="totl"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  total_marks: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td
+                            type="text"
+                            style={{ width: 156 }}
+                            placeholder="%"
+                          >
+                            {intermediate.obtain_marks &&
+                            intermediate.total_marks &&
+                            intermediate.total_marks >=
+                              intermediate.obtain_marks
+                              ? (intermediate.obtain_marks /
+                                  intermediate.total_marks) *
+                                100
+                              : 0}
+                          </td>
+                          <td>
+                            <input
+                              type="text "
+                              style={{ width: 156 }}
+                              placeholder="sub"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  subject: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 156 }}
+                              placeholder="board"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  board: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 156 }}
+                              placeholder="inst"
+                              onChange={(e) =>
+                                setIntermediate({
+                                  ...intermediate,
+                                  institute: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                        </tr>
+                      ) : (
+                        <></>
+                      )}
+
+                      {/* graduate */}
+                      {form.program === "post graduate" ? (
+                        <tr>
+                          <th scope="row">BA/B.SC</th>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 80 }}
+                              placeholder="year"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  year: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 80 }}
+                              placeholder="roll"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  roll_number: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="number"
+                              style={{ width: 80 }}
+                              placeholder="obt"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  obtain_marks: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="number"
+                              style={{ width: 80 }}
+                              placeholder="tot"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  total_marks: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td
+                            type="text"
+                            style={{ width: 156 }}
+                            placeholder="%"
+                          >
+                            {graduate.obtain_marks &&
+                            graduate.total_marks &&
+                            graduate.total_marks >= graduate.obtain_marks
+                              ? (graduate.obtain_marks / graduate.total_marks) *
+                                100
+                              : 0}
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 156 }}
+                              placeholder="sub"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  subject: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 156 }}
+                              placeholder="board"
+                              onChange={(e) =>
+                                setGraduate({
+                                  ...graduate,
+                                  board: e.target.value,
+                                })
+                              }
+                            />
+                          </td>
+                          <td>
+                            <input
+                              type="text"
+                              style={{ width: 156 }}
+                              placeholder="inst"
+                              onChange={(e) => {
+                                setGraduate({
+                                  ...graduate,
+                                  institute: e.target.value,
+                                });
+                              }}
+                            />
+                          </td>
+                        </tr>
+                      ) : (
+                        <></>
+                      )}
                     </tbody>
                   </table>
                 </div>
               </div>
-              <div className="d-flex justify-content-center">
-                <div className=" w-100">
-                  <button
-                    type="submit"
-                    onClick={updateHandle}
-                    className="mt-4 font-weight-bold text-uppercase text-bold w-50 shadow border-0 rounded-pill"
-                  >
-                    {" "}
-                    Update
-                  </button>
-                </div>
+              <div className="mb-3 d-flex">
+                <label htmlFor="formFile" className="me-2">
+                  <b>Upload Fee Challan Form Pic: </b>
+                </label>
+                <input type="file" id="formFile" />
               </div>
+              <button
+                type="submit"
+                onClick={updateHandle}
+                className="mt-4 font-weight-bold text-uppercase text-bold shadow w-50 text-white border-0 rounded-pill"
+              >
+                Update
+              </button>
             </form>
           </div>
         </div>

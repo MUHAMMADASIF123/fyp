@@ -32,13 +32,13 @@ function RegisterUser() {
     await axios
       .post(`${BASE_URL}/api/student/register`, users)
       .then((res) => {
-        alert(res.response.message);
+        alert(res.data.message);
         // console.log(res.response.data)
         history("/login");
       })
       .catch((err) => {
         console.log(err);
-        alert(err.response.data.message);
+        alert(err.response.message);
       });
   };
 

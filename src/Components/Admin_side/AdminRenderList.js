@@ -12,7 +12,7 @@ const AdminRenderList = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this form ?")) {
       await deleteStudent(id);
-      navigate("/");
+      navigate("/admin");
     }
   };
 

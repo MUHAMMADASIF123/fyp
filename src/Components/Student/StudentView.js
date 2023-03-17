@@ -269,7 +269,7 @@ const StudentView = () => {
                             </td>
                           </tr>
                         ) : (
-                          <>Something Went Wrong</>
+                          <></>
                         )}
                         {form?.program === "graduate" ? (
                           <tr>
@@ -297,7 +297,7 @@ const StudentView = () => {
                             </td>
                           </tr>
                         ) : (
-                          <>something went Wrong</>
+                          <></>
                         )}
                         {form?.program === "post graduate" &&
                         form?.program === "graduate" ? (

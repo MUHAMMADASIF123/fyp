@@ -100,6 +100,15 @@ function StudentEdit() {
     institute: "",
   });
   const {
+    yearg,
+    roll_numberg,
+    obtain_marksg,
+    total_marksg,
+    subjectg,
+    boardg,
+    instituteg,
+  } = graduate;
+  const {
     year,
     roll_number,
     obtain_marks,
@@ -740,7 +749,7 @@ function StudentEdit() {
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
-                                  year: e.target.value,
+                                  yearg: e.target.value,
                                 })
                               }
                             />

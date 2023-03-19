@@ -685,7 +685,7 @@ function RegistrationForm() {
                             <input
                               type="text"
                               placeholder="year"
-                              style={{ width: 80 }}
+                              style={{ width: 45 }}
                               onChange={(e) =>
                                 setMetric({
                                   ...metric,
@@ -698,7 +698,7 @@ function RegistrationForm() {
                             <input
                               type="text"
                               placeholder="roll"
-                              style={{ width: 80 }}
+                              style={{ width: 45 }}
                               onChange={(e) =>
                                 setMetric({
                                   ...metric,
@@ -710,7 +710,7 @@ function RegistrationForm() {
                           <td>
                             <input
                               type="number"
-                              style={{ width: 80 }}
+                              style={{ width: 45 }}
                               placeholder="obt"
                               onChange={(e) =>
                                 setMetric({
@@ -723,7 +723,7 @@ function RegistrationForm() {
                           <td>
                             <input
                               type="number"
-                              style={{ width: 80 }}
+                              style={{ width: 45 }}
                               placeholder="tot"
                               onChange={(e) =>
                                 setMetric({
@@ -738,7 +738,7 @@ function RegistrationForm() {
                               className="border"
                               // type='text'
                               style={{
-                                width: 156,
+                                width: 140,
                               }}
                               placeholder="%"
                             >
@@ -752,7 +752,7 @@ function RegistrationForm() {
                           <td>
                             <input
                               type="text"
-                              style={{ width: 156 }}
+                              style={{ width: 140 }}
                               placeholder="sub"
                               onChange={(e) => {
                                 setMetric({
@@ -765,7 +765,7 @@ function RegistrationForm() {
                           <td>
                             <input
                               type="text"
-                              style={{ width: 156 }}
+                              style={{ width: 140 }}
                               placeholder="board"
                               onChange={(e) => {
                                 setMetric({
@@ -778,7 +778,7 @@ function RegistrationForm() {
                           <td>
                             <input
                               type="text"
-                              style={{ width: 156 }}
+                              style={{ width: 140 }}
                               placeholder="instasd"
                               onChange={(e) => {
                                 setMetric({
@@ -799,7 +799,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="year"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -812,7 +812,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="roll number"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -825,7 +825,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="number"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="obt"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -838,7 +838,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="number"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="totl"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -850,7 +850,7 @@ function RegistrationForm() {
                             </td>
                             <td
                               type="text"
-                              style={{ width: 156 }}
+                              style={{ width: 140 }}
                               placeholder="%"
                             >
                               {intermediate.obtain_marks &&
@@ -865,7 +865,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text "
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="sub"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -878,7 +878,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="board"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -891,7 +891,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="inst"
                                 onChange={(e) =>
                                   setIntermediate({
@@ -913,7 +913,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="year"
                                 onChange={(e) =>
                                   setGraduate({
@@ -926,7 +926,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="roll"
                                 onChange={(e) =>
                                   setGraduate({
@@ -939,7 +939,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="number"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="obt"
                                 onChange={(e) =>
                                   setGraduate({
@@ -952,7 +952,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="number"
-                                style={{ width: 80 }}
+                                style={{ width: 45 }}
                                 placeholder="tot"
                                 onChange={(e) =>
                                   setGraduate({
@@ -964,7 +964,7 @@ function RegistrationForm() {
                             </td>
                             <td
                               type="text"
-                              style={{ width: 156 }}
+                              style={{ width: 140 }}
                               placeholder="%"
                             >
                               {graduate.obtain_marks &&
@@ -978,7 +978,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="sub"
                                 onChange={(e) =>
                                   setGraduate({
@@ -991,7 +991,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="board"
                                 onChange={(e) =>
                                   setGraduate({
@@ -1004,7 +1004,7 @@ function RegistrationForm() {
                             <td>
                               <input
                                 type="text"
-                                style={{ width: 156 }}
+                                style={{ width: 140 }}
                                 placeholder="inst"
                                 onChange={(e) => {
                                   setGraduate({

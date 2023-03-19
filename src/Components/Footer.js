@@ -42,7 +42,13 @@ function Footer() {
               </h6>
             </div>
             <div className="icons ">
-              <i className="fa-brands fa-facebook"></i>
+              <a
+                className="text-warning"
+                href="https://web.facebook.com/gcswrlahore?_rdc=1&_rdrx"
+              >
+                <i className="fa-brands fa-facebook"> </i>
+              </a>
+
               <i className="fa-brands fa-instagram"></i>
               <i className="fa-brands fa-twitter"></i>
             </div>

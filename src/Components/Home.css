@@ -99,11 +99,12 @@
 .card-img-top {
   height: 250px;
 }
-
- /* media query for mobile */
- @media screen and (max-width: 576px)
-{
-  .smallpoint  {
+.card-text {
+  color: white;
+}
+/* media query for mobile */
+@media screen and (max-width: 576px) {
+  .smallpoint {
     background-color: #172540;
     /* height: 70px; */
     width: 50px;
@@ -111,4 +112,4 @@
     border-radius: 10px;
     color: aliceblue; */
   }
-} 
+}

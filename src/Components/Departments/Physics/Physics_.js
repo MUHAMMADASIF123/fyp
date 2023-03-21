@@ -34,7 +34,7 @@ function Physics_() {
           <div className='col-md-6 col-sm-12'>
             <ul>
               <li>
-                <b> Dr. Ejaz Ahmed</b>
+                <b> Dr. Muhammad Saleem (Ph.D.) </b>
                 <br />
                 Professor,/Head of Department Ph.D.{' '}
               </li>
@@ -45,7 +45,7 @@ function Physics_() {
               </li>
               <hr />
               <li>
-                <b>Mr. Aslam Pervaiz</b>
+                <b>Mr. Tariq Ali</b>
                 <br />
                 Associate Professor M.Sc.{' '}
               </li>

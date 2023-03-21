@@ -56,6 +56,18 @@ function Botany() {
               Lecturer Ph.D.{' '}
             </li>
             <hr />
+            <li>
+              <b>Mr. Muhammad Danish Jamil</b>
+              <br />
+              Lecturer Ph.D.{' '}
+            </li>
+            <hr />
+            <li>
+              <b>Ms. Atiqa Wajed </b>
+              <br />
+              Lecturer Ph.D.{' '}
+            </li>
+           
           </ul>
 
             </div>

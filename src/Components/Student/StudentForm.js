@@ -1,20 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import useStore from "../../store/store";
-import { useNavigate } from "react-router-dom";
-const AdminRenderList = () => {
-  const navigate = useNavigate();
+const StudentForm = () => {
   const forms = useStore((state) => state.forms);
-  const deleteStudent = useStore((state) => state.deleteStudent);
   // let token = JSON.parse(localStorage.getItem('token-info'));
   // console.log(token);
-
-  const handleDelete = async (id) => {
-    if (window.confirm("Are you sure you want to delete this form ?")) {
-      await deleteStudent(id);
-      navigate("/admin");
-    }
-  };
 
   return (
     <div className="container shadow rounded vh-100 mb-5 bg-white">
@@ -28,7 +18,7 @@ const AdminRenderList = () => {
                 <th>Student's Father Name</th>
                 {/* <th>CNIC</th> <td>{forms.cnic}</td> */}
                 <th>Percentage Marks</th>
-                <th>Detail</th>
+                <th>Actions</th>
               </tr>
             </tbody>
           </table>
@@ -37,9 +27,9 @@ const AdminRenderList = () => {
               <table className="table" key={index}>
                 <tbody>
                   <tr>
-                    <td>{index + 1}</td>
-                    <td>{form.student_name}</td>
-                    <td>{form.father_name}</td>
+                    <td className="ms-5">{index + 1}</td>
+                    <td className="ms-5">{form.student_name}</td>
+                    <td className="ms-5">{form.father_name}</td>
                     {form.program === "intermediate" && (
                       <td>{form.metric.percentage}</td>
                     )}
@@ -49,13 +39,11 @@ const AdminRenderList = () => {
                     {form.program === "post graduate" && (
                       <td>{form.graduate.percentage}</td>
                     )}
-                    <td>
-                      <Link to={`/StudentView/${form._id}`}>View Detail</Link>
+                    <td className="ms-5">
+                      <Link to={`/edit/${form._id}`}>Edit Detail</Link>
                     </td>
                     <td>
-                      <button onClick={() => handleDelete(form._id)}>
-                        Delete Detail
-                      </button>
+                      <Link to={`/StudentView/${form._id}`}>View Detail</Link>
                     </td>
                   </tr>
                 </tbody>
@@ -64,10 +52,10 @@ const AdminRenderList = () => {
           })}
         </>
       ) : (
-        <h1>something went wrong</h1>
+        <span>Please put your CNIC to get your Registartion form</span>
       )}
     </div>
   );
 };
 
-export default AdminRenderList;
+export default StudentForm;

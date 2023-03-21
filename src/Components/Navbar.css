@@ -123,7 +123,17 @@ button a {
 .button_programs a:hover{
   color:#ffdd40;
 }
-
+@media screen and (max-width:1200px)
+{
+  .nav-logo a{
+    font-size: 5px;
+    margin-right: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    /* margin-bottom: 50px; */
+    color: white;
+  }
+}
 
 
 
@@ -182,9 +192,17 @@ button a {
     
     margin-left: -6px;
 }
+.nav-logo a{
+  font-size: 5px;
+  margin-right: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  /* margin-bottom: 50px; */
+  color: white;
+}
 
 }
-/* for mobile devices */
+ /* for mobile devices
 /* @media only screen and (min-width: 200px) and (max-width:375)
 {
   .nav-logo img{

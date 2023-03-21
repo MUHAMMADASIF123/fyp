@@ -7,6 +7,7 @@ const AdminRenderList = lazy(() => import('./AdminRenderList'))
 function Admin() {
   // const history = useHistory()
   const [search, setSearch] = useState({})
+  const [cnic,setCnic]=useState('')
 
   const adminFetchApplications = useStore(
     (state) => state.adminFetchApplications
@@ -14,10 +15,10 @@ function Admin() {
   const adminFetchQueryApplications = useStore(
     (state) => state.adminFetchQueryApplications
   )
+const adminSearchByCnic=useStore(state=>state.adminSearchByCnic)
+  const token=useStore(state=>state.token)
 
-  const forms = useStore((state) => state.forms)
-
-  // const [applications, setApplications] = useState([])
+  
 
   //=> useEffect
   useEffect(
@@ -31,11 +32,17 @@ function Admin() {
     e.preventDefault()
     await adminFetchQueryApplications(search)
   }
+const handleCnicSubmit=async(e)=>{
+  e.preventDefault()
+  await adminSearchByCnic(cnic)
+}
 
   return (
     <>
-      <div className='container justify-content-center'>
-        <form className='w-100 mb-5 mt-5 h-25 shadow bg-white rounded'>
+      <div className='container justify-content-center mb-5'>
+        <div className='row'>
+          <div className='col-md-6 shadow bg-white rounded'>
+          <form className='w-10 mb-5 mt-5 h-25'>
           <div className='row justify-content-start d-flex '>
             <div className='mt-3 ms-3 '>
               <h5 className='justify-content-start d-flex'>
@@ -50,7 +57,7 @@ function Admin() {
                     <select
                       className='custom-select'
                       id='inputGroupSelect01'
-                      style={{ width: 220 }}
+                      style={{ width: 100 }}
                       onChange={(e) =>
                         setSearch({
                           ...search,
@@ -79,7 +86,7 @@ function Admin() {
                         <select
                           className='custom-select'
                           id='inputGroupSelect01'
-                          style={{ width: 214 }}
+                          style={{ width: 100 }}
                           onChange={(e) => {
                             setSearch({
                               ...search,
@@ -158,7 +165,7 @@ function Admin() {
                         <select
                           className='custom-select '
                           id='inputGroupSelect03'
-                          style={{ width: 214 }}
+                          style={{ width: 100 }}
                           onChange={(e) =>
                             setSearch({
                               ...search,
@@ -204,7 +211,7 @@ function Admin() {
                     <select
                       className='custom-select'
                       id='inputGroupSelect01'
-                      style={{ width: 214 }}
+                      style={{ width: 100 }}
                       onChange={(e) =>
                         setSearch({
                           ...search,
@@ -242,7 +249,19 @@ function Admin() {
             </div>
           </div>
         </form>
-      </div>
+          </div>
+          <div className='col-md-6 shadow bg-white rounded  ms-5' style={{ width: 500  }}>
+            <h1 className='mt-5'>Student's CNIC</h1>
+            <p className='mt-3'> Search student by cnic:</p>
+            <input onChange={(e)=>setCnic(e.target.value)} type="string" className='mt-2' placeholder="Enter  Students's CNIC"/>
+            <button  onClick={handleCnicSubmit} type='submit'>
+                Search
+              </button>
+          </div>
+        </div>
+       
+      </div> 
+
       <Suspense fallback={<div>Loading...</div>}>
         <AdminRenderList />
       </Suspense>

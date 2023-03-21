@@ -4,9 +4,9 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 
 //config
-import BASE_URL from "../config/url";
+// import BASE_URL from "../config/url";
 
-function RegisterUser() {
+function RegisterAdmin() {
   const [user, setUser] = useState({
     name: "",
     email: "",
@@ -30,15 +30,15 @@ function RegisterUser() {
     console.log(users);
     e.preventDefault();
     await axios
-      .post(`${BASE_URL}/api/student/register`, users)
+      .post(`http://localhost:5000/api/student/register`, users)
       .then((res) => {
         alert(res.data.message);
-        // console.log(res.response.data)
-        history("/login");
+        console.log(res.data.message);
+        history("/adminlogin");
       })
       .catch((err) => {
         console.log(err);
-        alert(err.response.message);
+        alert(err.data.message);
       });
   };
 
@@ -128,4 +128,4 @@ function RegisterUser() {
   );
 }
 
-export default RegisterUser;
+export default RegisterAdmin;

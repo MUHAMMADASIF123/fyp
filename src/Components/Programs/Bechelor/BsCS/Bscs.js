@@ -438,7 +438,9 @@ function BSCS() {
         </div>
       </div>
     </>
-  )
+
+  );
+
 }
 
 export default BSCS

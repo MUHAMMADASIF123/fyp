@@ -65,12 +65,12 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
 
-        <Route path="/registeruser" element={<RegisterUser />} />
-        <Route path="/registeradmin" element={<RegisterAdmin />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/contactUs" element={<ContactUs />} />
-        <Route path="/AboutUs" element={<AboutUs />} />
-        {/* <Route path='/Admin' element={<Admin />} /> */}
+        <Route path='/registeruser' element={<RegisterUser />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/contactUs' element={<ContactUs />} />
+        <Route path='/AboutUs' element={<AboutUs />} />
+        <Route path='/Admin' element={<Admin />} />
+        <Route path='/AdminLogin' element={<AdminLogin />} />
         {/* <Route path='/navbar' element={<Navbar />} /> */}
         <Route path="/Administration" element={<Administration />} />
         <Route path="/apply" element={<RegistrationForm />} />

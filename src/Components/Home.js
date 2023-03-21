@@ -201,33 +201,104 @@ function Home() {
       <section id="Departments">
         <div className="container mt-3 dept_container rounded shadow mb-5 bg-white">
           <h1 className="custom_head rounded mt-5 "> BS Departments</h1>
+            <div className='row '>
+              <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
+                <a className='' href='/ComputerScience'>
+                  Computer Science
+                </a>
+              </div>
 
-          <div className="row ">
-            <div className="col-md-6 col-sm-6  bsdept mt-3 col-lg-3">
-              <a className="" href="/ComputerScience">
-                Computer Science
-              </a>
+              <div className='col-md-6 col-sm-6     mt-3 bsdept col-lg-3'>
+                <a className='' href='/Chemistry_'>
+                  Chemistry
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Physics_'>
+                  Physics
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6     mt-3 bsdept col-lg-3'>
+                <a className='' href='/Mathematics_'>
+                  Mathematics
+                </a>
+              </div>
             </div>
+            <div className='row'>
+              <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
+                <a className='' href='/Economics_'>
+                  Economics
+                </a>
+              </div>
 
-            <div className="col-md-6 col-sm-6  mt-3 bsdept col-lg-3">
-              <a className="" href="/Chemistry_">
-                Chemistry
-              </a>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Islamiyat_'>
+                  Islamiyat
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/BBA'>
+                  BBA
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/MassCom'>
+                  Mass Comm.
+                </a>
+              </div>
             </div>
-            <div className="col-md-6 col-sm-6  mt-3 bsdept col-lg-3">
-              <a className="" href="/Physics_">
-                Physics
-              </a>
+            <div className='row'>
+              <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
+                <a className='' href='/Sociology'>
+                  Sociology
+                </a>
+              </div>
+
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Botany'>
+                  Botany
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Zoology_'>
+                  Zoology
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Education'>
+                  Education
+                </a>
+              </div>
             </div>
-            <div className="col-md-6 col-sm-6  mt-3 bsdept col-lg-3">
-              <a className="" href="/Mathematics_">
-                Mathematics
-              </a>
+          
+            <div className='row'>
+              <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
+                <a className='' href='/English'>
+                  {' '}
+                  English
+                </a>
+              </div>
+
+              <div className='col-md-6 col-sm-6  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Urdu'>
+                  Urdu
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6 mb-2 mt-3 bsdept col-lg-3'>
+                <a className='' href='/PoliticalScience'>
+                  Political Science
+                </a>
+              </div>
+              <div className='col-md-6 col-sm-6 mb-2  mt-3 bsdept col-lg-3'>
+                <a className='' href='/Statistics'>
+                  Statistics
+                </a>
+              </div>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-md-6 col-sm-6  bsdept mt-3 col-lg-3">
-              <a className="" href="/Economics_">
+          
+          <div className='row'>
+            <div className='col-md-6 col-sm-6  bsdept mt-3 col-lg-3'>
+              <a className='' href='/Economics_'>
                 Economics
               </a>
             </div>
@@ -296,6 +367,7 @@ function Home() {
             </div>
           </div>
         </div>
+        
       </section>
 
       <div className=" container shadow rounded mb-5 bg-white slider_container">

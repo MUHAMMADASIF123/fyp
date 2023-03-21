@@ -92,9 +92,9 @@ function StudentEdit() {
 
   const [metric, setMetric] = useState({
     year: "",
-    roll_number: 0,
-    obtain_marks: 0,
-    total_marks: 0,
+    roll_number: "",
+    obtain_marks: "",
+    total_marks: "",
     subject: "",
     board: "",
     institute: "",
@@ -654,7 +654,7 @@ function StudentEdit() {
                             placeholder="year"
                             style={{ width: 80 }}
                             name="year"
-                            value={year}
+                            value={form?.metric?.year}
                             onChange={onInputChange}
                           />
                         </td>
@@ -664,7 +664,7 @@ function StudentEdit() {
                             placeholder="roll"
                             style={{ width: 80 }}
                             name="roll_number"
-                            value={roll_number}
+                            value={form?.metric?.roll_number}
                             onChange={onInputChange}
                           />
                         </td>
@@ -674,7 +674,7 @@ function StudentEdit() {
                             style={{ width: 80 }}
                             placeholder="obt"
                             name="obtain_marks"
-                            value={obtain_marks}
+                            value={form?.metric?.obtain_marks}
                             onChange={onInputChange}
                           />
                         </td>
@@ -684,7 +684,7 @@ function StudentEdit() {
                             style={{ width: 80 }}
                             placeholder="tot"
                             name="total_marks"
-                            value={total_marks}
+                            value={form?.metric?.total_marks}
                             onChange={onInputChange}
                           />
                         </td>
@@ -697,10 +697,11 @@ function StudentEdit() {
                             }}
                             placeholder="%"
                           >
-                            {metric.obtain_marks &&
+                            {/* {metric.obtain_marks &&
                             metric.total_marks >= metric.obtain_marks
                               ? (metric.obtain_marks / metric.total_marks) * 100
-                              : 0}
+                              : 0} */}
+                            {form?.metric?.percentage}
                           </div>
                         </td>
                         <td>
@@ -709,7 +710,7 @@ function StudentEdit() {
                             style={{ width: 156 }}
                             placeholder="sub"
                             name="subject"
-                            value={subject}
+                            value={form?.metric?.subject}
                             onChange={onInputChange}
                           />
                         </td>
@@ -719,7 +720,7 @@ function StudentEdit() {
                             style={{ width: 156 }}
                             placeholder="board"
                             name="board"
-                            value={board}
+                            value={form?.metric?.board}
                             onChange={onInputChange}
                           />
                         </td>
@@ -729,7 +730,7 @@ function StudentEdit() {
                             style={{ width: 156 }}
                             placeholder="instasd"
                             name="institute"
-                            value={institute}
+                            value={form?.metric?.institute}
                             onChange={onInputChange}
                           />
                         </td>
@@ -746,10 +747,11 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 80 }}
                               placeholder="year"
+                              value={form?.intermediate?.year}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
-                                  yearg: e.target.value,
+                                  year: e.target.value,
                                 })
                               }
                             />
@@ -759,6 +761,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 80 }}
                               placeholder="roll number"
+                              value={form?.intermediate?.roll_number}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -772,6 +775,7 @@ function StudentEdit() {
                               type="number"
                               style={{ width: 80 }}
                               placeholder="obt"
+                              value={form?.intermediate?.obtain_marks}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -785,6 +789,7 @@ function StudentEdit() {
                               type="number"
                               style={{ width: 80 }}
                               placeholder="totl"
+                              value={form?.intermediate?.total_marks}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -798,20 +803,22 @@ function StudentEdit() {
                             style={{ width: 156 }}
                             placeholder="%"
                           >
-                            {intermediate.obtain_marks &&
+                            {/* {intermediate.obtain_marks &&
                             intermediate.total_marks &&
                             intermediate.total_marks >=
                               intermediate.obtain_marks
                               ? (intermediate.obtain_marks /
                                   intermediate.total_marks) *
                                 100
-                              : 0}
+                              : 0} */}
+                            {form?.intermediate?.percentage}
                           </td>
                           <td>
                             <input
                               type="text "
                               style={{ width: 156 }}
                               placeholder="sub"
+                              value={form?.intermediate?.subject}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -825,6 +832,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 156 }}
                               placeholder="board"
+                              value={form?.intermediate?.board}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -838,6 +846,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 156 }}
                               placeholder="inst"
+                              value={form?.intermediate?.institute}
                               onChange={(e) =>
                                 setIntermediate({
                                   ...intermediate,
@@ -860,6 +869,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 80 }}
                               placeholder="year"
+                              value={form?.graduate?.year}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -873,6 +883,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 80 }}
                               placeholder="roll"
+                              value={form?.graduate?.roll_number}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -886,6 +897,7 @@ function StudentEdit() {
                               type="number"
                               style={{ width: 80 }}
                               placeholder="obt"
+                              value={form?.graduate?.obtain_marks}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -899,6 +911,7 @@ function StudentEdit() {
                               type="number"
                               style={{ width: 80 }}
                               placeholder="tot"
+                              value={form?.graduate?.total_marks}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -924,6 +937,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 156 }}
                               placeholder="sub"
+                              value={form?.graduate?.subject}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -937,6 +951,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 156 }}
                               placeholder="board"
+                              value={form?.graduate?.board}
                               onChange={(e) =>
                                 setGraduate({
                                   ...graduate,
@@ -950,6 +965,7 @@ function StudentEdit() {
                               type="text"
                               style={{ width: 156 }}
                               placeholder="inst"
+                              value={form?.graduate?.institute}
                               onChange={(e) => {
                                 setGraduate({
                                   ...graduate,

@@ -1,28 +1,47 @@
 import React, { useState } from "react";
 // import uniqid from "uniqid";
 
-// import axios from 'axios';
-import "./AdminLogin.css";
+import axios from "axios";
+import "../Login.css";
 // import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import useStore from "../../store/store";
+
+//config
+// import BASE_URL from "../config/url";
+//
 
 function AdminLogin() {
   const history = useNavigate();
-  const adminLogin = useStore((state) => state.adminLogin);
   const [user, setUser] = useState({
     email: "",
     password: "",
   });
 
+  const { email, password } = user;
   const onInputChange = (e) => {
     setUser({ ...user, [e.target.name]: e.target.value });
   };
 
   const handleuser = async (e) => {
+    // const user = {
+    //   email: email,
+    //   password: password,
+    // };
+    // console.log(users);
     e.preventDefault();
-    await adminLogin(user);
-    history("/admin");
+    await axios
+      .post(`http://localhost:5000/api/student/login`, user)
+      .then((res) => {
+        localStorage.setItem("token-info", JSON.stringify(res?.data?.result));
+        // console.log(res.data.result);
+        // alert(JSON.stringify(res.data))
+        alert(res.data.message);
+        history("/admin");
+      })
+      .catch((err) => {
+        console.log(err);
+        alert(err.response.data.message);
+      });
   };
   return (
     <div>
@@ -34,17 +53,17 @@ function AdminLogin() {
               style={{ backgroundColor: "white" }}
             >
               <h3 className="text-white fw-bolder fs-4 rounded  w-100 mb-2">
-                Admin Login Here !
+                Admin Login !
               </h3>
-              {/* <div className='fw-normal text-black fw-bold mb-4'>
-                New here ?{' '}
+              <div className="fw-normal text-black fw-bold mb-4">
+                New here ?{" "}
                 <a
-                  href='/registeruser'
-                  className='text-decoration-none text-warning fw-bolder'
+                  href="/registeradmin"
+                  className="text-decoration-none text-warning fw-bolder"
                 >
                   create a account
                 </a>
-              </div> */}
+              </div>
               <div className="form-floating mb-3 d-flex justify-content-center ">
                 {/* <input type="email" className="form-control" id="floatingInput" placeholder="name@example.com"/> */}
                 <input
@@ -52,6 +71,7 @@ function AdminLogin() {
                   // id="floatingInput"
                   placeholder="Enter Your Email"
                   name="email"
+                  value={email}
                   onChange={onInputChange}
                   className="form-control  text-center mt-2 border-warning"
                 />
@@ -65,6 +85,7 @@ function AdminLogin() {
                   id="floatingPassword"
                   placeholder="password"
                   name="password"
+                  value={password}
                   onChange={onInputChange}
                   className="form-control text-center mt-2 border-warning"
                 />

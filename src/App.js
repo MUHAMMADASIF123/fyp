@@ -50,7 +50,9 @@ import English from "./Components/Departments/English_Department/English";
 import Urdu from "./Components/Departments/Urdu_Department/Urdu";
 import Statistics from "./Components/Departments/Statistics_Department/Statistics";
 import PoliticalScience from "./Components/Departments/PoliticalScience_Department/PoliticalScience";
-
+// import { registerAdmin } from "../../cms-server/controller/admin.controller";
+// import RegisterAdmin from "./Components/Admin_side/RegisterAdmin";
+import RegisterAdmin from "./Components/Admin_side/RegisterAdmin";
 import StudentView from "./Components/Student/StudentView";
 import StudentEdit from "./Components/Student/StudentEdit";
 import Navbar from "./Components/Navbar";
@@ -64,6 +66,7 @@ function App() {
         <Route path="/" element={<Home />} />
 
         <Route path="/registeruser" element={<RegisterUser />} />
+        <Route path="/registeradmin" element={<RegisterAdmin />} />
         <Route path="/login" element={<Login />} />
         <Route path="/contactUs" element={<ContactUs />} />
         <Route path="/AboutUs" element={<AboutUs />} />

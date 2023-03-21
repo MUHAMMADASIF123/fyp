@@ -135,7 +135,7 @@ function Home() {
                 <h5 className="card-title text-white">Post Graduate</h5>
                 <p className="card-text">
                   Now its all upto you to choose wisely in which field you have
-                  most interest and want to harn your specifical skills.
+                  most interest and want to harn your spaciality.
                 </p>
                 <a href="PostGraduate" className="button_programs">
                   All Courses
